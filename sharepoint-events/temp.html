@@ -1,0 +1,3006 @@
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8">
+  <style>* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+		'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	line-height: 1.6;
+	font-size: 0.6875em; /* 11 pt */
+	color: #111;
+	margin: 0;
+}
+
+body > :first-child {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+body > :last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0.5em 0 0.25em;
+}
+
+h5,
+h6 {
+	padding: 0;
+}
+
+h5 {
+	font-size: 1em;
+}
+
+h6 {
+	font-size: 0.875em;
+	text-transform: uppercase;
+}
+
+p {
+	margin: 0.25em 0 1em;
+}
+
+blockquote {
+	margin: 0.5em 0 1em;
+	padding-left: 0.5em;
+	padding-right: 1em;
+	border-left: 4px solid gainsboro;
+	font-style: italic;
+}
+
+ul,
+ol {
+	margin: 0;
+	margin-left: 1em;
+	padding: 0 1.5em 0.5em;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code,
+p code,
+li code,
+pre code {
+	background-color: #f8f8f8;
+	padding: 0.1em 0.375em;
+	border: 1px solid #f8f8f8;
+	border-radius: 0.25em;
+	font-family: monospace;
+	font-size: 1.2em;
+}
+
+pre code {
+	display: block;
+	padding: 0.5em;
+}
+
+.page-break {
+	page-break-after: always;
+}
+
+img {
+	max-width: 100%;
+	margin: 1em 0;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	display: block;
+	margin: 0 0 1em;
+	width: 100%;
+	overflow: auto;
+}
+
+table th,
+table td {
+	padding: 0.5em 1em;
+	border: 1px solid gainsboro;
+}
+
+table th {
+	font-weight: 600;
+}
+
+table tr {
+	background-color: white;
+	border-top: 1px solid gainsboro;
+}
+
+table tr:nth-child(2n) {
+	background-color: whitesmoke;
+}
+/*# sourceURL=C:\Users\NefiLopez\AppData\Local\nvm\v24.11.0\node_modules\md-to-pdf\markdown.css*/</style><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}/*# sourceURL=C:\Users\NefiLopez\AppData\Local\nvm\v24.11.0\node_modules\md-to-pdf\node_modules\highlight.js\styles\github.css*/</style></head>
+	<body class="">
+		<h1 id="arquitectura-general-de-sharepoint">Arquitectura General de SharePoint</h1>
+<h2 id="resumen">Resumen</h2>
+<p>La solución está estructurada utilizando un <strong>Hub Site</strong> principal para "Casa Familiar Events", al cual se asocian <strong>sitios secundarios (Team Sites)</strong> para cada evento específico.</p>
+<h2 id="estructura-de-sitios">Estructura de Sitios</h2>
+<ul>
+<li><strong>Hub Site:</strong> <code>Casa Familiar Events Hub</code><ul>
+<li>Sitios Asociados (Eventos):<ul>
+<li><code>Fall Festival</code></li>
+<li><code>Haunted House</code></li>
+<li><code>Día de Muertos</code></li>
+<li><code>Thanksgiving</code></li>
+<li><code>Día de Reyes</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="gestión-de-comités-y-permisos-estrategia-para-alta-rotación">Gestión de Comités y Permisos (Estrategia para Alta Rotación)</h2>
+<p>Dado que la rotación constante de los miembros del comité año tras año es una realidad, la gestión de identidad es la pieza central de esta arquitectura.</p>
+<ul>
+<li>Cada sitio de evento tendrá un <strong>Microsoft 365 Group</strong> único y persistente.</li>
+<li><strong>Onboarding/Offboarding Centralizado:</strong> La rotación anual se gestiona <strong>exclusivamente</strong> agregando o eliminando miembros del grupo M365 a través de Entra ID o el Admin Center.<ul>
+<li><em>Ventaja clave:</em> Al dejar un comité, el voluntario pierde instantáneamente el acceso a correos, calendarios y archivos logísticos confidenciales para el próximo año.</li>
+<li><em>Riesgo mitigado:</em> No se crean "grupos huérfanos" (ej: "Comité 2023", "Comité 2024"). Es un solo grupo que muta sus miembros.</li>
+</ul>
+</li>
+<li><strong>Roles y Gobernanza:</strong><ul>
+<li><strong>Site Owners (Leads):</strong> 2 personas. Tienen control total sobre las listas, flujos y permisos de su sub-sitio. Son responsables de "Cerrar" el año.</li>
+<li><strong>Site Members (Comité):</strong> ~8 personas. Pueden agregar, editar y completar tareas en las listas de su evento. No pueden borrar elementos ni borrar Vistas (se debe configurar el nivel de permiso <em>Contribute</em> sin <em>Delete</em> para proteger la auditoría).</li>
+<li><strong>Site Visitors:</strong> Empleados o voluntarios que solo necesitan ver el progreso (Solo lectura).</li>
+<li><strong>External Sharing:</strong> Debe estar bloqueado o restringido para asegurar que las minutas, bases de datos o contratos permanezcan accesibles solo para el personal interno.</li>
+</ul>
+</li>
+</ul>
+<h2 id="unificación-y-mantenibilidad-enfoque-de-desarrollo">Unificación y Mantenibilidad (Enfoque de Desarrollo)</h2>
+<p>Para lograr la mantenibilidad requerida por un perfil técnico (Developer) y unificar los sitios:</p>
+<ol>
+<li><strong>Configuración del Hub Site:</strong> La navegación principal, el branding y los permisos globales (si aplica) se gestionan desde el Hub.</li>
+<li><strong>Site Templates / Site Scripts (JSON):</strong> <ul>
+<li>Crear un esquema de sitio base usando JSON/PowerShell que contenga todas las listas requeridas. Al aplicar esta plantilla a cualquier evento nuevo o existente, las listas estándar se generarán o actualizarán automáticamente.</li>
+<li><em>Consideración profunda:</em> Esto permite que en el futuro, si se agrega un nuevo evento (ej: "Posada Navideña"), lanzar el portal tome 5 minutos y respete exactamente las mismas columnas.</li>
+</ul>
+</li>
+<li><strong>Site Columns y Content Types:</strong> Definirlos a nivel de Hub y publicarlos en los sitios secundarios (Content Type Hub) para que todas las listas de eventos compartan exactamente los mismos nombres internos e IDs de esquema (ej: <code>Task Status</code>, <code>Event Year</code>). Esto es crucial para el cruce de datos (Roll-up) y consolidaciones en PowerBI.</li>
+</ol>
+<h1 id="estructura-de-listas-y-contenido-detalle-profundo">Estructura de Listas y Contenido (Detalle Profundo)</h1>
+<p>Para mantener la estandarización y evitar diferencias entre los sitios de eventos, cada sub-sitio de evento contendrá las siguientes listas. Todas deben usar Content Types definidos en el Hub.</p>
+<h2 id="1-lista-event-tasks">1. Lista: Event Tasks</h2>
+<p>Lista principal para el seguimiento de actividades.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Column</th>
+<th align="left">Data Type</th>
+<th align="left">Description / Options</th>
+<th align="left">Advanced Configuration</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Title</strong></td>
+<td align="left">Text</td>
+<td align="left">Nombre de la tarea.</td>
+<td align="left">Requerido</td>
+</tr>
+<tr>
+<td align="left"><strong>Description</strong></td>
+<td align="left">Multiple lines text</td>
+<td align="left">Detalles de la responsabilidad.</td>
+<td align="left">Rich Text habilitado</td>
+</tr>
+<tr>
+<td align="left"><strong>Assigned To</strong></td>
+<td align="left">Person or Group</td>
+<td align="left">Persona asignada.</td>
+<td align="left">Restringido al M365 Group del sitio</td>
+</tr>
+<tr>
+<td align="left"><strong>Status</strong></td>
+<td align="left">Choice</td>
+<td align="left"><code>Pending</code>, <code>In Progress</code>, <code>Blocked</code>, <code>Completed</code>, <code>Cancelled</code>.</td>
+<td align="left">Default: <code>Pending</code>. Formato Condicional (Rojo/Amarillo/Verde)</td>
+</tr>
+<tr>
+<td align="left"><strong>Year (Cycle)</strong></td>
+<td align="left">Choice (o Number)</td>
+<td align="left">Año al que pertenece (ej: <code>2024</code>).</td>
+<td align="left">Indexado. Requerido.</td>
+</tr>
+<tr>
+<td align="left"><strong>Start Date</strong></td>
+<td align="left">Date and Time</td>
+<td align="left">Cuándo debe comenzar la tarea.</td>
+<td align="left">Friendly Format</td>
+</tr>
+<tr>
+<td align="left"><strong>Due Date</strong></td>
+<td align="left">Date and Time</td>
+<td align="left">Fecha límite o de finalización.</td>
+<td align="left">Validación: Mayor a Start Date</td>
+</tr>
+<tr>
+<td align="left"><strong>Closing Notes</strong></td>
+<td align="left">Multiple lines text</td>
+<td align="left">Lecciones aprendidas.</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left"><strong>Lead Approval</strong></td>
+<td align="left">Yes/No</td>
+<td align="left">Check para tareas críticas.</td>
+<td align="left">Visible solo a Owners o vía validación de lista.</td>
+</tr>
+</tbody></table>
+<p><em>Análisis Profundo:</em> Indexar la columna <code>Year (Cycle)</code> es esencial cuando la lista supera los 5,000 elementos (eventos a largo plazo), asegurando que las Vistas activas no se rompan (límite de Threshold de SharePoint).</p>
+<h2 id="2-lista-committee-roster-roles-y-miembros">2. Lista: Committee Roster (Roles y Miembros)</h2>
+<p>Lista para registrar quién participó en qué rol en cada comité anual.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Column</th>
+<th align="left">Data Type</th>
+<th align="left">Description / Options</th>
+<th align="left">Advanced Configuration</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Title (Name)</strong></td>
+<td align="left">Person or Group</td>
+<td align="left">Usuario de M365 perteneciente al comité.</td>
+<td align="left">Mostrar foto de perfil</td>
+</tr>
+<tr>
+<td align="left"><strong>Committee Role</strong></td>
+<td align="left">Choice</td>
+<td align="left"><code>Lead</code>, <code>Member</code>.</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left"><strong>Area/Department</strong></td>
+<td align="left">Choice</td>
+<td align="left"><code>Logistics</code>, <code>Marketing</code>, <code>Volunteering</code>.</td>
+<td align="left">Permite crear vistas de directorio precisas</td>
+</tr>
+<tr>
+<td align="left"><strong>Year</strong></td>
+<td align="left">Choice / Number</td>
+<td align="left">Año de participación (ej: <code>2024</code>).</td>
+<td align="left">-</td>
+</tr>
+</tbody></table>
+<h2 id="3-lista-risks--issues-registro-de-riesgos">3. Lista: Risks &amp; Issues (Registro de Riesgos)</h2>
+<p>Los eventos a menudo sufren contratiempos imprevistos no considerados tareas normales. Separar esto de 'Event Tasks' permite medir el nivel de salud del proyecto.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Column</th>
+<th align="left">Data Type</th>
+<th align="left">Description / Options</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Risk/Issue</strong></td>
+<td align="left">Text</td>
+<td align="left">Ej: "Faltan permisos del Ayuntamiento"</td>
+</tr>
+<tr>
+<td align="left"><strong>Impact</strong></td>
+<td align="left">Choice</td>
+<td align="left"><code>High</code>, <code>Medium</code>, <code>Low</code></td>
+</tr>
+<tr>
+<td align="left"><strong>Mitigation Plan</strong></td>
+<td align="left">Multiple lines</td>
+<td align="left">Qué se hará al respecto.</td>
+</tr>
+<tr>
+<td align="left"><strong>Status</strong></td>
+<td align="left">Choice</td>
+<td align="left"><code>Open</code>, <code>Resolved</code></td>
+</tr>
+<tr>
+<td align="left"><strong>Year</strong></td>
+<td align="left">Choice / Number</td>
+<td align="left">Año</td>
+</tr>
+</tbody></table>
+<h2 id="4-document-library-event-documents">4. Document Library: Event Documents</h2>
+<p>Estructura unificada que asegura la Retention Policy.</p>
+<ul>
+<li><em>Folder:</em> <code>/2023/</code></li>
+<li><em>Folder:</em> <code>/2024/</code><ul>
+<li><em>Folder:</em> <code>/2024/Committee Minutes/</code></li>
+<li><em>Folder:</em> <code>/2024/Contracts and Permits/</code></li>
+<li><em>Folder:</em> <code>/2024/Invoices/</code></li>
+</ul>
+</li>
+</ul>
+<p><em>Análisis de Integridad:</em> Se sugiere obligar el Control de Versiones en esta biblioteca para evitar sobreescrituras accidentales de contratos, y aplicar <em>Retention Labels</em> nativos desde el Compliance Center para que "Contracts and Permits" no puedan borrarse por al menos 5 años (para auditoría fiscal de Non-Profit).</p>
+<h1 id="flujos-de-trabajo-y-ciclo-de-vida-del-evento-extendido">Flujos de Trabajo y Ciclo de Vida del Evento (Extendido)</h1>
+<p>A continuación se presentan los diagramas de ciclo de vida con un enfoque profundo en el manejo de excepciones y el archivado robusto.</p>
+<h2 id="1-ciclo-de-vida-de-tareas-event-task">1. Ciclo de Vida de Tareas (Event Task)</h2>
+<p>Gestiona las asignaciones y los posibles cuellos de botella (bloqueos y escalaciones).</p>
+<pre><code class="hljs mermaid">stateDiagram-v2
+    [*] --&gt; Pending : Creación Manual/Automática
+    Pending --&gt; InProgress : La persona asignada inicia el trabajo
+    InProgress --&gt; Blocked : Existe un Problema/Dependencia
+    Blocked --&gt; InProgress : Bloqueo resuelto
+    Blocked --&gt; Escalated : Si no se resuelve en 48h (Automático)
+    Escalated --&gt; InProgress : Intervención del Lead
+    InProgress --&gt; Completed : Trabajo finalizado
+    Pending --&gt; Cancelled : Tarea descartada (Con justificación)
+    Completed --&gt; [*]
+    Cancelled --&gt; [*]
+</code></pre>
+<h2 id="2-proceso-de-rollover-anual-rotación-de-comité-y-archivados">2. Proceso de Rollover Anual (Rotación de Comité y Archivados)</h2>
+<p>Dado que los comités cambian cada año, el rollover no puede simplemente asignar tareas a las mismas personas. El ciclo se centra en "limpiar responsabilidades" y despejar el tablero para el nuevo comité.</p>
+<pre><code class="hljs mermaid">sequenceDiagram
+    participant AD as M365 Admin (Entra ID)
+    participant Lead as Comité Lead Entrante/Saliente
+    participant SP as SharePoint (Listas)
+    participant PA as Power Automate
+
+    Lead-&gt;&gt;SP: Finaliza el evento (Tareas en estado Completed/Cancelled)
+    Note over SP: Las tareas históricas permanecen "congeladas" bajo la columna [Year]
+    Lead-&gt;&gt;AD: Elimina a los miembros del comité viejo del M365 Group
+    Lead-&gt;&gt;AD: Agrega a los miembros del comité nuevo al M365 Group
+    Lead-&gt;&gt;SP: Actualiza la lista "Committee Roster" con nuevos miembros y el New Year
+    Lead-&gt;&gt;PA: Ejecuta el flujo "Prepare Next Year" (Botón de Flujo)
+    PA-&gt;&gt;SP: Extrae las "Master Tasks" (ej: "Get City Hall Permit", "Table Rentals")
+    PA-&gt;&gt;SP: Genera nuevas tareas asignando [Year] = Next Year (Status = Pending)
+    Note over PA: CRÍTICO: La columna 'Assigned To' en las nuevas tareas se deja VACÍA.
+    SP--&gt;&gt;Lead: El tablero está limpio. El nuevo Lead puede comenzar a asignar tareas al nuevo comité.
+</code></pre>
+<h2 id="3-flujo-de-notificaciones-y-acuerdo-de-nivel-de-servicio-sla">3. Flujo de Notificaciones y Acuerdo de Nivel de Servicio (SLA)</h2>
+<p>Para evitar la saturación de correos electrónicos, el flujo incorpora verificaciones de tiempo (Recurrencia Diaria) en Power Automate en lugar de notificaciones instantáneas para todo.</p>
+<pre><code class="hljs mermaid">flowchart TD
+    A["Trigger: Recurrencia Diaria (8:00 AM)"] --&gt; B["Obtener tareas 'In Progress' o 'Pending'"]
+    B --&gt; C{"¿Vence en &lt; 3 días?"}
+    C -- "Sí" --&gt; E["Añadir al Resumen Diario"]
+    C -- "No" --&gt; D{"¿Está Bloqueada?"}
+    D -- "Sí" --&gt; E
+    D -- "No" --&gt; F["Siguiente tarea"]
+    E --&gt; F
+    F --&gt; G{"¿Quedan más tareas?"}
+    G -- "Sí" --&gt; C
+    G -- "No" --&gt; H{"¿Resumen vacío?"}
+    H -- "No" --&gt; I["Enviar mensaje en Teams (Canal Comité)"]
+    H -- "Sí" --&gt; J["Fin del Flujo"]
+    I --&gt; J
+</code></pre>
+<p><em>Análisis Operativo:</em> Un Resumen Diario es infinitamente mejor para la <em>Gobernanza</em> que disparar un correo por cada elemento de lista creado. Ayuda a mantener la tranquilidad del comité y aumenta la probabilidad de que las alertas sean leídas y atendidas.</p>
+<h1 id="guía-maestra-de-implementación-sistema-casa-familiar-events">Guía Maestra de Implementación: Sistema "Casa Familiar Events"</h1>
+<p>Esta es la guía definitiva para implementar y administrar el ecosistema de sitios de eventos. El sistema está diseñado en la <strong>Experiencia Moderna de SharePoint</strong> (Modern Experience).</p>
+<hr>
+<h2 id="prerrequisitos-de-automatización-septiembre-2024">Prerrequisitos de Automatización (Septiembre 2024)</h2>
+<p>Antes de ejecutar cualquier script (<code>.ps1</code>) o subir archivos JSON, tienes dos opciones según tu preferencia:</p>
+<h3 id="opción-a-módulo-oficial-de-sharepoint-spo">Opción A: Módulo Oficial de SharePoint (SPO)</h3>
+<ul>
+<li><strong>Uso:</strong> Ideal para registrar el Site Script (JSON) de forma "oficial".</li>
+<li><strong>Fácil:</strong> No requiere registrar aplicaciones de terceros.</li>
+<li><strong>Guía:</strong> <strong>[[04j-Official-SPO-Deployment|Ver pasos con el módulo oficial aquí]]</strong>.</li>
+</ul>
+<h3 id="opción-b-pnp-powershell-recomendado-para-expertos">Opción B: PnP PowerShell (Recomendado para Expertos)</h3>
+<ul>
+<li><strong>Uso:</strong> Necesario para crear carpetas, menús complejos y automatización de contenido.</li>
+<li><strong>Poderoso:</strong> Mucho más flexible pero requiere el registro de Entra ID.</li>
+<li><strong>Guía:</strong> <strong>[[04e-Detalle-Site-Scripts|Ver pasos con PnP aquí]]</strong>.</li>
+</ul>
+<hr>
+<h2 id="fase-1-configuración-del-hub-the-brain">Fase 1: Configuración del Hub (The "Brain")</h2>
+<p><em>Esta fase se realiza manualmente por única vez en el sitio principal.</em></p>
+<ol>
+<li><strong>Crear el Hub Site:</strong><ul>
+<li>Nombre: <code>Event Planning Improvements Project</code> (o el nombre de tu Hub).</li>
+<li>Registrarlo como <strong>Hub Site</strong> en el Centro de Administración de SharePoint.</li>
+</ul>
+</li>
+<li><strong>Columnas de Sitio (The Metadata):</strong><ul>
+<li>Define las 3 columnas maestras en el Hub para que todos los eventos hablen el mismo idioma.</li>
+<li><strong>[[04a-Detalle-Columnas-Base|Ver configuración exacta de columnas aquí]]</strong></li>
+</ul>
+</li>
+<li><strong>Políticas de Cumplimiento (Compliance):</strong><ul>
+<li>Configura las reglas para que los contratos y actas no se borren por error.</li>
+<li><strong>[[04d-Detalle-Retention-Policies|Ver configuración de Retención]]</strong></li>
+</ul>
+</li>
+<li><strong>Estructura de Archivos y Menú:</strong><ul>
+<li>Configura las bibliotecas de "Master Templates" y el "MegaMenu" en inglés.</li>
+<li><strong>[[08-Hub-Site-English-Content|Ver blueprint del Hub y Menú]]</strong></li>
+<li><strong>[[09-Event-Site-Folder-Structure|Ver estructura operativa para Sitios de Eventos]]</strong></li>
+<li><strong>Automatización:</strong> Usa <code>create-hub-folders.ps1</code> para el Hub y <code>create-event-folders.ps1</code> para cada sitio nuevo.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="fase-2-automatización-de-sitios-the-blueprint">Fase 2: Automatización de Sitios (The "Blueprint")</h2>
+<p><em>Usa plantillas (Site Scripts) para crear sitios de eventos en 2 minutos.</em></p>
+<ol>
+<li><strong>El Molde Maestro (JSON):</strong><ul>
+<li>Usa la versión "Ultimate" que ya tiene todos los campos de Tareas, Presupuesto, Riesgos y Roster configurados.</li>
+<li><strong>[[04h-Site-Script|Instrucciones de Despliegue del Script V5]]</strong></li>
+</ul>
+</li>
+<li><strong>Registro del Tema (Branding):</strong><ul>
+<li>Asegúrate de registrar el tema "Teal" para que los sitios se vean profesionales. (Instrucciones dentro de la guía de Site Scripts arriba).</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="fase-3-gobierno-y-continuidad-the-control">Fase 3: Gobierno y Continuidad (The "Control")</h2>
+<p><em>Cómo mantener el orden a través de los años.</em></p>
+<ol>
+<li><strong>Plan de Gobernanza:</strong><ul>
+<li>Reglas sobre quién puede editar qué y cuándo los sitios pasan a modo "Solo Lectura".</li>
+<li><strong>[[05-Plan-Gobernanza-Datos|Plan de Gobernanza de Datos]]</strong></li>
+</ul>
+</li>
+<li><strong>Estrategia de Reutilización:</strong><ul>
+<li>¿Crear sitio nuevo o limpiar el viejo? (Pista: Siempre es mejor uno nuevo).</li>
+<li><strong>[[06-Estrategia-Reutilizacion-Anual|Plan de Reutilización Anual]]</strong></li>
+</ul>
+</li>
+<li><strong>Gestión Centralizada de Archivos:</strong><ul>
+<li>Cómo fluyen las plantillas desde el Hub hacia los sitios de eventos.</li>
+<li><strong>[[07-Estrategia-Archivos-Centralizados|Estrategia de Documentos]]</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="fase-4-visualización-y-formato-the-look">Fase 4: Visualización y Formato (The "Look")</h2>
+<p><em>Haz que la información sea fácil de consumir para los voluntarios.</em></p>
+<ol>
+<li><strong>Formato de Colores (JSON):</strong><ul>
+<li>Códigos para que el estatus "Blocked" sea rojo y "Completed" verde automáticamente.</li>
+<li><strong>[[04b-JSON-Formatting-Templates|Ver códigos de formato visual]]</strong></li>
+</ul>
+</li>
+<li><strong>Diseño de Páginas:</strong><ul>
+<li>Cómo acomodar los elementos en la página principal para que el comité vea sus tareas al entrar.</li>
+<li><strong>[[04f-Detalle-Visualizacion-Paginas|Ver guía de diseño de páginas]]</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="fase-5-futuras-mejoras-native-power">Fase 5: Futuras Mejoras (Native Power)</h2>
+<p>Para el futuro, considera usar herramientas nativas para extender la funcionalidad:</p>
+<ul>
+<li><strong>[[05-Future-Native-Improvements|Ver ideas de automatización con Power Automate]]</strong></li>
+</ul>
+<hr>
+<h1 id="plan-de-implementación-del-sitio-extendido">Plan de Implementación del Sitio (Extendido)</h1>
+<p>Este plan cubre todo desde la configuración inicial hasta el plan de gobernanza y adopción de usuarios (Change Management).</p>
+<blockquote>
+<p>[!NOTE] 
+<strong>¿Requiere Desarrollo?</strong>
+El grueso de esta arquitectura es <strong>Configuración Out-of-the-Box (OOTB)</strong> (haciendo clic en la interfaz de SharePoint).
+NO se requiere programación tradicional (como React o C#). 
+Sin embargo, incluye ligeras cargas de <strong>Low-Code/Scripting</strong> (marcadas con la etiqueta [LOW-CODE]) en dos áreas: </p>
+<ol>
+<li>Power Automate: Para conectar flujos lógicos (arrastrar y soltar bloques condicionales).</li>
+<li>JSON/PnP PowerShell: Para automatizar la creación de sitios en lugar de hacerlo de forma manual e iterativa.</li>
+</ol>
+</blockquote>
+<h2 id="fase-1-arquitectura-de-hub-y-gobernanza-data-governance">Fase 1: Arquitectura de Hub y Gobernanza (Data Governance)</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>1.1. Crear Hub Site:</strong> Crear un Communication Site ("Casa Familiar Events") y registrarlo. [CONFIGURATION]</li>
+<li><input disabled="" type="checkbox"> <strong>1.2. Site Columns (Nivel Hub):</strong> Crear tipos de datos CF_TaskStatus, CF_YearCycle, CF_CommitteeRole. [CONFIGURATION]</li>
+<li><input disabled="" type="checkbox"> <strong>1.3. Content Types (Nivel Hub):</strong> Agrupar Site Columns en Event Task CT y Roster CT, y publicarlos (Content Type Publisher). [CONFIGURATION]</li>
+<li><input disabled="" type="checkbox"> <strong>1.4. Retention Policies (Compliance Center):</strong> Aplicar políticas de auditoría a las bibliotecas de documentos (vida útil obligatoria de 5 años para contratos). [CONFIGURATION]</li>
+</ul>
+<h2 id="fase-2-automatización-del-despliegue-de-sitios-desarrollo-ligero">Fase 2: Automatización del Despliegue de Sitios (Desarrollo Ligero)</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>2.1. Plantilla (Site Script &amp; Site Design):</strong> [LOW-CODE] Desarrollar scripts JSON y PnP PowerShell que instalen automáticamente las listas (Event Tasks, Risks, Committee Roster, Event Budget) sobre los grupos de M365 creados.</li>
+<li><input disabled="" type="checkbox"> <strong>2.2. Aprovisionamiento:</strong> [LOW-CODE] Ejecutar el Site Design en los 5 sitios base (Fall Festival, Haunted House...). Esto elimina errores tipográficos al escribir columnas manualmente.</li>
+</ul>
+<h2 id="fase-3-configuración-de-interfaz-y-vistas-nativas">Fase 3: Configuración de Interfaz y Vistas Nativas</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>3.1. Formato de Vistas (List Formatting):</strong> [LOW-CODE] Aplicar JSON Formatters (código JSON nativo de SharePoint) para colorear toda la fila de verde si está Completed o de rojo grueso si está Blocked.</li>
+<li><input disabled="" type="checkbox"> <strong>3.2. Vistas Indexadas:</strong> Crear un índice a nivel de plataforma para la columna CF_YearCycle para prevenir el colapso del sitio a largo plazo (List Threshold de 5,000 elementos). [CONFIGURATION]</li>
+<li><input disabled="" type="checkbox"> <strong>3.3. Hub Central Dashboard:</strong> Configurar Highlighted Content Webparts en el Hub central para mostrar "Tareas Bloqueadas Recientes". [CONFIGURATION]</li>
+</ul>
+<h2 id="fase-4-flujos-operativos-y-notificaciones-plumbing--flow">Fase 4: Flujos Operativos y Notificaciones (Plumbing / Flow)</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>4.1. Resumen Diario de Vencimientos:</strong> [LOW-CODE] Programar el "Daily Digest" en Power Automate para verificar tareas vencidas.</li>
+<li><input disabled="" type="checkbox"> <strong>4.2. Flujo de Rollover Automático:</strong> [LOW-CODE] Crear el flujo maestro que clona tareas críticas del ciclo anterior y prepara al nuevo comité.</li>
+</ul>
+<h2 id="fase-5-estrategia-de-adopción-change-management">Fase 5: Estrategia de Adopción (Change Management)</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>5.1. Piloto Técnico (UAT):</strong> Probar los flujos con usuarios ficticios en 1 sitio o con el equipo técnico.</li>
+<li><input disabled="" type="checkbox"> <strong>5.2. Playbook / Manual del Comité:</strong> Crear una WIKI o página dentro del Hub Site llamada "Cómo gestionar mi evento" (capacitación asíncrona para la rotación constante de voluntarios).</li>
+<li><input disabled="" type="checkbox"> <strong>5.3. Limitación de Daños (Permisos):</strong> Validar que los permisos para el Committee Roster no permitan borrar la lista completa. (Cambiar nivel Contributor -&gt; Nivel de permiso personalizado sin capacidad de borrar listas/elementos).</li>
+<li><input disabled="" type="checkbox"> <strong>5.4. Go-Live y Soporte Temprano:</strong> Incorporar a los comités reales del año actual e iniciar el soporte de hypercare por 2 a 3 semanas.</li>
+</ul>
+<h1 id="detalle-técnico-columnas-de-sitio-modern-sharepoint">Detalle Técnico: Columnas de Sitio (Modern SharePoint)</h1>
+<blockquote>
+<p>[!NOTE]
+En la interfaz moderna (<strong>Modern Experience</strong>), algunas configuraciones avanzadas aún requieren acceder al panel de <em>Site Settings</em> tradicional, pero la aplicación de estas columnas a las listas es 100% moderna.</p>
+</blockquote>
+<h3 id="1-¿qué-son-las-site-columns">1. ¿Qué son las "Site Columns"?</h3>
+<p><strong>No son listas.</strong> Imagínalas como los "encabezados" o "categorías" que utilizarás más adelante dentro de tus listas.</p>
+<ul>
+<li><strong>Una Lista</strong> es como una hoja de Excel (ej: "Lista de Tareas").</li>
+<li><strong>Una Site Column</strong> es la definición del campo (ej: "Estado") que vive al nivel del sitio para que puedas usarlo en muchas hojas de Excel diferentes sin tener que volver a crearlo.</li>
+</ul>
+<p>En SharePoint, una <strong>Site Column</strong> es una definición de columna reutilizable. A diferencia de una columna de lista estándar, si cambias la configuración de una Site Column (ej: agregas una nueva opción de estado), el cambio puede propagarse automáticamente a todas las listas que la utilizan.</p>
+<h3 id="2-configuración-de-las-3-columnas-maestras-paso-a-paso">2. Configuración de las 3 Columnas Maestras (Paso a Paso)</h3>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Ubicación:</strong> Ve siempre a tu <strong>HUB SITE</strong> primero.
+Haz clic en el icono del engrane (<strong>Settings</strong> -&gt; <strong>Site information</strong> -&gt; <strong>View all site settings</strong> -&gt; <strong>Site columns</strong> -&gt; <strong>Create</strong>.</p>
+</blockquote>
+<hr>
+<h4 id="a-columna-cf_taskstatus">A. Columna: <code>CF_TaskStatus</code></h4>
+<ul>
+<li><strong>Nombre de columna:</strong> <code>CF_TaskStatus</code></li>
+<li><strong>Tipo:</strong> <code>Choice (menú para elegir)</code></li>
+<li><strong>Grupo:</strong> <code>New group</code> -&gt; <code>_Casa Familiar</code></li>
+<li><strong>Descripción:</strong> <code>Estandarizar el progreso de las tareas.</code></li>
+<li><strong>Requerir que esta columna contenga información:</strong> <code>Sí</code> (Importante: cada tarea debe tener un estado).</li>
+<li><strong>Forzar valores únicos:</strong> <code>No</code><pre><code class="hljs text">1. Pending
+2. In Progress
+3. Blocked
+4. Completed
+</code></pre>
+</li>
+<li><strong>Permitir opciones 'Fill-in':</strong> <code>No</code> (Crítico: permitir estados personalizados rompe la automatización de tareas).</li>
+<li><strong>Mostrar opciones usando:</strong> <code>Drop-Down Menu</code></li>
+<li><strong>Valor por defecto:</strong> <code>1. Pending</code></li>
+</ul>
+<hr>
+<h4 id="b-columna-cf_yearcycle">B. Columna: <code>CF_YearCycle</code></h4>
+<ul>
+<li><strong>Nombre de columna:</strong> <code>CF_YearCycle</code></li>
+<li><strong>Tipo:</strong> <code>Choice (menú para elegir)</code></li>
+<li><strong>Grupo:</strong> <code>Existing group</code> -&gt; <code>_Casa Familiar</code></li>
+<li><strong>Descripción:</strong> <code>Ciclo anual del evento (ej: 2025).</code></li>
+<li><strong>Requerir que esta columna contenga información:</strong> <code>Sí</code> (Importante para el seguimiento histórico).</li>
+<li><strong>Opciones:</strong><pre><code class="hljs text">2024
+2025
+2026
+2027
+</code></pre>
+</li>
+<li><strong>Permitir opciones 'Fill-in':</strong> <code>Sí</code> (Importante: permite agregar años futuros sin editar la configuración).</li>
+<li><strong>Mostrar opciones usando:</strong> <code>Drop-Down Menu</code></li>
+<li><strong>Valor por defecto:</strong> <code>Choice</code> -&gt; (Dejar vacío o seleccionar el año actual).</li>
+</ul>
+<hr>
+<h4 id="c-columna-cf_committeerole">C. Columna: <code>CF_CommitteeRole</code></h4>
+<ul>
+<li><strong>Nombre de columna:</strong> <code>CF_CommitteeRole</code></li>
+<li><strong>Tipo:</strong> <code>Choice (menú para elegir)</code></li>
+<li><strong>Grupo:</strong> <code>Existing group</code> -&gt; <code>_Casa Familiar</code></li>
+<li><strong>Descripción:</strong> <code>Rol dentro del comité del evento.</code></li>
+<li><strong>Requerir que esta columna contenga información:</strong> <code>No</code> (Opcional, ya que algunas tareas podrían no estar asignadas a un rol específico aún).</li>
+<li><strong>Opciones:</strong><pre><code class="hljs text">Event Lead
+Logistics
+Finance / Treasury
+Volunteer Management
+Communication / Marketing
+</code></pre>
+</li>
+<li><strong>Permitir opciones 'Fill-in':</strong> <code>Sí</code> (Útil si surge un nuevo rol en el comité durante el año).</li>
+<li><strong>Mostrar opciones usando:</strong> <code>Drop-Down Menu</code></li>
+<li><strong>Valor por defecto:</strong> (Dejar vacío).</li>
+</ul>
+<h3 id="3-ventajas-de-este-enfoque">3. Ventajas de este Enfoque</h3>
+<ol>
+<li><strong>Mantenimiento Centralizado:</strong> Si el comité decide agregar un estado llamado "En Revisión", solo lo agregas en un lugar.</li>
+<li><strong>Reportes Consolidados:</strong> Al usar exactamente el mismo nombre de columna y opciones.</li>
+<li><strong>Visualización Pro:</strong> Puedes aplicar [[04b-JSON-Formatting-Templates|Formatos JSON avanzados]] para que las listas sean fáciles de leer.</li>
+</ol>
+<hr>
+<h3 id="recursos-adicionales">Recursos Adicionales</h3>
+<ul>
+<li>[[04b-JSON-Formatting-Templates|Manual de Códigos JSON para Formato de Columnas]]</li>
+</ul>
+<h1 id="json-formatting-templates">JSON Formatting Templates</h1>
+<p>Estos códigos se pegan en la sección <strong>"Column Formatting"</strong> (al final de la pantalla de creación de la columna) o seleccionando la columna en la lista -&gt; <strong>Column settings</strong> -&gt; <strong>Format this column</strong>.</p>
+<h3 id="1-cf_taskstatus_formattingjson-para-cf_taskstatus-estado">1. [[CF_TaskStatus_Formatting|JSON para CF_TaskStatus (Estado)]]</h3>
+<p>Este JSON crea burbujas de color con texto en blanco para visibilidad inmediata.</p>
+<pre><code class="hljs json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"$schema"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"elmType"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"div"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"txtContent"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"@currentField"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"style"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"padding"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"4px 10px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"border-radius"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"16px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"color"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"white"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"font-weight"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"600"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"text-align"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"center"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"background-color"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"=if(@currentField == '1. Pending', '#607d8b', if(@currentField == '2. In Progress', '#0078d4', if(@currentField == '3. Blocked', '#d13438', if(@currentField == '4. Completed', '#107c10', '#f3f2f1'))))"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<hr>
+<h3 id="2-cf_yearcycle_formattingjson-para-cf_yearcycle-año">2. [[CF_YearCycle_Formatting|JSON para CF_YearCycle (Año)]]</h3>
+<p>Muestra el año en una etiqueta sutil con borde.</p>
+<pre><code class="hljs json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"$schema"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"elmType"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"div"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"txtContent"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"@currentField"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"style"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"padding"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2px 8px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"border"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"1px solid #0078d4"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"border-radius"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"4px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"color"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"#0078d4"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"font-weight"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"500"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"display"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"inline-block"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<hr>
+<h3 id="3-cf_committeerole_formattingjson-para-cf_committeerole-rol">3. [[CF_CommitteeRole_Formatting|JSON para CF_CommitteeRole (Rol)]]</h3>
+<p>Etiquetas tipo "pill" con colores suaves por rol.</p>
+<pre><code class="hljs json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"$schema"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"elmType"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"div"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"txtContent"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"@currentField"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"style"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"padding"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"4px 8px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"border-radius"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"8px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"background-color"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"=if(@currentField == 'Event Lead', '#edebe9', if(@currentField == 'Finance / Treasury', '#fff4ce', if(@currentField == 'Logistics', '#dff6dd', if(@currentField == 'Volunteer Management', '#d1e4fe', '#f3f2f1'))))"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"color"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"#323130"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"font-size"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"12px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"font-weight"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"500"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h1 id="detalle-técnico-content-types-plantillas-de-listas">Detalle Técnico: Content Types (Plantillas de Listas)</h1>
+<h3 id="1-¿qué-es-un-content-type">1. ¿Qué es un "Content Type"?</h3>
+<p>Si las <strong>Site Columns</strong> son los ingredientes, el <strong>Content Type</strong> es la "receta". Es una plantilla que agrupa varias columnas para que puedas aplicarlas a una lista de un solo golpe.</p>
+<hr>
+<h3 id="2-instrucciones-para-crear-el-content-type">2. Instrucciones para Crear el Content Type</h3>
+<p>Para ambos, ve a: <strong>Settings</strong> (Engranaje) -&gt; <strong>Site information</strong> -&gt; <strong>View all site settings</strong> -&gt; <strong>Site content types</strong> -&gt; <strong>Create content type</strong>.</p>
+<h4 id="a-content-type-event-task-ct-para-tareas">A. Content Type: <code>Event Task CT</code> (Para Tareas)</h4>
+<p>Llena los campos exactamente así:</p>
+<ul>
+<li><strong>Name:</strong> <code>Event Task CT</code></li>
+<li><strong>Description:</strong> <code>Plantilla maestra para las tareas de los eventos de Casa Familiar.</code></li>
+<li><strong>Category:</strong> Selecciona <strong>"New category"</strong> y escribe <code>_Casa Familiar</code> (Para que aparezca junto a tus columnas).</li>
+<li><strong>Parent content type:</strong><ul>
+<li><strong>Parent category:</strong> <code>List Content Types</code></li>
+<li><strong>Content type:</strong> <code>Item</code> (Es la base más limpia para construir listas personalizadas).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="b-content-type-roster-ct-para-el-comité">B. Content Type: <code>Roster CT</code> (Para el Comité)</h4>
+<p>Llena los campos exactamente así:</p>
+<ul>
+<li><strong>Name:</strong> <code>Roster CT</code></li>
+<li><strong>Description:</strong> <code>Plantilla maestra para el listado de personas y roles del comité.</code></li>
+<li><strong>Category:</strong> Selecciona <strong>"Existing category"</strong> -&gt; <code>_Casa Familiar</code>.</li>
+<li><strong>Parent content type:</strong><ul>
+<li><strong>Parent category:</strong> <code>List Content Types</code></li>
+<li><strong>Content type:</strong> <code>Item</code>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-el-paso-final-agregar-tus-columnas">3. El Paso Final: Agregar tus Columnas</h3>
+<p>Una vez que le des a <strong>Create</strong>, SharePoint te llevará a la pantalla del nuevo Content Type. Haz lo siguiente para terminar la "receta":</p>
+<ol>
+<li>Haz clic en <strong>Add site column</strong> (o <em>Add from existing site columns</em>).</li>
+<li>Busca tu grupo <code>_Casa Familiar</code>.</li>
+<li>Agrega las columnas correspondientes:<ul>
+<li>Para <code>Event Task CT</code>: Agrega <code>CF_TaskStatus</code> y <code>CF_YearCycle</code>.</li>
+<li>Para <code>Roster CT</code>: Agrega <code>CF_CommitteeRole</code> y <code>CF_YearCycle</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="📂relacionado">📂Relacionado</h3>
+<ul>
+<li>[[04a-Detalle-Columnas-Base|Guía de Columnas (Ingredientes)]]</li>
+<li>[[04-Guia-Implementacion-Practica|Volver a la Guía Principal]]</li>
+</ul>
+<h1 id="detalle-técnico-retention-policies-microsoft-purview">Detalle Técnico: Retention Policies (Microsoft Purview)</h1>
+<h3 id="1-¿qué-es-una-retention-policy">1. ¿Qué es una Retention Policy?</h3>
+<p>Es una regla de cumplimiento que vive por encima de SharePoint, en el <strong>Microsoft Purview (Compliance Center)</strong>. Sirve para asegurar que la información importante no se pierda, ya sea por error humano o de forma intencionada.</p>
+<p>En tu proyecto, los <strong>contratos y presupuestos</strong> son críticos. Una política de retención garantiza que, aunque alguien intente borrar un archivo, SharePoint guardará una copia oculta durante el tiempo que definas.</p>
+<hr>
+<h3 id="2-configuración-en-microsoft-purview">2. Configuración en Microsoft Purview</h3>
+<p>Para configurar esto, un administrador debe ir a: <strong>Microsoft 365 Admin Center</strong> -&gt; <strong>Compliance</strong> (o Purview) -&gt; <strong>Data Lifecycle Management</strong> -&gt; <strong>Microsoft 365</strong> -&gt; <strong>Retention Policies</strong>.</p>
+<h4 id="configuración-recomendada-para-casa-familiar">Configuración Recomendada para Casa Familiar:</h4>
+<ul>
+<li><strong>Name:</strong> <code>Retention Policy - Event Contracts (5 Years)</code></li>
+<li><strong>Description:</strong> <code>Retención obligatoria para documentos de contratos y finanzas de eventos.</code></li>
+<li><strong>Type:</strong> <strong>Static</strong> (Para aplicar a sitios específicos).</li>
+<li><strong>Locations:</strong> Selecciona <strong>SharePoint sites</strong>. Puedes elegir aplicarlo a todos los sitios o solo a los que pertenecen al Hub de eventos.</li>
+<li><strong>Retention Settings:</strong><ul>
+<li><strong>Retain items for a specific period:</strong> <code>5 years</code>.</li>
+<li><strong>Start the retention period based on:</strong> <code>When items were created</code>.</li>
+<li><strong>At the end of the retention period:</strong> <code>Do nothing</code> (o borrar automáticamente si quieres limpieza total).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-¿cómo-funciona-en-la-vida-real">3. ¿Cómo funciona en la vida real?</h3>
+<p>Si un usuario intenta borrar un contrato bajo esta política:</p>
+<ol>
+<li>El archivo parece desaparecer de la biblioteca de documentos.</li>
+<li>Sin embargo, SharePoint lo mueve automáticamente a una biblioteca oculta llamada <strong>"Preservation Hold Library"</strong>.</li>
+<li>Solo los administradores con permisos especiales pueden ver o recuperar esos archivos de esa biblioteca oculta durante los 5 años que dura la política.</li>
+</ol>
+<h3 id="4-diferencia-entre-retention-policy-y-retention-label">4. Diferencia entre "Retention Policy" y "Retention Label"</h3>
+<ul>
+<li><strong>Policy (Política):</strong> Se aplica a <strong>todo el sitio</strong> o biblioteca. Es automática y el usuario no tiene que hacer nada. <em>(Esta es la recomendada para tu Fase 1).</em></li>
+<li><strong>Label (Etiqueta):</strong> El usuario elige manualmente qué archivos marcar (ej: marcar solo el archivo "Contrato.pdf"). Es más flexible pero requiere que la gente se acuerde de poner la etiqueta.</li>
+</ul>
+<h3 id="📂-relacionado">📂 Relacionado</h3>
+<ul>
+<li>[[04-Guia-Implementacion-Practica|Volver a la Guía Principal]]</li>
+</ul>
+<h1 id="04e---guía-de-despliegue-de-site-scripts-v3">04e - Guía de Despliegue de Site Scripts (v3+)</h1>
+<p>Esta guía explica cómo registrar y aplicar los Site Scripts (<code>event-site-template.json</code> y <code>hub-site-template.json</code>) utilizando los estándares más recientes de PnP PowerShell (Posteriores a Septiembre 2024).</p>
+<h2 id="1-prerrequisitos-powershell-7">1. Prerrequisitos (PowerShell 7)</h2>
+<p>Microsoft actualizó las políticas de seguridad en Septiembre 2024. Ahora debes registrar tu propia aplicación en tu tenant para permitir los inicios de sesión interactivos.</p>
+<h3 id="11-registrar-la-app-de-pnp-en-entra-id">1.1 Registrar la App de PnP en Entra ID</h3>
+<p>Ejecuta este comando una sola vez por tenant:</p>
+<pre><code class="hljs powershell"><span class="hljs-built_in">Register-PnPEntraIDAppForInteractiveLogin</span>
+</code></pre>
+<ul>
+<li>Se abrirá una ventana del navegador. Inicia sesión con tu cuenta de administrador.</li>
+<li>Concede el consentimiento para la organización.</li>
+<li>IMPORTANTE: En tu terminal de PowerShell, aparecerá un Application (Client) ID. Cópialo y guárdalo.</li>
+</ul>
+<h2 id="2-conectar-a-sharepoint">2. Conectar a SharePoint</h2>
+<p>Una vez registrado, conéctate usando tu nuevo Client ID:</p>
+<pre><code class="hljs powershell"><span class="hljs-variable">$SiteURL</span> = <span class="hljs-string">"https://netorg4878279.sharepoint.com/sites/TuSitio"</span>
+<span class="hljs-variable">$ClientID</span> = <span class="hljs-string">"TU-CLIENT-ID-AQUI"</span>
+
+<span class="hljs-built_in">Connect-PnPOnline</span> <span class="hljs-literal">-Url</span> <span class="hljs-variable">$SiteURL</span> <span class="hljs-literal">-Interactive</span> <span class="hljs-literal">-ClientId</span> <span class="hljs-variable">$ClientID</span>
+</code></pre>
+<h2 id="3-registrar-el-site-script">3. Registrar el Site Script</h2>
+<p>Para agregar tu JSON como una plantilla en SharePoint:</p>
+<pre><code class="hljs powershell"><span class="hljs-comment"># Leer el archivo JSON</span>
+<span class="hljs-variable">$json</span> = <span class="hljs-built_in">Get-Content</span> <span class="hljs-literal">-Path</span> <span class="hljs-string">".\event-site-template.json"</span> <span class="hljs-literal">-Raw</span>
+
+<span class="hljs-comment"># Agregar el Site Script a SharePoint</span>
+<span class="hljs-built_in">Add-PnPSiteScript</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Casa Familiar - Event Site Template"</span> <span class="hljs-literal">-Content</span> <span class="hljs-variable">$json</span> <span class="hljs-literal">-Description</span> <span class="hljs-string">"Listas estandarizadas para planeación de eventos"</span>
+</code></pre>
+<p>Toma nota del ID devuelto por este comando.</p>
+<h2 id="4-crear-el-site-design-plantilla-de-sitio">4. Crear el Site Design (Plantilla de Sitio)</h2>
+<p>Ahora, vincula ese script a un "Site Design" para que aparezca en la interfaz web:</p>
+<pre><code class="hljs powershell"><span class="hljs-built_in">Add-PnPSiteDesign</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Event Planning Site"</span> <span class="hljs-literal">-SiteScriptIds</span> <span class="hljs-string">"EL-ID-DEL-PASO-3"</span> <span class="hljs-literal">-WebTemplate</span> <span class="hljs-string">"64"</span>
+</code></pre>
+<p>Nota: "64" es el ID para un Team Site.</p>
+<h2 id="5-aplicación-visual-interfaz-web">5. Aplicación Visual (Interfaz Web)</h2>
+<p>Una vez registrado vía PowerShell, puedes aplicarlo visualmente:</p>
+<ol>
+<li>Ve a tu nuevo sitio de SharePoint.</li>
+<li>Haz clic en Settings (Icono del engrane) -&gt; Apply a site template.</li>
+<li>Ve a la pestaña From your organization.</li>
+<li>Selecciona "Event Planning Site" y haz clic en Use template.</li>
+</ol>
+<hr>
+<blockquote>
+<p>[!TIP]
+Usa <code>Get-PnPSiteScript</code> y <code>Get-PnPSiteDesign</code> para listar las plantillas ya registradas.</p>
+</blockquote>
+<h1 id="detalle-técnico-visualización-en-páginas-web-parts">Detalle Técnico: Visualización en Páginas (Web Parts)</h1>
+<h3 id="1-la-diferencia-entre-lista-y-página">1. La Diferencia entre Lista y Página</h3>
+<ul>
+<li><strong>La Lista:</strong> Es el "depósito" de datos. Es donde entras a escribir las tareas, elegir el año y ver los colores. (Ej: <code>https://tu-sitio/Lists/EventTasks</code>).</li>
+<li><strong>La Página:</strong> Es la "cara" del sitio. Es lo que los usuarios ven al entrar (Home). Aquí es donde <strong>muestras</strong> la lista de forma elegante.</li>
+</ul>
+<hr>
+<h3 id="2-cómo-agregar-tus-columnas-maestras-a-una-lista">2. Cómo agregar tus Columnas Maestras a una Lista</h3>
+<p>Si ya tienes una lista creada y quieres empezar a usar tus columnas (Status, Year, Role), sigue esta ruta para no tener que crearlas de nuevo:</p>
+<ol>
+<li>Entra a la lista en SharePoint.</li>
+<li>Haz clic en el engrane (Settings) -&gt; List settings.</li>
+<li>Baja a la sección Columns y haz clic en Add from existing site columns.</li>
+<li>En "Select columns from", elige tu grupo _Casa Familiar.</li>
+<li>Selecciona la columna, dale a Add &gt; y luego a OK.</li>
+</ol>
+<hr>
+<h3 id="3-cómo-mostrar-tu-lista-en-la-página-principal-home">3. Cómo mostrar tu lista en la Página Principal (Home)</h3>
+<p>Para que el comité vea sus tareas al entrar al sitio:</p>
+<ol>
+<li>Ve a la página de inicio (Home) y haz clic en Edit (esquina superior derecha).</li>
+<li>Haz clic en el círculo con el símbolo de más (+) para agregar un nuevo web part.</li>
+<li>Busca y selecciona el web part de List.</li>
+<li>Selecciona la lista de tareas (ej: Event Tasks).</li>
+<li>Haz clic en Republish para guardar los cambios.</li>
+</ol>
+<hr>
+<h3 id="4-personalizar-la-vista-en-la-página">4. Personalizar la vista en la Página</h3>
+<p>Una vez que la lista está en la página, puedes:</p>
+<ul>
+<li><strong>Filtrar:</strong> Configurar el componente para que solo muestre las tareas "Blocked".</li>
+<li><strong>Esconder columnas:</strong> Para que la página no se vea muy cargada, puedes esconder la columna "ID" o "Creado por" y dejar solo lo importante.</li>
+</ul>
+<h3 id="5-resumen-visual">5. Resumen Visual</h3>
+<ul>
+<li><strong>¿Dónde vive la columna?</strong> En la Lista.</li>
+<li><strong>¿Dónde se ve el Dashboard?</strong> En la Página (usando el Web Part de Lista).</li>
+</ul>
+<h3 id="relacionado">Relacionado</h3>
+<ul>
+<li>[[04b-JSON-Formatting-Templates|Asegúrate de tener aplicados los colores JSON para que la página sea impactante.]]</li>
+<li>[[04-Guia-Implementacion-Practica|Volver a la Guía Principal]]</li>
+</ul>
+<h1 id="detalle-técnico-ultimate-site-script-v5---final">Detalle Técnico: Ultimate Site Script (V5 - Final)</h1>
+<p>Esta es la versión <strong>lista para producción</strong> de tu automatización de gestión de eventos. Cada lista está completamente equipada, los enlaces de navegación están preconfigurados y el branding se aplica automáticamente.</p>
+<hr>
+<h3 id="1-qué-incluye">1. Qué Incluye</h3>
+<table>
+<thead>
+<tr>
+<th align="left">List</th>
+<th align="left">Columns</th>
+<th align="left">Smart View</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Event Tasks</strong></td>
+<td align="left">Status, Year, Due Date, Start Date, Assigned To, Priority, Category, % Complete, Notes</td>
+<td align="left">"My Pending Tasks", "Blocked Tasks"</td>
+</tr>
+<tr>
+<td align="left"><strong>Risks</strong></td>
+<td align="left">Status, Risk Category, Probability, Impact Level, Mitigation Plan, Risk Owner, Review Date</td>
+<td align="left">"Active Risks"</td>
+</tr>
+<tr>
+<td align="left"><strong>Committee Roster</strong></td>
+<td align="left">Role, Year, Phone, Email, Availability, Emergency Contact, Special Skills</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left"><strong>Event Budget</strong></td>
+<td align="left">Expense Category, Vendor, Estimated Cost, Actual Cost, Payment Status, Approved By, Invoice Date, Receipt Notes</td>
+<td align="left">"Pending Payments"</td>
+</tr>
+</tbody></table>
+<p><strong>Plus:</strong> Tema Teal + Navegación MegaMenu + Enlaces en el menú izquierdo.</p>
+<hr>
+<h3 id="2-post-despliegue-convertir-campos-de-texto-a-choice">2. Post-Despliegue: Convertir Campos de Texto a Choice</h3>
+<p>Después de aplicar el script, mejora manualmente estos campos para un mejor control de datos:</p>
+<table>
+<thead>
+<tr>
+<th align="left">List</th>
+<th align="left">Field</th>
+<th align="left">Recommended Choices</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Event Tasks</td>
+<td align="left">Priority</td>
+<td align="left">High, Medium, Low</td>
+</tr>
+<tr>
+<td align="left">Event Tasks</td>
+<td align="left">Category</td>
+<td align="left">Venue, Catering, Entertainment, Marketing, Logistics</td>
+</tr>
+<tr>
+<td align="left">Risks</td>
+<td align="left">Probability</td>
+<td align="left">Low, Medium, High</td>
+</tr>
+<tr>
+<td align="left">Risks</td>
+<td align="left">Impact Level</td>
+<td align="left">Low, Medium, High, Critical</td>
+</tr>
+<tr>
+<td align="left">Event Budget</td>
+<td align="left">Payment Status</td>
+<td align="left">Pending, Approved, Paid, Cancelled</td>
+</tr>
+<tr>
+<td align="left">Event Budget</td>
+<td align="left">Expense Category</td>
+<td align="left">Venue Rental, Food &amp; Beverage, Decorations, Permits, Insurance, Marketing</td>
+</tr>
+<tr>
+<td align="left">Committee Roster</td>
+<td align="left">Availability</td>
+<td align="left">Full-Time, Part-Time, Event Day Only</td>
+</tr>
+</tbody></table>
+<p><strong>Cómo:</strong> List Settings → clic en el nombre de la columna → cambiar Type a Choice → agregar opciones → OK.</p>
+<hr>
+<h3 id="3-cómo-desplegar-estrategia-de-script-dual">3. Cómo Desplegar (Estrategia de Script Dual)</h3>
+<p>Dado que ahora tienes una arquitectura con un Hub central y múltiples Sitios de Eventos conectados, tienes <strong>dos scripts JSON diferentes</strong>.</p>
+<h4 id="a-desplegando-el-hub-site-script-hub-site-templatejson">A. Desplegando el Hub Site Script (<code>hub-site-template.json</code>)</h4>
+<p>Este script solo debe ejecutarse <strong>una vez</strong> en tu portal principal. Fuerza el tema Teal y establece el layout a MegaMenu con cabecera compacta.</p>
+<p><strong>Importante:</strong> Antes de ejecutar estos comandos, asegúrate de haber seguido la <strong>[[04e-Detalle-Site-Scripts|Nueva Guía de Autenticación]]</strong> para registrar tu Client ID.</p>
+<pre><code class="hljs powershell"><span class="hljs-comment"># Conectar usando PnP (Moderno)</span>
+<span class="hljs-built_in">Connect-PnPOnline</span> <span class="hljs-literal">-Url</span> https://netorg4878279.sharepoint.com/sites/TuHub <span class="hljs-literal">-Interactive</span> <span class="hljs-literal">-ClientId</span> <span class="hljs-string">"TU-ID"</span>
+
+<span class="hljs-variable">$hubContent</span> = <span class="hljs-built_in">Get-Content</span> <span class="hljs-string">".\hub-site-template.json"</span> <span class="hljs-literal">-Raw</span>
+<span class="hljs-variable">$hubResult</span> = <span class="hljs-built_in">Add-PnPSiteScript</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Casa Familiar - Hub Branding"</span> <span class="hljs-literal">-Content</span> <span class="hljs-variable">$hubContent</span>
+<span class="hljs-built_in">Add-PnPSiteDesign</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Apply Hub Branding"</span> <span class="hljs-literal">-SiteScriptIds</span> <span class="hljs-variable">$hubResult</span>.Id <span class="hljs-literal">-WebTemplate</span> <span class="hljs-string">"68"</span>
+</code></pre>
+<p><em>Aplica esta plantilla "Apply Hub Branding" solo a tu Hub Site principal.</em></p>
+<hr>
+<h4 id="b-desplegando-el-event-sites-script-event-site-templatejson">B. Desplegando el Event Sites Script (<code>event-site-template.json</code>)</h4>
+<p>Este es el motor principal. Crea las 4 listas, se une al Hub automáticamente y configura el Menú Izquierdo. Lo aplicarás a <em>cada</em> nuevo sitio de evento que crees (ej: The Walk 2025).</p>
+<p><strong>Si estás actualizando el script existente (V5):</strong></p>
+<pre><code class="hljs powershell"><span class="hljs-variable">$newContent</span> = <span class="hljs-built_in">Get-Content</span> <span class="hljs-string">".\event-site-template.json"</span> <span class="hljs-literal">-Raw</span>
+<span class="hljs-built_in">Set-PnPSiteScript</span> <span class="hljs-literal">-Identity</span> <span class="hljs-string">"3b6c1a53-25d0-4cb0-bb48-ad0d0f6522e4"</span> <span class="hljs-literal">-Content</span> <span class="hljs-variable">$newContent</span>
+</code></pre>
+<p><strong>Si estás creando una plantilla nueva para Sitios de Eventos:</strong></p>
+<pre><code class="hljs powershell"><span class="hljs-variable">$content</span> = <span class="hljs-built_in">Get-Content</span> <span class="hljs-string">".\event-site-template.json"</span> <span class="hljs-literal">-Raw</span>
+<span class="hljs-variable">$result</span> = <span class="hljs-built_in">Add-PnPSiteScript</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Casa Familiar V5 - Event Site"</span> <span class="hljs-literal">-Content</span> <span class="hljs-variable">$content</span>
+<span class="hljs-built_in">Add-PnPSiteDesign</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Casa Familiar - Full Event Setup"</span> <span class="hljs-literal">-SiteScriptIds</span> <span class="hljs-variable">$result</span>.Id <span class="hljs-literal">-WebTemplate</span> <span class="hljs-string">"64"</span>
+</code></pre>
+<p><em>Nota: Usamos WebTemplate "64" para Team Sites modernos.</em></p>
+<h4 id="después-de-subir-ambas-opciones">Después de Subir (Ambas Opciones):</h4>
+<ol>
+<li>Ve a tu sitio de SharePoint.</li>
+<li>Haz clic en el engrane -&gt; <strong>Apply a site template</strong> -&gt; <strong>From your organization</strong>.</li>
+<li>Selecciona <strong>"Casa Familiar - Full Event Setup"</strong>.</li>
+<li>¡Listo! Se aplicarán las 4 listas, vistas, enlaces de navegación y el branding.</li>
+</ol>
+<blockquote>
+<p><strong>Importante:</strong> Si las listas ya existen de una ejecución previa, el script omitirá su creación pero no agregará nuevas columnas. Para probar un despliegue limpio, aplícalo en un sitio nuevo o borra las listas existentes primero.</p>
+</blockquote>
+<hr>
+<h3 id="4-opcional-registrar-el-tema-teal-primero">4. Opcional: Registrar el Tema Teal Primero</h3>
+<p>Si recibes un error de tema, registra el tema Teal antes de aplicar:</p>
+<pre><code class="hljs powershell"><span class="hljs-variable">$themepalette</span> = <span class="hljs-selector-tag">@</span>{
+  <span class="hljs-string">"themePrimary"</span> = <span class="hljs-string">"#008080"</span>; <span class="hljs-string">"themeLighterAlt"</span> = <span class="hljs-string">"#f0fafa"</span>
+  <span class="hljs-string">"themeLighter"</span> = <span class="hljs-string">"#c5eded"</span>; <span class="hljs-string">"themeLight"</span> = <span class="hljs-string">"#98dede"</span>
+  <span class="hljs-string">"themeTertiary"</span> = <span class="hljs-string">"#4dbdbd"</span>; <span class="hljs-string">"themeSecondary"</span> = <span class="hljs-string">"#1a9e9e"</span>
+  <span class="hljs-string">"themeDarkAlt"</span> = <span class="hljs-string">"#007373"</span>; <span class="hljs-string">"themeDark"</span> = <span class="hljs-string">"#006161"</span>
+  <span class="hljs-string">"themeDarker"</span> = <span class="hljs-string">"#004848"</span>; <span class="hljs-string">"neutralLighterAlt"</span> = <span class="hljs-string">"#faf9f8"</span>
+  <span class="hljs-string">"neutralLighter"</span> = <span class="hljs-string">"#f3f2f1"</span>; <span class="hljs-string">"neutralLight"</span> = <span class="hljs-string">"#edebe9"</span>
+  <span class="hljs-string">"neutralQuaternaryAlt"</span> = <span class="hljs-string">"#e1dfdd"</span>; <span class="hljs-string">"neutralQuaternary"</span> = <span class="hljs-string">"#d0d0d0"</span>
+  <span class="hljs-string">"neutralTertiaryAlt"</span> = <span class="hljs-string">"#c8c6c4"</span>; <span class="hljs-string">"neutralTertiary"</span> = <span class="hljs-string">"#a19f9d"</span>
+  <span class="hljs-string">"neutralSecondary"</span> = <span class="hljs-string">"#605e5c"</span>; <span class="hljs-string">"neutralPrimaryAlt"</span> = <span class="hljs-string">"#3b3a39"</span>
+  <span class="hljs-string">"neutralPrimary"</span> = <span class="hljs-string">"#323130"</span>; <span class="hljs-string">"neutralDark"</span> = <span class="hljs-string">"#201f1e"</span>
+  <span class="hljs-string">"black"</span> = <span class="hljs-string">"#000000"</span>; <span class="hljs-string">"white"</span> = <span class="hljs-string">"#ffffff"</span>
+}
+<span class="hljs-built_in">Add-SPOTheme</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">"Teal"</span> <span class="hljs-literal">-Palette</span> <span class="hljs-variable">$themepalette</span> <span class="hljs-literal">-IsInverted</span> <span class="hljs-variable">$false</span>
+</code></pre>
+<hr>
+<h3 id="relacionado-1">Relacionado</h3>
+<ul>
+<li>[[04b-JSON-Formatting-Templates|Aplicar formato de colores después del despliegue]]</li>
+<li>[[04f-Detalle-Visualizacion-Paginas|Agregar listas a tu página de inicio]]</li>
+<li>[[04-Guia-Implementacion-Practica|Volver a la Guía Práctica]]</li>
+</ul>
+<h1 id="04j---guía-de-despliegue-oficial-de-sharepoint-online-spo">04j - Guía de Despliegue Oficial de SharePoint Online (SPO)</h1>
+<p>Si prefieres usar el <strong>Microsoft SharePoint Online Management Shell Oficial</strong> en lugar de PnP, utiliza esta guía. Este método es la forma "tradicional" y NO requiere registrar una aplicación en Entra ID.</p>
+<h2 id="1-prerrequisitos">1. Prerrequisitos</h2>
+<p>Asegúrate de tener instalado el módulo oficial:</p>
+<pre><code class="hljs powershell"><span class="hljs-built_in">Install-Module</span> <span class="hljs-literal">-Name</span> Microsoft.Online.SharePoint.PowerShell <span class="hljs-literal">-Force</span>
+</code></pre>
+<h2 id="2-conectar-a-tu-centro-de-administración">2. Conectar a tu Centro de Administración</h2>
+<p>Reemplaza <code>netorg4878279</code> con el nombre real de tu tenant:</p>
+<pre><code class="hljs powershell"><span class="hljs-built_in">Connect-SPOService</span> <span class="hljs-literal">-Url</span> https://netorg4878279<span class="hljs-literal">-admin</span>.sharepoint.com
+</code></pre>
+<h2 id="3-registrar-el-site-script-json">3. Registrar el Site Script (JSON)</h2>
+<p>Ejecuta estos comandos para subir tu <code>event-site-template.json</code>:</p>
+<pre><code class="hljs powershell"><span class="hljs-comment"># 1. Leer el contenido del JSON</span>
+<span class="hljs-variable">$json</span> = <span class="hljs-built_in">Get-Content</span> <span class="hljs-literal">-Path</span> <span class="hljs-string">".\event-site-template.json"</span> <span class="hljs-literal">-Raw</span>
+
+<span class="hljs-comment"># 2. Agregar el script a tu tenant</span>
+<span class="hljs-variable">$script</span> = <span class="hljs-built_in">Add-SPOSiteScript</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Casa Familiar - Official Event Site"</span> <span class="hljs-literal">-Content</span> <span class="hljs-variable">$json</span>
+
+<span class="hljs-comment"># 3. Crear el Site Design (Plantilla)</span>
+<span class="hljs-comment"># Usa WebTemplate "64" para Team Sites</span>
+<span class="hljs-built_in">Add-SPOSiteDesign</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Official Event Setup"</span> <span class="hljs-literal">-WebTemplate</span> <span class="hljs-string">"64"</span> <span class="hljs-literal">-SiteScripts</span> <span class="hljs-variable">$script</span>.Id
+</code></pre>
+<h2 id="4-¿por-qué-usar-pnp-para-carpetas">4. ¿Por qué usar PnP para Carpetas?</h2>
+<p>Aunque el módulo oficial de SPO (arriba) es perfecto para registrar scripts, <strong>no puede</strong> crear fácilmente carpetas dentro de las bibliotecas de documentos ni gestionar MegaMenus.</p>
+<ul>
+<li><strong>Para el JSON:</strong> Usa el módulo Oficial de SPO (esta guía).</li>
+<li><strong>Para Carpetas/Menús:</strong> Usa PnP PowerShell (ya que sus cmdlets están diseñados específicamente para la automatización de contenido).</li>
+</ul>
+<hr>
+<blockquote>
+<p>[!TIP]
+Usa <code>Get-SPOSiteScript</code> y <code>Get-SPOSiteDesign</code> para gestionar tus plantillas oficiales a través del módulo de SPO.</p>
+</blockquote>
+<h1 id="mejoras-adicionales-de-sharepoint-nativas">Mejoras Adicionales de SharePoint (Nativas)</h1>
+<p>A continuación se presentan recomendaciones de mejora adicionales para los sitios de eventos de Casa Familiar, utilizando exclusivamente herramientas nativas de Microsoft 365 y SharePoint incluidas en el licenciamiento estándar para evitar generar costos extra.</p>
+<h2 id="1-integración-nativa-con-microsoft-teams">1. Integración Nativa con Microsoft Teams</h2>
+<p>Dado que cada sitio de evento está asociado a un Grupo de M365 (y por lo tanto a un Team de Teams), podemos unificar aún más la experiencia del comité.</p>
+<ul>
+<li><strong>Pestaña de Tareas:</strong> Incrusta directamente la vista de la lista <em>Event Tasks</em> (como pestaña de Sitio Web o Lista) dentro del canal General en Teams. Esto permite que el comité actualice su progreso sin necesidad de abrir el navegador web.</li>
+<li><strong>Canales por Área:</strong> En lugar de enviar correos caóticos, crea canales en Teams para <code>#Logística</code>, <code>#Voluntariado</code>, <code>#Marketing</code> para centrar las conversaciones. Las carpetas en la Biblioteca de Documentos del sitio deben alinearse con la estructura de canales en Teams.</li>
+</ul>
+<h2 id="2-vistas-visuales-board-view-kanban">2. Vistas Visuales: Board View (Kanban)</h2>
+<p>En la lista de <em>Event Tasks</em>, configura una "Board View" (Vista de Tablero) basada en la columna <code>CF_TaskStatus</code>.</p>
+<ul>
+<li><strong>Beneficio:</strong> Esta es una funcionalidad <em>Out-of-the-Box</em>. Permite al comité visualizar su carga de trabajo en columnas (Pending -&gt; In Progress -&gt; Completed) y arrastrar y soltar tarjetas.</li>
+<li><strong>Reemplazo de Power Apps:</strong> Esta vista mejora la experiencia web y móvil de forma gratuita sin diseñar formularios complejos.</li>
+</ul>
+<h2 id="3-seguimiento-de-presupuesto-expense-tracking">3. Seguimiento de Presupuesto (Expense Tracking)</h2>
+<p>Para el control financiero de eventos sin fines de lucro.</p>
+<ul>
+<li><strong>Lista Adicional (<code>Event Budget</code>):</strong> Crea una lista con las siguientes columnas:<ul>
+<li><code>Item Concept</code> (Texto)</li>
+<li><code>Estimated Amount</code> (Moneda)</li>
+<li><code>Actual Amount</code> (Moneda)</li>
+<li><code>Category</code> (Choice: Food, Rental, Marketing, etc.)</li>
+<li><code>CF_YearCycle</code> (Número)</li>
+<li>Attachments habilitados (para subir cotizaciones y recibos).</li>
+</ul>
+</li>
+<li><strong>Enlace de Facturas:</strong> El Lead del comité puede autorizarlas, y se agrupan por <code>Category</code> para tener sub-totales automáticos nativos en la vista de lista.</li>
+</ul>
+<h2 id="4-directorio-y-recursos-compartidos-en-el-hub">4. Directorio y Recursos Compartidos en el Hub</h2>
+<p>Para evitar duplicar el esfuerzo de buscar proveedores año tras año entre diferentes comités:</p>
+<ul>
+<li><strong>Lista Maestra de Proveedores en el Hub:</strong> <code>Casa Familiar Vendors</code>.<ul>
+<li>Columnas: Nombre, Contacto, Teléfono, Especialidad (Comida, Música, Seguridad), Calificación (1 a 5 estrellas por el Lead anterior).</li>
+</ul>
+</li>
+<li><strong>Lookup Column:</strong> En cada lista de <code>Event Tasks</code> e incluso en la lista de presupuesto (<code>Event Budget</code>), utiliza una columna de búsqueda (Lookup) referenciando la lista del Hub Site. Esta es una funcionalidad nativa y evita la redundancia de datos.</li>
+</ul>
+<h2 id="5-cuadros-de-mando-ejetutivos-dashboards-y-reportes">5. Cuadros de Mando Ejetutivos (Dashboards) y Reportes</h2>
+<p>Para la junta directiva de Casa Familiar que requiere una visión general sin entrar en el detalle de todos los sitios:</p>
+<ul>
+<li><strong>Página Principal del Hub (Vista de Roll-up):</strong> Usa el Web Part de "Highlighted Content" o "News" en el <code>Casa Familiar Events Hub</code> para consultar una vista consolidada de todas las <em>Event Tasks</em> a través de los 5 sitios asociados que tengan estado <code>Blocked</code> y el <code>CF_YearCycle</code> actual. Esto resalta rápidamente si algún evento necesita apoyo de la alta gerencia, utilizando el motor de búsqueda interno de SharePoint de forma gratuita.</li>
+</ul>
+<h1 id="plan-de-gobernanza-de-datos-sitios-de-eventos-casa-familiar">Plan de Gobernanza de Datos: Sitios de Eventos "Casa Familiar"</h1>
+<p>Este documento establece las reglas y políticas para asegurar que la información generada en cada sitio de evento se mantenga segura, organizada y cumpla con las políticas de retención de la organización.</p>
+<hr>
+<h2 id="1-estructura-y-arquitectura-dónde-vive-la-información">1. Estructura y Arquitectura (Dónde vive la información)</h2>
+<p>El modelo de gobernanza se basa en una arquitectura <strong>"Hub &amp; Spoke"</strong> (Centro y Ejes):</p>
+<ul>
+<li><p><strong>El Centro (Hub Site):</strong> <code>Casa Familiar Events</code></p>
+<ul>
+<li><strong>Propósito:</strong> Portal público para todos los empleados. Consolidación de información de todos los eventos.</li>
+<li><strong>Gobernanza:</strong> Solo el equipo core de planeación (y TI) tiene permisos de edición. El resto de la organización solo tiene acceso de <em>Lectura</em>.</li>
+<li><strong>Datos alojados:</strong> Políticas generales, plantillas maestras, columnas de sitio globales (<code>CF_TaskStatus</code>, etc.).</li>
+</ul>
+</li>
+<li><p><strong>Los Ejes (Event Sites):</strong> <code>Event: [Nombre del Evento 202X]</code></p>
+<ul>
+<li><strong>Propósito:</strong> Espacio de trabajo colaborativo específico para <em>cada</em> evento.</li>
+<li><strong>Gobernanza:</strong> Todos los miembros del comité del evento tienen permisos de edición.</li>
+<li><strong>Datos alojados:</strong> Presupuestos específicos, listas de tareas del evento, contratos de proveedores, rosters.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-gestión-de-permisos-quién-puede-ver-y-editar">2. Gestión de Permisos (Quién puede ver y editar)</h2>
+<p>La seguridad se maneja mediante Grupos de Microsoft 365 y niveles de permiso estándar de SharePoint. No se deben romper las herencias de permisos a nivel de carpeta o archivo individual a menos que sea estrictamente necesario (ej: Presupuestos).</p>
+<table>
+<thead>
+<tr>
+<th align="left">Rol en el Evento</th>
+<th align="left">Grupo de SharePoint</th>
+<th align="left">Nivel de Permiso</th>
+<th align="left">Cuándo usarlo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Director / Líder de Proyecto</strong></td>
+<td align="left">Owners (Propietarios)</td>
+<td align="left">Full Control</td>
+<td align="left">Puede crear listas, cambiar configuraciones del sitio y gestionar accesos. Máximo 2-3 personas.</td>
+</tr>
+<tr>
+<td align="left"><strong>Comité / Coordinadores / Volunteers Core</strong></td>
+<td align="left">Members (Miembros)</td>
+<td align="left">Edit</td>
+<td align="left">Pueden agregar, editar y borrar tareas, riesgos, documentos y elementos del presupuesto.</td>
+</tr>
+<tr>
+<td align="left"><strong>Voluntarios Generales / Staff Externo</strong></td>
+<td align="left">Visitors (Visitantes)</td>
+<td align="left">Read</td>
+<td align="left">Solo pueden ver la información para estar enterados, pero no pueden modificar documentos ni listas.</td>
+</tr>
+</tbody></table>
+<p><strong>Excepción Crítica (Lista de Presupuesto):</strong>
+La lista <code>Event Budget</code> y la carpeta de facturas/contratos deben configurarse para que solo el rol de <em>Owners</em> y el área de Finanzas puedan aprobar ("Payment Status: Paid").</p>
+<ul>
+<li><strong>Acción:</strong> Romper la herencia de permisos solo en esa lista si se requiere privacidad financiera absoluta.</li>
+</ul>
+<hr>
+<h2 id="3-retención-y-ciclo-de-vida-de-los-datos-cuánto-tiempo-se-guarda">3. Retención y Ciclo de Vida de los Datos (Cuánto tiempo se guarda)</h2>
+<p>Para cumplir con normativas legales y evitar la acumulación de "basura digital", se aplicarán políticas de retención y limpieza automatizada.</p>
+<h3 id="31-política-de-retención-legal-microsoft-purview">3.1 Política de Retención Legal (Microsoft Purview)</h3>
+<ul>
+<li><strong>Alcance:</strong> Documentos críticos (Contratos de proveedores, Facturas firmadas, Pólizas de seguro, Evidencia de mitigación de riesgos).</li>
+<li><strong>Regla:</strong> Retención de <strong>10 años</strong> desde que se marca como "Final" o "Pagado". No pueden ser eliminados permanentemente ni por el usuario (ver [[04d-Detalle-Retention-Policies]]).</li>
+</ul>
+<h3 id="32-ciclo-de-vida-del-sitio-del-evento-site-lifecycle-management">3.2 Ciclo de Vida del Sitio del Evento (Site Lifecycle Management)</h3>
+<p>Dado que se crean nuevos sitios cada año (ej: The Walk 2024, The Walk 2025), los sitios viejos deben "congelarse".</p>
+<table>
+<thead>
+<tr>
+<th align="left">Fase</th>
+<th align="left">Cuándo Ocurre</th>
+<th align="left">Acción de Gobernanza</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>1. Activo</strong></td>
+<td align="left">Planeación y ejecución del evento</td>
+<td align="left">Accesos normales (Edición completa para miembros).</td>
+</tr>
+<tr>
+<td align="left"><strong>2. Cierre (Read-Only)</strong></td>
+<td align="left">30 días después del evento</td>
+<td align="left">TI o el Dueño del Sitio cambian el grupo de "Members" a "Visitors". El sitio se vuelve un "archivo histórico de solo lectura". Nadie puede modificar datos pasados.</td>
+</tr>
+<tr>
+<td align="left"><strong>3. Archivado Profundo</strong></td>
+<td align="left">3 años después del evento</td>
+<td align="left">Se desvincula del Menú del Hub (ya no es visible globalmente) pero sigue accesible vía búsqueda e indexación para auditorías.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-estandarización-de-metadatos-cómo-se-etiqueta-la-información">4. Estandarización de Metadatos (Cómo se etiqueta la información)</h2>
+<p>Para poder buscar reportes (ej: "Muéstrame todas las tareas 'Completadas' de todos los eventos del '2024'"), dependemos 100% del uso estricto de <strong>Site Columns</strong> aplicadas vía los <strong>Site Scripts</strong> (ver [[04h-Site-Script]]).</p>
+<p><strong>Reglas de Ingreso de Datos:</strong></p>
+<ol>
+<li><strong>Cero Listas Personalizadas a nivel Raíz:</strong> Todas las listas core (Tasks, Risks, Budget, Roster) <em>deben</em> crearse siempre y únicamente usando el template oficial "Casa Familiar - Full Event Setup".</li>
+<li><strong>No modificar tipos de campo Core:</strong> Los campos inyectados por el template (<code>CF_TaskStatus</code>, <code>Expense Category</code>) no deben ser borrados ni renombrados por los dueños del sitio.</li>
+<li><strong>Uso de Metadatos Obligatorios:</strong> Los campos definidos como <code>isRequired: true</code> en el template (Ej: <em>Due Date</em>, <em>Estimated Cost</em>) garantizan que no existan registros "huérfanos".</li>
+</ol>
+<hr>
+<h2 id="5-auditoría-y-revisiones">5. Auditoría y Revisiones</h2>
+<ul>
+<li><strong>Frecuencia:</strong> Bimestral.</li>
+<li><strong>Responsable:</strong> Administrador de SharePoint / Project Manager Global.</li>
+<li><strong>Acción:</strong><ol>
+<li>Revisar el <em>Site Usage Analytics</em> para identificar sitios "abandonados".</li>
+<li>Verificar que los <em>Owners</em> de los sitios siguen siendo empleados activos de Casa Familiar (Identity Management).</li>
+<li>Asegurar que ningún sitio de evento tenga habilitada la opción de compartir enlaces anónimos ("Anyone with the link") para proteger información personal del Roster o Financiera.</li>
+</ol>
+</li>
+</ul>
+<h3 id="📂-relacionado-1">📂 Relacionado</h3>
+<ul>
+<li>[[04d-Detalle-Retention-Policies|Política técnica de Prevención de Datos (Purview)]]</li>
+<li>[[04h-Site-Script|Documentación del Template Automatizado Principal]]</li>
+</ul>
+<h1 id="estrategia-de-reutilización-anual-de-sitios">Estrategia de Reutilización Anual de Sitios</h1>
+<p>Cuando un evento se repite cada año (Ej: <em>The Walk 2024</em>, <em>The Walk 2025</em>), surge la pregunta: <strong>¿Reutilizo el mismo sitio de SharePoint y borro lo viejo, o creo uno nuevo?</strong></p>
+<p>En SharePoint Moderno, la recomendación de Microsoft es casi siempre <strong>crear un sitio nuevo</strong>. Aquí explicamos por qué y cómo manejar ambas estrategias.</p>
+<hr>
+<h2 id="estrategia-1-nuevo-año-nuevo-sitio-recomendada">Estrategia 1: "Nuevo Año, Nuevo Sitio" (Recomendada)</h2>
+<p>En lugar de borrar tareas viejas, creas un sitio fresco usando el <strong>Site Script</strong> que ya automatizamos.</p>
+<ul>
+<li><strong>Ejemplo:</strong> Tienes <code>casafamiliar.sharepoint.com/sites/TheWalk2024</code>. El próximo año creas <code>.../sites/TheWalk2025</code>.</li>
+</ul>
+<h3 id="ventajas">Ventajas</h3>
+<ol>
+<li><strong>Auditoría perfecta:</strong> Tienes un archivo histórico intacto de lo que pasó en 2024 (quién hizo qué, cuánto costó, qué falló).</li>
+<li><strong>Cero riesgo de borrado:</strong> No hay peligro de que alguien borre por accidente un contrato de 2024 creyendo que era "basura" para limpiar la lista.</li>
+<li><strong>Cumplimiento Legal (Purview):</strong> Las políticas de retención de 10 años funcionan perfectamente porque el sitio viejo simplemente se archiva (ver [[05-Plan-Gobernanza-Datos]]).</li>
+<li><strong>Rapidez:</strong> Gracias a tu Site Script ([[04h-Site-Script]]), crear el sitio 2025 y sus listas toma menos de 2 minutos.</li>
+</ol>
+<h3 id="desventajas">Desventajas</h3>
+<ul>
+<li>Genera más sitios en tu consola de administración (lo cual es normal y esperado en Microsoft 365).</li>
+</ul>
+<h3 id="flujo-de-trabajo-paso-a-paso">Flujo de Trabajo (Paso a Paso):</h3>
+<ol>
+<li><strong>Cierre del Evento (Noviembre 2024):</strong> Cambias los permisos del sitio <code>TheWalk2024</code> a "Solo Lectura". Nada se toca.</li>
+<li><strong>Inicio Nuevo Ciclo (Enero 2025):</strong> Creas el sitio <code>TheWalk2025</code>.</li>
+<li><strong>Aplicar Template:</strong> Ejecutas el template "Casa Familiar - Full Event Setup" en el nuevo sitio.</li>
+<li><strong>Enlazar al Hub:</strong> El script ya lo conecta automáticamente al hub principal.</li>
+<li><strong>Copiar Plantillas:</strong> Mueves manualmente solo los documentos de plantilla "en blanco" (ej: formato de check-in) del sitio 2024 al 2025.</li>
+</ol>
+<hr>
+<h2 id="estrategia-2-reciclaje-de-sitio-no-recomendada-pero-posible-">Estrategia 2: "Reciclaje de Sitio" (No recomendada, pero posible )</h2>
+<p>Usas exactamente el mismo sitio (<code>casafamiliar.sharepoint.com/sites/TheWalk</code>) año tras año, limpiando las listas.</p>
+<h3 id="ventajas-1">Ventajas</h3>
+<ul>
+<li>La URL nunca cambia. Los voluntarios siempre guardan el mismo link en sus favoritos.</li>
+<li>No tienes que mover ni copiar documentos base de un año a otro.</li>
+</ul>
+<h3 id="desventajas-riesgos-altos">Desventajas (Riesgos Altos)</h3>
+<ol>
+<li><strong>Pérdida de Historial:</strong> Para usar listas como <em>Event Tasks</em> limpias, alguien tiene que borrar las tareas del año pasado. Se pierde el historial operativo.</li>
+<li><strong>Choque Legal:</strong> Si configuras la política de Retención de 10 años, <strong>Microsoft M365 te impedirá borrar elementos</strong> de la lista para reciclarlos. El sistema te marcará error al intentar "limpiar" para el nuevo año.</li>
+<li><strong>Saturación de Vistas:</strong> Si decides <em>no</em> borrar, sino solo cambiar la columna <code>CF_YearCycle</code> (ej: filtrar la vista para que solo muestre "2025"), después de 3 años tu lista de Tareas será inmensa, muy lenta de cargar, y la búsqueda será un caos.</li>
+</ol>
+<h3 id="flujo-de-trabajo-si-decides-hacerlo-así">Flujo de Trabajo (Si decides hacerlo así):</h3>
+<ol>
+<li><strong>Cierre del Evento:</strong> Debes exportar tus listas (Tasks, Risks, Budget) a Excel como respaldo histórico.</li>
+<li><strong>Limpieza manual:</strong> Un administrador debe entrar y borrar <strong>todos</strong> los elementos de todas las listas. <em>(Reitero: esto fallará si tienes Retention Policies activas)</em>.</li>
+<li><strong>Actualizar Documentos:</strong> Mover los documentos del año pasado a una carpeta llamada "Archive 2024".</li>
+</ol>
+<hr>
+<h2 id="veredicto-para-casa-familiar">Veredicto para Casa Familiar</h2>
+<p>Dado que has implementado <strong>Site Scripts Autómatizados</strong> y necesitas <strong>Políticas de Retención de Contratos</strong>, la única estrategia viable y segura a largo plazo es la <strong>Estrategia 1 (Nuevo Año, Nuevo Sitio)</strong>.</p>
+<p><strong>Solución al problema del "link eterno":</strong>
+Para evitar que los usuarios se confundan con URLs nuevas cada año, la mejor práctica es:
+En tu <strong>Hub Site principal</strong>, pon un botón gigante que diga "Ir al Evento The Walk Actual". Tú como administrador, solo actualizas ese botón cada año para que apunte al nuevo sitio (del 2024 al 2025). El usuario final solo tiene que recordar la ruta del Hub Site.</p>
+<h3 id="📂-relacionado-2">📂 Relacionado</h3>
+<ul>
+<li>[[04h-Site-Script|Recuerda cómo aplicar el template para sitios nuevos]]</li>
+<li>[[05-Plan-Gobernanza-Datos|Reglas sobre qué hacer con los sitios viejos]]</li>
+</ul>
+<h1 id="estrategia-de-archivos-centralizados-hub-vs-event-sites">Estrategia de Archivos Centralizados (Hub vs Event Sites)</h1>
+<p>El modelo de "Hub &amp; Spoke" (Centro y Ejes) no solo aplica a las listas, sino también a la gestión de documentos. El error más común al planear eventos es tener 5 versiones diferentes del mismo "Formato de Check-in" regadas por todos los sitios.</p>
+<p>Aquí tienes el plan recomendado para gobernar los archivos y mantener una "Única Fuente de Verdad" (Single Source of Truth).</p>
+<hr>
+<h2 id="1-el-hub-site-la-biblioteca-maestra-plantillas-y-políticas">1. El Hub Site: La Biblioteca Maestra (Plantillas y Políticas)</h2>
+<p>El sitio Hub (<code>Event Planning Improvements Project</code>) es el "Corporativo". Aquí no se guarda trabajo en progreso de ningún evento específico.</p>
+<h3 id="bibliotecas-de-documentos-recomendadas-en-el-hub">Bibliotecas de Documentos Recomendadas en el Hub:</h3>
+<ol>
+<li><strong>"Master Templates" (Plantillas Maestras):</strong><ul>
+<li><strong>Qué guardar:</strong> Logos oficiales, formatos vacíos de presupuestos (Excel), formatos de check-in de voluntarios, machotes de contratos.</li>
+<li><strong>Permisos (Crucial):</strong> Solo el equipo central (Owners) tiene permiso de <em>Edición</em>. Todos los demás voluntarios tienen permiso de <em>Lectura</em> (solo pueden descargar o copiar).</li>
+</ul>
+</li>
+<li><strong>"Global Policies &amp; Manuals" (Políticas Globales):</strong><ul>
+<li><strong>Qué guardar:</strong> Manuales de respuesta a emergencias, guías de código de vestimenta, protocolos de seguridad.</li>
+<li><strong>Permisos:</strong> Igual que arriba, 100% de Lectura para la mayoría.</li>
+</ul>
+</li>
+</ol>
+<h3 id="beneficio">Beneficio:</h3>
+<p>Si en 2025 cambias el logo de la organización, solo actualizas el archivo en la carpeta "Master Templates" del Hub. Cuando los voluntarios de un evento vayan a buscar el logo, siempre descargarán la versión más nueva, sin que tengas que avisarles a todos.</p>
+<hr>
+<h2 id="2-los-event-sites-espacios-de-trabajo-working-documents">2. Los Event Sites: Espacios de Trabajo (Working Documents)</h2>
+<p>Cada sitio de evento individual (Ej: <code>The Walk 2024</code>) viene por defecto con una biblioteca llamada <strong>"Documents"</strong> (Documentos). Ese es el espacio de trabajo activo.</p>
+<h3 id="¿qué-se-guarda-en-el-sitio-del-evento">¿Qué se guarda en el Sitio del Evento?</h3>
+<ul>
+<li>Contratos de proveedores <strong>ya firmados</strong> para <em>ese</em> evento.</li>
+<li>Presentaciones de PowerPoint específicas para <em>esa</em> junta de comité.</li>
+<li>El plano de mesas (Layout) del salón de <em>ese</em> año.</li>
+</ul>
+<h3 id="permisos">Permisos:</h3>
+<ul>
+<li>Todos los miembros del comité del evento tienen permisos para <strong>Editar, Borrar y Crear</strong> la biblioteca de su sitio. Es su espacio de trabajo.</li>
+</ul>
+<hr>
+<h2 id="3-¿cómo-conectar-ambos-mundos-flujo-de-trabajo-del-usuario">3. ¿Cómo Conectar Ambos Mundos? (Flujo de Trabajo del Usuario)</h2>
+<p>Para que los voluntarios no se frustren buscando la "Plantilla de Check-in", debes hacer que fluya de manera natural desde el Hub hacia el Sitio del Evento.</p>
+<h3 id="la-función-mágica-colocar-un-acceso-directo-add-shortcut">La Función Mágica: "Colocar un Acceso Directo" (Add shortcut)</h3>
+<ol>
+<li>Ve a la biblioteca "Master Templates" de tu Hub Site.</li>
+<li>Selecciona la carpeta de plantillas.</li>
+<li>Copia el <strong>enlace (URL)</strong> de esa biblioteca.</li>
+<li>En tu sitio de evento, puedes agregar ese enlace como un acceso directo (Quick Link) o en el menú izquierdo de navegación.</li>
+</ol>
+<h3 id="método-copy-to-recomendado-para-sharepoint-moderno">Método "Copy to" (Recomendado para SharePoint Moderno)</h3>
+<p>La mejor manera de trabajar es enseñar a los voluntarios este flujo:</p>
+<ol>
+<li>El voluntario entra al <strong>Hub Site</strong>.</li>
+<li>Entra a la biblioteca <strong>Master Templates</strong>.</li>
+<li>Selecciona el formato vacío (ej: <code>Formato-CheckIn-Vacio.xlsx</code>).</li>
+<li>Haz clic en el botón superior que dice <strong>"Copy to"</strong> (Copiar a).</li>
+<li>SharePoint le preguntará "¿A dónde lo quieres copiar?". El voluntario selecciona su sitio de evento activo (Ej: <code>The Walk 2024</code> -&gt; <code>Documents</code>).</li>
+<li><strong>Magia:</strong> El documento vacío se copia al sitio del evento, donde el voluntario ya puede llenarlo con nombres sin afectar la plantilla maestra del Hub.</li>
+</ol>
+<hr>
+<h2 id="4-mejora-continua-actualizando-plantillas">4. Mejora Continua: Actualizando Plantillas</h2>
+<p>¿Qué pasa si un voluntario del evento "The Walk 2024" mejora la plantilla del presupuesto agregando fórmulas increíbles?</p>
+<ul>
+<li>Esa mejora se queda en su sitio de evento.</li>
+<li>Te envía un correo diciendo: "Oye, mejoré el formato de presupuesto, ¿lo puedes hacer el oficial?".</li>
+<li>Tú (como Owner del Hub) vas a tu computadora, descargas el formato mejorado, y <strong>lo subes a la biblioteca "Master Templates" del Hub</strong> reemplazando el viejo.</li>
+<li>¡Listo! El próximo evento (Ej: Gala 2024) ya usará el formato mejorado cuando le den "Copy to".</li>
+</ul>
+<h3 id="📂-relacionado-3">📂 Relacionado</h3>
+<ul>
+<li>[[05-Plan-Gobernanza-Datos|Plan de control de versiones y permisos]]</li>
+<li>[[06-Estrategia-Reutilizacion-Anual|Qué hacer con los documentos de eventos pasados]]</li>
+</ul>
+<h1 id="configuración-centralizada-del-hub-site-guía-de-contenido">Configuración Centralizada del Hub Site (Guía de Contenido)</h1>
+<p>Para mantener la consistencia con tu "Ultimate English Site Script" (V5), el Hub Site central (<code>Event Planning Improvements Project</code>) debe estar estructurado y nombrado completamente en Inglés para los elementos del sistema, aunque las descripciones estén en Español.</p>
+<p>Aquí tienes el blueprint exacto de qué crear en el Hub Site, incluyendo nombres de bibliotecas, estructuras de carpetas y plantillas esenciales.</p>
+<hr>
+<h2 id="1-bibliotecas-de-documentos-a-crear">1. Bibliotecas de Documentos a Crear</h2>
+<p>No uses la biblioteca por defecto "Documents" para todo. Segrega tus archivos creando estas bibliotecas específicas en el Hub Site (Icono Engrane -&gt; Add an App -&gt; Document Library).</p>
+<h3 id="library-a-master-templates">Library A: <code>Master Templates</code></h3>
+<p><strong>Propósito:</strong> Hogar de todos los archivos en blanco y reutilizables.
+<strong>Permisos:</strong> Owners (Edit), Members/Visitors (Read-Only).</p>
+<p><strong>Estructura Completa de Carpetas dentro de <code>Master Templates</code>:</strong></p>
+<ul>
+<li><p><code>01 - Finance &amp; Budget</code></p>
+<ul>
+<li><code>Event-Budget-Blank-Template.xlsx</code></li>
+<li><code>Vendor-Invoice-Cover-Sheet.docx</code></li>
+<li><code>Reimbursement-Request-Form.pdf</code></li>
+<li><code>Sponsorship-Pitch-Deck.pptx</code></li>
+<li><code>Sponsorship-Pricing-Tiers.pdf</code></li>
+<li><code>Tax-Exemption-Certificate.pdf</code></li>
+</ul>
+</li>
+<li><p><code>02 - Operations &amp; Logistics</code></p>
+<ul>
+<li><code>Volunteer-Check-In-Sheet.xlsx</code></li>
+<li><code>Event-Run-of-Show-Template.docx</code></li>
+<li><code>Venue-Inspection-Checklist.pdf</code></li>
+<li><code>Equipment-Inventory-Tracker.xlsx</code></li>
+<li><code>Catering-Menu-Template.docx</code></li>
+<li><code>Event-Debrief-Meeting-Agenda.docx</code></li>
+</ul>
+</li>
+<li><p><code>03 - Marketing &amp; Branding</code></p>
+<ul>
+<li><code>Casa-Familiar-Official-Logos.zip</code></li>
+<li><code>Press-Release-Template.docx</code></li>
+<li><code>Social-Media-Graphics-Base.pptx</code></li>
+<li><code>Typography-and-Brand-Colors.pdf</code></li>
+<li><code>Email-Newsletter-Template.docx</code></li>
+<li><code>Event-Flyer-Template.dotx</code></li>
+</ul>
+</li>
+<li><p><code>04 - Legal &amp; Contracts</code></p>
+<ul>
+<li><code>Standard-Vendor-Agreement.docx</code></li>
+<li><code>Liability-Waiver-Form.pdf</code></li>
+<li><code>Photo-Release-Consent-Form.pdf</code></li>
+<li><code>Talent-Performer-Agreement.docx</code></li>
+<li><code>Non-Disclosure-Agreement-NDA.pdf</code></li>
+</ul>
+</li>
+<li><p><code>05 - Risk &amp; Safety Management</code></p>
+<ul>
+<li><code>Risk-Assessment-Matrix-Blank.xlsx</code></li>
+<li><code>Incident-Report-Form.pdf</code></li>
+<li><code>Emergency-Contact-List-Template.xlsx</code></li>
+</ul>
+</li>
+<li><p><code>06 - Committee &amp; Volunteers</code></p>
+<ul>
+<li><code>Committee-Meeting-Minutes-Template.docx</code></li>
+<li><code>Volunteer-Role-Descriptions.pdf</code></li>
+<li><code>Certificate-of-Appreciation-Template.pptx</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="library-b-global-policies--procedures">Library B: <code>Global Policies &amp; Procedures</code></h3>
+<p><strong>Propósito:</strong> Reglas y manuales oficiales que no cambian de evento en evento.
+<strong>Permisos:</strong> Owners (Edit), Members/Visitors (Read-Only).</p>
+<p><strong>Contenido Recomendado (Sin carpetas, mantener plano para facilitar búsquedas):</strong></p>
+<ul>
+<li><code>Emergency-Response-Protocol.pdf</code></li>
+<li><code>Volunteer-Code-of-Conduct.pdf</code></li>
+<li><code>Expense-Approval-Policy.pdf</code></li>
+<li><code>Media-Interaction-Guidelines.pdf</code></li>
+<li><code>Vendor-Onboarding-Process.pdf</code></li>
+<li><code>Data-Privacy-and-Photo-Policy.pdf</code></li>
+<li><code>Event-Cancellation-Policy.pdf</code></li>
+</ul>
+<hr>
+<h2 id="2-navegación-del-hub-site-megamenu">2. Navegación del Hub Site (MegaMenu)</h2>
+<p>El Hub utiliza el layout de MegaMenu para mostrar un directorio completo de recursos.</p>
+<p><strong>Estructura Extendida del Menú (Inglés para los Enlaces):</strong></p>
+<ul>
+<li><strong>Home</strong> <em>(Link al Hub Home Page)</em></li>
+<li><strong>Active Events</strong> <em>(Dropdown)</em><ul>
+<li><em>The Walk 2024</em></li>
+<li><em>Annual Gala 2024</em></li>
+<li><em>Community Festival 2024</em></li>
+</ul>
+</li>
+<li><strong>Master Templates</strong> <em>(Dropdown - Link a la Library A)</em><ul>
+<li><em>Finance &amp; Budget</em></li>
+<li><em>Operations &amp; Logistics</em></li>
+<li><em>Marketing &amp; Branding</em></li>
+<li><em>Legal &amp; Contracts</em></li>
+<li><em>Risk &amp; Safety</em></li>
+<li><em>Committee &amp; Volunteers</em></li>
+</ul>
+</li>
+<li><strong>Global Policies</strong> <em>(Dropdown - Link a la Library B)</em><ul>
+<li><em>Emergency Protocols</em></li>
+<li><em>Volunteer Code of Conduct</em></li>
+<li><em>Vendor Onboarding Process</em></li>
+</ul>
+</li>
+<li><strong>Quick Links</strong> <em>(Dropdown)</em><ul>
+<li><em>Submit Expense Reimbursement</em></li>
+<li><em>IT Support Request</em></li>
+<li><em>Marketing Brand Portal</em></li>
+</ul>
+</li>
+<li><strong>Past Events Archive</strong> <em>(Dropdown)</em><ul>
+<li><em>The Walk 2023</em></li>
+<li><em>Annual Gala 2023</em></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3-diseño-de-la-página-principal-del-hub-web-parts">3. Diseño de la Página Principal del Hub (Web Parts)</h2>
+<p>La Home page del Hub Site no debe mostrar tareas (eso pertenece a los sitios de eventos). Debe actuar como un panel para toda la organización.</p>
+<p><strong>Web Parts Recomendados (De arriba a abajo):</strong></p>
+<ol>
+<li><strong>Hero Web Part:</strong><ul>
+<li><em>Título:</em> "Welcome to Casa Familiar Event Planning"</li>
+<li><em>Botón de Llamado a la Acción:</em> "Go to Current Event: The Walk 2024" (Se actualiza anualmente).</li>
+</ul>
+</li>
+<li><strong>Quick Links Web Part (Layout de Iconos):</strong><ul>
+<li>Link 1: Download Official Logos</li>
+<li>Link 2: View Emergency Protocols</li>
+<li>Link 3: Submit Reimbursement</li>
+</ul>
+</li>
+<li><strong>News Web Part:</strong><ul>
+<li>Úsalo para publicar anuncios organizacionales (ej: "New Catering Vendor Approved", "Gala Date Moved").</li>
+</ul>
+</li>
+<li><strong>Events Web Part:</strong><ul>
+<li>Consolida fechas de calendario de todos los Event Sites conectados para mostrar una línea de tiempo unificada.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="4-recordatorio-del-flujo-de-trabajo">4. Recordatorio del Flujo de Trabajo</h2>
+<p><strong>Siempre entrena al personal con esta regla:</strong>
+<em>"Nunca edites un archivo directamente en la biblioteca <code>Master Templates</code>. Abre la carpeta, selecciona el archivo, haz clic en <strong>Copy to</strong> en el menú superior, y envíalo a la biblioteca de documentos de tu sitio de evento específico antes de llenarlo."</em></p>
+<hr>
+<h3 id="relacionado-2">Relacionado</h3>
+<ul>
+<li>[[07-Estrategia-Archivos-Centralizados|Por qué centralizamos archivos (Estrategia)]]</li>
+<li>[[04h-Site-Script|La plantilla usada para los Sitios de Eventos]]</li>
+</ul>
+<h1 id="estructura-de-carpetas-operativas-para-sitios-de-eventos">Estructura de Carpetas Operativas para Sitios de Eventos</h1>
+<p>Mientras que el Hub Site contiene las <strong>Master Templates</strong>, cada sitio de evento individual (ej: <em>The Walk 2024</em>) necesita una estructura operativa para almacenar sus archivos de trabajo específicos, contratos firmados y activos del día del evento.</p>
+<p>La consistencia en todos los sitios de eventos es clave para facilitar los reportes y la rotación del personal.</p>
+<hr>
+<h2 id="1-recomendaciones-para-la-biblioteca-documents">1. Recomendaciones para la Biblioteca "Documents"</h2>
+<p>Cada sitio de evento creado con la plantilla "Casa Familiar - Full Event Setup" tendrá una biblioteca por defecto llamada <strong>Documents</strong>. Esta debe organizarse de la siguiente manera:</p>
+<h3 id="estructura-sugerida-de-carpetas-inglés">Estructura Sugerida de Carpetas (Inglés):</h3>
+<ul>
+<li><code>01 - Financials &amp; Expenses</code><ul>
+<li><em>Propósito:</em> Presupuesto llenado localmente, cotizaciones de vendors y facturas específicas.</li>
+<li><em>Contenido:</em> <code>TheWalk2024-Final-Budget.xlsx</code>, <code>Catering-Invoice-001.pdf</code>.</li>
+</ul>
+</li>
+<li><code>02 - Planning &amp; Logistics</code><ul>
+<li><em>Propósito:</em> Planes operativos, run-of-shows y planos del lugar.</li>
+<li><em>Contenido:</em> <code>Event-Schedule-V3.docx</code>, <code>Venue-Layout-Map.png</code>.</li>
+</ul>
+</li>
+<li><code>03 - Marketing &amp; Social Media</code><ul>
+<li><em>Propósito:</em> Flyers específicos para este año, fotos del evento y comunicados de prensa localizados.</li>
+<li><em>Contenido:</em> <code>Social-Media-Photos/</code>, <code>TheWalk2024-Campaign-Flyer.pdf</code>.</li>
+</ul>
+</li>
+<li><code>04 - Signed Contracts &amp; Agreements</code><ul>
+<li><em>Propósito:</em> Versiones finales y firmadas de documentos (Mover desde el template del Hub -&gt; Llenar -&gt; Firmar -&gt; Almacenar aquí).</li>
+<li><em>Contenido:</em> <code>Signed-Security-Contract.pdf</code>, <code>Talent-Waivers/</code>.</li>
+</ul>
+</li>
+<li><code>05 - Volunteer &amp; Staff Management</code><ul>
+<li><em>Propósito:</em> Horarios de turnos, listas de contactos específicas para este equipo.</li>
+<li><em>Contenido:</em> <code>Shift-Schedule-Final.xlsx</code>, <code>Staff-Instructions.pdf</code>.</li>
+</ul>
+</li>
+<li><code>06 - Post-Event &amp; Debrief</code><ul>
+<li><em>Propósito:</em> Reportes resumidos, resultados de encuestas y lecciones aprendidas.</li>
+<li><em>Contenido:</em> <code>Post-Event-Report.docx</code>, <code>Survey-Results-Summary.xlsx</code>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-mejores-prácticas-para-dueños-de-sitios">2. Mejores Prácticas para Dueños de Sitios</h2>
+<ol>
+<li><strong>No crees carpetas de primer nivel:</strong> Mantente fiel a las 6 categorías estándar de arriba.</li>
+<li><strong>Convención de Nombres:</strong> Prefija los archivos con el Nombre del Evento y Año (ej: <code>Gala2024-GuestList.xlsx</code>) para que, si alguna vez se mueven o comparten, el contexto permanezca.</li>
+<li><strong>Usa el Hub:</strong> Si necesitas un formulario "en blanco", ve a la biblioteca <code>Master Templates</code> del Hub y usa la función <strong>"Copy to"</strong> para traerlo aquí.</li>
+</ol>
+<hr>
+<h2 id="3-automatización-creación-programática">3. Automatización (Creación Programática)</h2>
+<p>Dado que los Site Scripts de SharePoint aún no soportan de forma nativa la creación de estructuras de carpetas complejas, se recomienda que el <strong>Dueño del Sitio</strong> o <strong>Administrador de TI</strong> ejecute el script <code>create-event-folders.ps1</code> inmediatamente después de que se aprovisione un nuevo sitio de evento.</p>
+<hr>
+<h3 id="relacionado-3">Relacionado</h3>
+<ul>
+<li>[[08-Hub-Site-English-Content|Compara con la estructura de Master Templates del Hub Site]]</li>
+<li>[[07-Estrategia-Archivos-Centralizados|Aprende cómo copiar archivos del Hub al Sitio de Evento]]</li>
+</ul>
+<h1 id="arquitectura-general-de-sharepoint-1">Arquitectura General de SharePoint</h1>
+<h2 id="resumen-1">Resumen</h2>
+<p>La solución está estructurada utilizando un <strong>Hub Site</strong> principal para "Casa Familiar Events", al cual se asocian <strong>sitios secundarios (Team Sites)</strong> para cada evento específico.</p>
+<h2 id="estructura-de-sitios-1">Estructura de Sitios</h2>
+<ul>
+<li><strong>Hub Site:</strong> <code>Casa Familiar Events Hub</code><ul>
+<li>Sitios Asociados (Eventos):<ul>
+<li><code>Fall Festival</code></li>
+<li><code>Haunted House</code></li>
+<li><code>Día de Muertos</code></li>
+<li><code>Thanksgiving</code></li>
+<li><code>Día de Reyes</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="gestión-de-comités-y-permisos-estrategia-para-alta-rotación-1">Gestión de Comités y Permisos (Estrategia para Alta Rotación)</h2>
+<p>Dado que la rotación constante de los miembros del comité año tras año es una realidad, la gestión de identidad es la pieza central de esta arquitectura.</p>
+<ul>
+<li>Cada sitio de evento tendrá un <strong>Microsoft 365 Group</strong> único y persistente.</li>
+<li><strong>Onboarding/Offboarding Centralizado:</strong> La rotación anual se gestiona <strong>exclusivamente</strong> agregando o eliminando miembros del grupo M365 a través de Entra ID o el Admin Center.<ul>
+<li><em>Ventaja clave:</em> Al dejar un comité, el voluntario pierde instantáneamente el acceso a correos, calendarios y archivos logísticos confidenciales para el próximo año.</li>
+<li><em>Riesgo mitigado:</em> No se crean "grupos huérfanos" (ej: "Comité 2023", "Comité 2024"). Es un solo grupo que muta sus miembros.</li>
+</ul>
+</li>
+<li><strong>Roles y Gobernanza:</strong><ul>
+<li><strong>Site Owners (Leads):</strong> 2 personas. Tienen control total sobre las listas, flujos y permisos de su sub-sitio. Son responsables de "Cerrar" el año.</li>
+<li><strong>Site Members (Comité):</strong> ~8 personas. Pueden agregar, editar y completar tareas en las listas de su evento. No pueden borrar elementos ni borrar Vistas (se debe configurar el nivel de permiso <em>Contribute</em> sin <em>Delete</em> para proteger la auditoría).</li>
+<li><strong>Site Visitors:</strong> Empleados o voluntarios que solo necesitan ver el progreso (Solo lectura).</li>
+<li><strong>External Sharing:</strong> Debe estar bloqueado o restringido para asegurar que las minutas, bases de datos o contratos permanezcan accesibles solo para el personal interno.</li>
+</ul>
+</li>
+</ul>
+<h2 id="unificación-y-mantenibilidad-enfoque-de-desarrollo-1">Unificación y Mantenibilidad (Enfoque de Desarrollo)</h2>
+<p>Para lograr la mantenibilidad requerida por un perfil técnico (Developer) y unificar los sitios:</p>
+<ol>
+<li><strong>Configuración del Hub Site:</strong> La navegación principal, el branding y los permisos globales (si aplica) se gestionan desde el Hub.</li>
+<li><strong>Site Templates / Site Scripts (JSON):</strong> <ul>
+<li>Crear un esquema de sitio base usando JSON/PowerShell que contenga todas las listas requeridas. Al aplicar esta plantilla a cualquier evento nuevo o existente, las listas estándar se generarán o actualizarán automáticamente.</li>
+<li><em>Consideración profunda:</em> Esto permite que en el futuro, si se agrega un nuevo evento (ej: "Posada Navideña"), lanzar el portal tome 5 minutos y respete exactamente las mismas columnas.</li>
+</ul>
+</li>
+<li><strong>Site Columns y Content Types:</strong> Definirlos a nivel de Hub y publicarlos en los sitios secundarios (Content Type Hub) para que todas las listas de eventos compartan exactamente los mismos nombres internos e IDs de esquema (ej: <code>Task Status</code>, <code>Event Year</code>). Esto es crucial para el cruce de datos (Roll-up) y consolidaciones en PowerBI.</li>
+</ol>
+<h1 id="estructura-de-listas-y-contenido-detalle-profundo-1">Estructura de Listas y Contenido (Detalle Profundo)</h1>
+<p>Para mantener la estandarización y evitar diferencias entre los sitios de eventos, cada sub-sitio de evento contendrá las siguientes listas. Todas deben usar Content Types definidos en el Hub.</p>
+<h2 id="1-lista-event-tasks-1">1. Lista: Event Tasks</h2>
+<p>Lista principal para el seguimiento de actividades.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Column</th>
+<th align="left">Data Type</th>
+<th align="left">Description / Options</th>
+<th align="left">Advanced Configuration</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Title</strong></td>
+<td align="left">Text</td>
+<td align="left">Nombre de la tarea.</td>
+<td align="left">Requerido</td>
+</tr>
+<tr>
+<td align="left"><strong>Description</strong></td>
+<td align="left">Multiple lines text</td>
+<td align="left">Detalles de la responsabilidad.</td>
+<td align="left">Rich Text habilitado</td>
+</tr>
+<tr>
+<td align="left"><strong>Assigned To</strong></td>
+<td align="left">Person or Group</td>
+<td align="left">Persona asignada.</td>
+<td align="left">Restringido al M365 Group del sitio</td>
+</tr>
+<tr>
+<td align="left"><strong>Status</strong></td>
+<td align="left">Choice</td>
+<td align="left"><code>Pending</code>, <code>In Progress</code>, <code>Blocked</code>, <code>Completed</code>, <code>Cancelled</code>.</td>
+<td align="left">Default: <code>Pending</code>. Formato Condicional (Rojo/Amarillo/Verde)</td>
+</tr>
+<tr>
+<td align="left"><strong>Year (Cycle)</strong></td>
+<td align="left">Choice (o Number)</td>
+<td align="left">Año al que pertenece (ej: <code>2024</code>).</td>
+<td align="left">Indexado. Requerido.</td>
+</tr>
+<tr>
+<td align="left"><strong>Start Date</strong></td>
+<td align="left">Date and Time</td>
+<td align="left">Cuándo debe comenzar la tarea.</td>
+<td align="left">Friendly Format</td>
+</tr>
+<tr>
+<td align="left"><strong>Due Date</strong></td>
+<td align="left">Date and Time</td>
+<td align="left">Fecha límite o de finalización.</td>
+<td align="left">Validación: Mayor a Start Date</td>
+</tr>
+<tr>
+<td align="left"><strong>Closing Notes</strong></td>
+<td align="left">Multiple lines text</td>
+<td align="left">Lecciones aprendidas.</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left"><strong>Lead Approval</strong></td>
+<td align="left">Yes/No</td>
+<td align="left">Check para tareas críticas.</td>
+<td align="left">Visible solo a Owners o vía validación de lista.</td>
+</tr>
+</tbody></table>
+<p><em>Análisis Profundo:</em> Indexar la columna <code>Year (Cycle)</code> es esencial cuando la lista supera los 5,000 elementos (eventos a largo plazo), asegurando que las Vistas activas no se rompan (límite de Threshold de SharePoint).</p>
+<h2 id="2-lista-committee-roster-roles-y-miembros-1">2. Lista: Committee Roster (Roles y Miembros)</h2>
+<p>Lista para registrar quién participó en qué rol en cada comité anual.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Column</th>
+<th align="left">Data Type</th>
+<th align="left">Description / Options</th>
+<th align="left">Advanced Configuration</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Title (Name)</strong></td>
+<td align="left">Person or Group</td>
+<td align="left">Usuario de M365 perteneciente al comité.</td>
+<td align="left">Mostrar foto de perfil</td>
+</tr>
+<tr>
+<td align="left"><strong>Committee Role</strong></td>
+<td align="left">Choice</td>
+<td align="left"><code>Lead</code>, <code>Member</code>.</td>
+<td align="left">-</td>
+</tr>
+<tr>
+<td align="left"><strong>Area/Department</strong></td>
+<td align="left">Choice</td>
+<td align="left"><code>Logistics</code>, <code>Marketing</code>, <code>Volunteering</code>.</td>
+<td align="left">Permite crear vistas de directorio precisas</td>
+</tr>
+<tr>
+<td align="left"><strong>Year</strong></td>
+<td align="left">Choice / Number</td>
+<td align="left">Año de participación (ej: <code>2024</code>).</td>
+<td align="left">-</td>
+</tr>
+</tbody></table>
+<h2 id="3-lista-risks--issues-registro-de-riesgos-1">3. Lista: Risks &amp; Issues (Registro de Riesgos)</h2>
+<p>Los eventos a menudo sufren contratiempos imprevistos no considerados tareas normales. Separar esto de 'Event Tasks' permite medir el nivel de salud del proyecto.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Column</th>
+<th align="left">Data Type</th>
+<th align="left">Description / Options</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Risk/Issue</strong></td>
+<td align="left">Text</td>
+<td align="left">Ej: "Faltan permisos del Ayuntamiento"</td>
+</tr>
+<tr>
+<td align="left"><strong>Impact</strong></td>
+<td align="left">Choice</td>
+<td align="left"><code>High</code>, <code>Medium</code>, <code>Low</code></td>
+</tr>
+<tr>
+<td align="left"><strong>Mitigation Plan</strong></td>
+<td align="left">Multiple lines</td>
+<td align="left">Qué se hará al respecto.</td>
+</tr>
+<tr>
+<td align="left"><strong>Status</strong></td>
+<td align="left">Choice</td>
+<td align="left"><code>Open</code>, <code>Resolved</code></td>
+</tr>
+<tr>
+<td align="left"><strong>Year</strong></td>
+<td align="left">Choice / Number</td>
+<td align="left">Año</td>
+</tr>
+</tbody></table>
+<h2 id="4-document-library-event-documents-1">4. Document Library: Event Documents</h2>
+<p>Estructura unificada que asegura la Retention Policy.</p>
+<ul>
+<li><em>Folder:</em> <code>/2023/</code></li>
+<li><em>Folder:</em> <code>/2024/</code><ul>
+<li><em>Folder:</em> <code>/2024/Committee Minutes/</code></li>
+<li><em>Folder:</em> <code>/2024/Contracts and Permits/</code></li>
+<li><em>Folder:</em> <code>/2024/Invoices/</code></li>
+</ul>
+</li>
+</ul>
+<p><em>Análisis de Integridad:</em> Se sugiere obligar el Control de Versiones en esta biblioteca para evitar sobreescrituras accidentales de contratos, y aplicar <em>Retention Labels</em> nativos desde el Compliance Center para que "Contracts and Permits" no puedan borrarse por al menos 5 años (para auditoría fiscal de Non-Profit).</p>
+<h1 id="flujos-de-trabajo-y-ciclo-de-vida-del-evento-extendido-1">Flujos de Trabajo y Ciclo de Vida del Evento (Extendido)</h1>
+<p>A continuación se presentan los diagramas de ciclo de vida con un enfoque profundo en el manejo de excepciones y el archivado robusto.</p>
+<h2 id="1-ciclo-de-vida-de-tareas-event-task-1">1. Ciclo de Vida de Tareas (Event Task)</h2>
+<p>Gestiona las asignaciones y los posibles cuellos de botella (bloqueos y escalaciones).</p>
+<pre><code class="hljs mermaid">stateDiagram-v2
+    [*] --&gt; Pending : Creación Manual/Automática
+    Pending --&gt; InProgress : La persona asignada inicia el trabajo
+    InProgress --&gt; Blocked : Existe un Problema/Dependencia
+    Blocked --&gt; InProgress : Bloqueo resuelto
+    Blocked --&gt; Escalated : Si no se resuelve en 48h (Automático)
+    Escalated --&gt; InProgress : Intervención del Lead
+    InProgress --&gt; Completed : Trabajo finalizado
+    Pending --&gt; Cancelled : Tarea descartada (Con justificación)
+    Completed --&gt; [*]
+    Cancelled --&gt; [*]
+</code></pre>
+<h2 id="2-proceso-de-rollover-anual-rotación-de-comité-y-archivados-1">2. Proceso de Rollover Anual (Rotación de Comité y Archivados)</h2>
+<p>Dado que los comités cambian cada año, el rollover no puede simplemente asignar tareas a las mismas personas. El ciclo se centra en "limpiar responsabilidades" y despejar el tablero para el nuevo comité.</p>
+<pre><code class="hljs mermaid">sequenceDiagram
+    participant AD as M365 Admin (Entra ID)
+    participant Lead as Comité Lead Entrante/Saliente
+    participant SP as SharePoint (Listas)
+    participant PA as Power Automate
+
+    Lead-&gt;&gt;SP: Finaliza el evento (Tareas en estado Completed/Cancelled)
+    Note over SP: Las tareas históricas permanecen "congeladas" bajo la columna [Year]
+    Lead-&gt;&gt;AD: Elimina a los miembros del comité viejo del M365 Group
+    Lead-&gt;&gt;AD: Agrega a los miembros del comité nuevo al M365 Group
+    Lead-&gt;&gt;SP: Actualiza la lista "Committee Roster" con nuevos miembros y el New Year
+    Lead-&gt;&gt;PA: Ejecuta el flujo "Prepare Next Year" (Botón de Flujo)
+    PA-&gt;&gt;SP: Extrae las "Master Tasks" (ej: "Get City Hall Permit", "Table Rentals")
+    PA-&gt;&gt;SP: Genera nuevas tareas asignando [Year] = Next Year (Status = Pending)
+    Note over PA: CRÍTICO: La columna 'Assigned To' en las nuevas tareas se deja VACÍA.
+    SP--&gt;&gt;Lead: El tablero está limpio. El nuevo Lead puede comenzar a asignar tareas al nuevo comité.
+</code></pre>
+<h2 id="3-flujo-de-notificaciones-y-acuerdo-de-nivel-de-servicio-sla-1">3. Flujo de Notificaciones y Acuerdo de Nivel de Servicio (SLA)</h2>
+<p>Para evitar la saturación de correos electrónicos, el flujo incorpora verificaciones de tiempo (Recurrencia Diaria) en Power Automate en lugar de notificaciones instantáneas para todo.</p>
+<pre><code class="hljs mermaid">flowchart TD
+    A["Trigger: Recurrencia Diaria (8:00 AM)"] --&gt; B["Obtener tareas 'In Progress' o 'Pending'"]
+    B --&gt; C{"¿Vence en &lt; 3 días?"}
+    C -- "Sí" --&gt; E["Añadir al Resumen Diario"]
+    C -- "No" --&gt; D{"¿Está Bloqueada?"}
+    D -- "Sí" --&gt; E
+    D -- "No" --&gt; F["Siguiente tarea"]
+    E --&gt; F
+    F --&gt; G{"¿Quedan más tareas?"}
+    G -- "Sí" --&gt; C
+    G -- "No" --&gt; H{"¿Resumen vacío?"}
+    H -- "No" --&gt; I["Enviar mensaje en Teams (Canal Comité)"]
+    H -- "Sí" --&gt; J["Fin del Flujo"]
+    I --&gt; J
+</code></pre>
+<p><em>Análisis Operativo:</em> Un Resumen Diario es infinitamente mejor para la <em>Gobernanza</em> que disparar un correo por cada elemento de lista creado. Ayuda a mantener la tranquilidad del comité y aumenta la probabilidad de que las alertas sean leídas y atendidas.</p>
+<h1 id="guía-maestra-de-implementación-sistema-casa-familiar-events-1">Guía Maestra de Implementación: Sistema "Casa Familiar Events"</h1>
+<p>Esta es la guía definitiva para implementar y administrar el ecosistema de sitios de eventos. El sistema está diseñado en la <strong>Experiencia Moderna de SharePoint</strong> (Modern Experience).</p>
+<hr>
+<h2 id="prerrequisitos-de-automatización-septiembre-2024-1">Prerrequisitos de Automatización (Septiembre 2024)</h2>
+<p>Antes de ejecutar cualquier script (<code>.ps1</code>) o subir archivos JSON, tienes dos opciones según tu preferencia:</p>
+<h3 id="opción-a-módulo-oficial-de-sharepoint-spo-1">Opción A: Módulo Oficial de SharePoint (SPO)</h3>
+<ul>
+<li><strong>Uso:</strong> Ideal para registrar el Site Script (JSON) de forma "oficial".</li>
+<li><strong>Fácil:</strong> No requiere registrar aplicaciones de terceros.</li>
+<li><strong>Guía:</strong> <strong>[[04j-Official-SPO-Deployment|Ver pasos con el módulo oficial aquí]]</strong>.</li>
+</ul>
+<h3 id="opción-b-pnp-powershell-recomendado-para-expertos-1">Opción B: PnP PowerShell (Recomendado para Expertos)</h3>
+<ul>
+<li><strong>Uso:</strong> Necesario para crear carpetas, menús complejos y automatización de contenido.</li>
+<li><strong>Poderoso:</strong> Mucho más flexible pero requiere el registro de Entra ID.</li>
+<li><strong>Guía:</strong> <strong>[[04e-Detalle-Site-Scripts|Ver pasos con PnP aquí]]</strong>.</li>
+</ul>
+<hr>
+<h2 id="fase-1-configuración-del-hub-the-brain-1">Fase 1: Configuración del Hub (The "Brain")</h2>
+<p><em>Esta fase se realiza manualmente por única vez en el sitio principal.</em></p>
+<ol>
+<li><strong>Crear el Hub Site:</strong><ul>
+<li>Nombre: <code>Event Planning Improvements Project</code> (o el nombre de tu Hub).</li>
+<li>Registrarlo como <strong>Hub Site</strong> en el Centro de Administración de SharePoint.</li>
+</ul>
+</li>
+<li><strong>Columnas de Sitio (The Metadata):</strong><ul>
+<li>Define las 3 columnas maestras en el Hub para que todos los eventos hablen el mismo idioma.</li>
+<li><strong>[[04a-Detalle-Columnas-Base|Ver configuración exacta de columnas aquí]]</strong></li>
+</ul>
+</li>
+<li><strong>Políticas de Cumplimiento (Compliance):</strong><ul>
+<li>Configura las reglas para que los contratos y actas no se borren por error.</li>
+<li><strong>[[04d-Detalle-Retention-Policies|Ver configuración de Retención]]</strong></li>
+</ul>
+</li>
+<li><strong>Estructura de Archivos y Menú:</strong><ul>
+<li>Configura las bibliotecas de "Master Templates" y el "MegaMenu" en inglés.</li>
+<li><strong>[[08-Hub-Site-English-Content|Ver blueprint del Hub y Menú]]</strong></li>
+<li><strong>[[09-Event-Site-Folder-Structure|Ver estructura operativa para Sitios de Eventos]]</strong></li>
+<li><strong>Automatización:</strong> Usa <code>create-hub-folders.ps1</code> para el Hub y <code>create-event-folders.ps1</code> para cada sitio nuevo.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="fase-2-automatización-de-sitios-the-blueprint-1">Fase 2: Automatización de Sitios (The "Blueprint")</h2>
+<p><em>Usa plantillas (Site Scripts) para crear sitios de eventos en 2 minutos.</em></p>
+<ol>
+<li><strong>El Molde Maestro (JSON):</strong><ul>
+<li>Usa la versión "Ultimate" que ya tiene todos los campos de Tareas, Presupuesto, Riesgos y Roster configurados.</li>
+<li><strong>[[04h-Site-Script|Instrucciones de Despliegue del Script V5]]</strong></li>
+</ul>
+</li>
+<li><strong>Registro del Tema (Branding):</strong><ul>
+<li>Asegúrate de registrar el tema "Teal" para que los sitios se vean profesionales. (Instrucciones dentro de la guía de Site Scripts arriba).</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="fase-3-gobierno-y-continuidad-the-control-1">Fase 3: Gobierno y Continuidad (The "Control")</h2>
+<p><em>Cómo mantener el orden a través de los años.</em></p>
+<ol>
+<li><strong>Plan de Gobernanza:</strong><ul>
+<li>Reglas sobre quién puede editar qué y cuándo los sitios pasan a modo "Solo Lectura".</li>
+<li><strong>[[05-Plan-Gobernanza-Datos|Plan de Gobernanza de Datos]]</strong></li>
+</ul>
+</li>
+<li><strong>Estrategia de Reutilización:</strong><ul>
+<li>¿Crear sitio nuevo o limpiar el viejo? (Pista: Siempre es mejor uno nuevo).</li>
+<li><strong>[[06-Estrategia-Reutilizacion-Anual|Plan de Reutilización Anual]]</strong></li>
+</ul>
+</li>
+<li><strong>Gestión Centralizada de Archivos:</strong><ul>
+<li>Cómo fluyen las plantillas desde el Hub hacia los sitios de eventos.</li>
+<li><strong>[[07-Estrategia-Archivos-Centralizados|Estrategia de Documentos]]</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="fase-4-visualización-y-formato-the-look-1">Fase 4: Visualización y Formato (The "Look")</h2>
+<p><em>Haz que la información sea fácil de consumir para los voluntarios.</em></p>
+<ol>
+<li><strong>Formato de Colores (JSON):</strong><ul>
+<li>Códigos para que el estatus "Blocked" sea rojo y "Completed" verde automáticamente.</li>
+<li><strong>[[04b-JSON-Formatting-Templates|Ver códigos de formato visual]]</strong></li>
+</ul>
+</li>
+<li><strong>Diseño de Páginas:</strong><ul>
+<li>Cómo acomodar los elementos en la página principal para que el comité vea sus tareas al entrar.</li>
+<li><strong>[[04f-Detalle-Visualizacion-Paginas|Ver guía de diseño de páginas]]</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="fase-5-futuras-mejoras-native-power-1">Fase 5: Futuras Mejoras (Native Power)</h2>
+<p>Para el futuro, considera usar herramientas nativas para extender la funcionalidad:</p>
+<ul>
+<li><strong>[[05-Future-Native-Improvements|Ver ideas de automatización con Power Automate]]</strong></li>
+</ul>
+<hr>
+<h1 id="plan-de-implementación-del-sitio-extendido-1">Plan de Implementación del Sitio (Extendido)</h1>
+<p>Este plan cubre todo desde la configuración inicial hasta el plan de gobernanza y adopción de usuarios (Change Management).</p>
+<blockquote>
+<p>[!NOTE] 
+<strong>¿Requiere Desarrollo?</strong>
+El grueso de esta arquitectura es <strong>Configuración Out-of-the-Box (OOTB)</strong> (haciendo clic en la interfaz de SharePoint).
+NO se requiere programación tradicional (como React o C#). 
+Sin embargo, incluye ligeras cargas de <strong>Low-Code/Scripting</strong> (marcadas con la etiqueta [LOW-CODE]) en dos áreas: </p>
+<ol>
+<li>Power Automate: Para conectar flujos lógicos (arrastrar y soltar bloques condicionales).</li>
+<li>JSON/PnP PowerShell: Para automatizar la creación de sitios en lugar de hacerlo de forma manual e iterativa.</li>
+</ol>
+</blockquote>
+<h2 id="fase-1-arquitectura-de-hub-y-gobernanza-data-governance-1">Fase 1: Arquitectura de Hub y Gobernanza (Data Governance)</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>1.1. Crear Hub Site:</strong> Crear un Communication Site ("Casa Familiar Events") y registrarlo. [CONFIGURATION]</li>
+<li><input disabled="" type="checkbox"> <strong>1.2. Site Columns (Nivel Hub):</strong> Crear tipos de datos CF_TaskStatus, CF_YearCycle, CF_CommitteeRole. [CONFIGURATION]</li>
+<li><input disabled="" type="checkbox"> <strong>1.3. Content Types (Nivel Hub):</strong> Agrupar Site Columns en Event Task CT y Roster CT, y publicarlos (Content Type Publisher). [CONFIGURATION]</li>
+<li><input disabled="" type="checkbox"> <strong>1.4. Retention Policies (Compliance Center):</strong> Aplicar políticas de auditoría a las bibliotecas de documentos (vida útil obligatoria de 5 años para contratos). [CONFIGURATION]</li>
+</ul>
+<h2 id="fase-2-automatización-del-despliegue-de-sitios-desarrollo-ligero-1">Fase 2: Automatización del Despliegue de Sitios (Desarrollo Ligero)</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>2.1. Plantilla (Site Script &amp; Site Design):</strong> [LOW-CODE] Desarrollar scripts JSON y PnP PowerShell que instalen automáticamente las listas (Event Tasks, Risks, Committee Roster, Event Budget) sobre los grupos de M365 creados.</li>
+<li><input disabled="" type="checkbox"> <strong>2.2. Aprovisionamiento:</strong> [LOW-CODE] Ejecutar el Site Design en los 5 sitios base (Fall Festival, Haunted House...). Esto elimina errores tipográficos al escribir columnas manualmente.</li>
+</ul>
+<h2 id="fase-3-configuración-de-interfaz-y-vistas-nativas-1">Fase 3: Configuración de Interfaz y Vistas Nativas</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>3.1. Formato de Vistas (List Formatting):</strong> [LOW-CODE] Aplicar JSON Formatters (código JSON nativo de SharePoint) para colorear toda la fila de verde si está Completed o de rojo grueso si está Blocked.</li>
+<li><input disabled="" type="checkbox"> <strong>3.2. Vistas Indexadas:</strong> Crear un índice a nivel de plataforma para la columna CF_YearCycle para prevenir el colapso del sitio a largo plazo (List Threshold de 5,000 elementos). [CONFIGURATION]</li>
+<li><input disabled="" type="checkbox"> <strong>3.3. Hub Central Dashboard:</strong> Configurar Highlighted Content Webparts en el Hub central para mostrar "Tareas Bloqueadas Recientes". [CONFIGURATION]</li>
+</ul>
+<h2 id="fase-4-flujos-operativos-y-notificaciones-plumbing--flow-1">Fase 4: Flujos Operativos y Notificaciones (Plumbing / Flow)</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>4.1. Resumen Diario de Vencimientos:</strong> [LOW-CODE] Programar el "Daily Digest" en Power Automate para verificar tareas vencidas.</li>
+<li><input disabled="" type="checkbox"> <strong>4.2. Flujo de Rollover Automático:</strong> [LOW-CODE] Crear el flujo maestro que clona tareas críticas del ciclo anterior y prepara al nuevo comité.</li>
+</ul>
+<h2 id="fase-5-estrategia-de-adopción-change-management-1">Fase 5: Estrategia de Adopción (Change Management)</h2>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>5.1. Piloto Técnico (UAT):</strong> Probar los flujos con usuarios ficticios en 1 sitio o con el equipo técnico.</li>
+<li><input disabled="" type="checkbox"> <strong>5.2. Playbook / Manual del Comité:</strong> Crear una WIKI o página dentro del Hub Site llamada "Cómo gestionar mi evento" (capacitación asíncrona para la rotación constante de voluntarios).</li>
+<li><input disabled="" type="checkbox"> <strong>5.3. Limitación de Daños (Permisos):</strong> Validar que los permisos para el Committee Roster no permitan borrar la lista completa. (Cambiar nivel Contributor -&gt; Nivel de permiso personalizado sin capacidad de borrar listas/elementos).</li>
+<li><input disabled="" type="checkbox"> <strong>5.4. Go-Live y Soporte Temprano:</strong> Incorporar a los comités reales del año actual e iniciar el soporte de hypercare por 2 a 3 semanas.</li>
+</ul>
+<h1 id="detalle-técnico-columnas-de-sitio-modern-sharepoint-1">Detalle Técnico: Columnas de Sitio (Modern SharePoint)</h1>
+<blockquote>
+<p>[!NOTE]
+En la interfaz moderna (<strong>Modern Experience</strong>), algunas configuraciones avanzadas aún requieren acceder al panel de <em>Site Settings</em> tradicional, pero la aplicación de estas columnas a las listas es 100% moderna.</p>
+</blockquote>
+<h3 id="1-¿qué-son-las-site-columns-1">1. ¿Qué son las "Site Columns"?</h3>
+<p><strong>No son listas.</strong> Imagínalas como los "encabezados" o "categorías" que utilizarás más adelante dentro de tus listas.</p>
+<ul>
+<li><strong>Una Lista</strong> es como una hoja de Excel (ej: "Lista de Tareas").</li>
+<li><strong>Una Site Column</strong> es la definición del campo (ej: "Estado") que vive al nivel del sitio para que puedas usarlo en muchas hojas de Excel diferentes sin tener que volver a crearlo.</li>
+</ul>
+<p>En SharePoint, una <strong>Site Column</strong> es una definición de columna reutilizable. A diferencia de una columna de lista estándar, si cambias la configuración de una Site Column (ej: agregas una nueva opción de estado), el cambio puede propagarse automáticamente a todas las listas que la utilizan.</p>
+<h3 id="2-configuración-de-las-3-columnas-maestras-paso-a-paso-1">2. Configuración de las 3 Columnas Maestras (Paso a Paso)</h3>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Ubicación:</strong> Ve siempre a tu <strong>HUB SITE</strong> primero.
+Haz clic en el icono del engrane (<strong>Settings</strong> -&gt; <strong>Site information</strong> -&gt; <strong>View all site settings</strong> -&gt; <strong>Site columns</strong> -&gt; <strong>Create</strong>.</p>
+</blockquote>
+<hr>
+<h4 id="a-columna-cf_taskstatus-1">A. Columna: <code>CF_TaskStatus</code></h4>
+<ul>
+<li><strong>Nombre de columna:</strong> <code>CF_TaskStatus</code></li>
+<li><strong>Tipo:</strong> <code>Choice (menú para elegir)</code></li>
+<li><strong>Grupo:</strong> <code>New group</code> -&gt; <code>_Casa Familiar</code></li>
+<li><strong>Descripción:</strong> <code>Estandarizar el progreso de las tareas.</code></li>
+<li><strong>Requerir que esta columna contenga información:</strong> <code>Sí</code> (Importante: cada tarea debe tener un estado).</li>
+<li><strong>Forzar valores únicos:</strong> <code>No</code><pre><code class="hljs text">1. Pending
+2. In Progress
+3. Blocked
+4. Completed
+</code></pre>
+</li>
+<li><strong>Permitir opciones 'Fill-in':</strong> <code>No</code> (Crítico: permitir estados personalizados rompe la automatización de tareas).</li>
+<li><strong>Mostrar opciones usando:</strong> <code>Drop-Down Menu</code></li>
+<li><strong>Valor por defecto:</strong> <code>1. Pending</code></li>
+</ul>
+<hr>
+<h4 id="b-columna-cf_yearcycle-1">B. Columna: <code>CF_YearCycle</code></h4>
+<ul>
+<li><strong>Nombre de columna:</strong> <code>CF_YearCycle</code></li>
+<li><strong>Tipo:</strong> <code>Choice (menú para elegir)</code></li>
+<li><strong>Grupo:</strong> <code>Existing group</code> -&gt; <code>_Casa Familiar</code></li>
+<li><strong>Descripción:</strong> <code>Ciclo anual del evento (ej: 2025).</code></li>
+<li><strong>Requerir que esta columna contenga información:</strong> <code>Sí</code> (Importante para el seguimiento histórico).</li>
+<li><strong>Opciones:</strong><pre><code class="hljs text">2024
+2025
+2026
+2027
+</code></pre>
+</li>
+<li><strong>Permitir opciones 'Fill-in':</strong> <code>Sí</code> (Importante: permite agregar años futuros sin editar la configuración).</li>
+<li><strong>Mostrar opciones usando:</strong> <code>Drop-Down Menu</code></li>
+<li><strong>Valor por defecto:</strong> <code>Choice</code> -&gt; (Dejar vacío o seleccionar el año actual).</li>
+</ul>
+<hr>
+<h4 id="c-columna-cf_committeerole-1">C. Columna: <code>CF_CommitteeRole</code></h4>
+<ul>
+<li><strong>Nombre de columna:</strong> <code>CF_CommitteeRole</code></li>
+<li><strong>Tipo:</strong> <code>Choice (menú para elegir)</code></li>
+<li><strong>Grupo:</strong> <code>Existing group</code> -&gt; <code>_Casa Familiar</code></li>
+<li><strong>Descripción:</strong> <code>Rol dentro del comité del evento.</code></li>
+<li><strong>Requerir que esta columna contenga información:</strong> <code>No</code> (Opcional, ya que algunas tareas podrían no estar asignadas a un rol específico aún).</li>
+<li><strong>Opciones:</strong><pre><code class="hljs text">Event Lead
+Logistics
+Finance / Treasury
+Volunteer Management
+Communication / Marketing
+</code></pre>
+</li>
+<li><strong>Permitir opciones 'Fill-in':</strong> <code>Sí</code> (Útil si surge un nuevo rol en el comité durante el año).</li>
+<li><strong>Mostrar opciones usando:</strong> <code>Drop-Down Menu</code></li>
+<li><strong>Valor por defecto:</strong> (Dejar vacío).</li>
+</ul>
+<h3 id="3-ventajas-de-este-enfoque-1">3. Ventajas de este Enfoque</h3>
+<ol>
+<li><strong>Mantenimiento Centralizado:</strong> Si el comité decide agregar un estado llamado "En Revisión", solo lo agregas en un lugar.</li>
+<li><strong>Reportes Consolidados:</strong> Al usar exactamente el mismo nombre de columna y opciones.</li>
+<li><strong>Visualización Pro:</strong> Puedes aplicar [[04b-JSON-Formatting-Templates|Formatos JSON avanzados]] para que las listas sean fáciles de leer.</li>
+</ol>
+<hr>
+<h3 id="recursos-adicionales-1">Recursos Adicionales</h3>
+<ul>
+<li>[[04b-JSON-Formatting-Templates|Manual de Códigos JSON para Formato de Columnas]]</li>
+</ul>
+<h1 id="json-formatting-templates-1">JSON Formatting Templates</h1>
+<p>Estos códigos se pegan en la sección <strong>"Column Formatting"</strong> (al final de la pantalla de creación de la columna) o seleccionando la columna en la lista -&gt; <strong>Column settings</strong> -&gt; <strong>Format this column</strong>.</p>
+<h3 id="1-cf_taskstatus_formattingjson-para-cf_taskstatus-estado-1">1. [[CF_TaskStatus_Formatting|JSON para CF_TaskStatus (Estado)]]</h3>
+<p>Este JSON crea burbujas de color con texto en blanco para visibilidad inmediata.</p>
+<pre><code class="hljs json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"$schema"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"elmType"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"div"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"txtContent"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"@currentField"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"style"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"padding"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"4px 10px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"border-radius"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"16px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"color"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"white"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"font-weight"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"600"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"text-align"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"center"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"background-color"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"=if(@currentField == '1. Pending', '#607d8b', if(@currentField == '2. In Progress', '#0078d4', if(@currentField == '3. Blocked', '#d13438', if(@currentField == '4. Completed', '#107c10', '#f3f2f1'))))"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<hr>
+<h3 id="2-cf_yearcycle_formattingjson-para-cf_yearcycle-año-1">2. [[CF_YearCycle_Formatting|JSON para CF_YearCycle (Año)]]</h3>
+<p>Muestra el año en una etiqueta sutil con borde.</p>
+<pre><code class="hljs json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"$schema"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"elmType"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"div"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"txtContent"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"@currentField"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"style"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"padding"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"2px 8px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"border"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"1px solid #0078d4"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"border-radius"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"4px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"color"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"#0078d4"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"font-weight"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"500"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"display"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"inline-block"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<hr>
+<h3 id="3-cf_committeerole_formattingjson-para-cf_committeerole-rol-1">3. [[CF_CommitteeRole_Formatting|JSON para CF_CommitteeRole (Rol)]]</h3>
+<p>Etiquetas tipo "pill" con colores suaves por rol.</p>
+<pre><code class="hljs json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"$schema"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"elmType"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"div"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"txtContent"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"@currentField"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"style"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"padding"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"4px 8px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"border-radius"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"8px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"background-color"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"=if(@currentField == 'Event Lead', '#edebe9', if(@currentField == 'Finance / Treasury', '#fff4ce', if(@currentField == 'Logistics', '#dff6dd', if(@currentField == 'Volunteer Management', '#d1e4fe', '#f3f2f1'))))"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"color"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"#323130"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"font-size"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"12px"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"font-weight"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"500"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h1 id="detalle-técnico-content-types-plantillas-de-listas-1">Detalle Técnico: Content Types (Plantillas de Listas)</h1>
+<h3 id="1-¿qué-es-un-content-type-1">1. ¿Qué es un "Content Type"?</h3>
+<p>Si las <strong>Site Columns</strong> son los ingredientes, el <strong>Content Type</strong> es la "receta". Es una plantilla que agrupa varias columnas para que puedas aplicarlas a una lista de un solo golpe.</p>
+<hr>
+<h3 id="2-instrucciones-para-crear-el-content-type-1">2. Instrucciones para Crear el Content Type</h3>
+<p>Para ambos, ve a: <strong>Settings</strong> (Engranaje) -&gt; <strong>Site information</strong> -&gt; <strong>View all site settings</strong> -&gt; <strong>Site content types</strong> -&gt; <strong>Create content type</strong>.</p>
+<h4 id="a-content-type-event-task-ct-para-tareas-1">A. Content Type: <code>Event Task CT</code> (Para Tareas)</h4>
+<p>Llena los campos exactamente así:</p>
+<ul>
+<li><strong>Name:</strong> <code>Event Task CT</code></li>
+<li><strong>Description:</strong> <code>Plantilla maestra para las tareas de los eventos de Casa Familiar.</code></li>
+<li><strong>Category:</strong> Selecciona <strong>"New category"</strong> y escribe <code>_Casa Familiar</code> (Para que aparezca junto a tus columnas).</li>
+<li><strong>Parent content type:</strong><ul>
+<li><strong>Parent category:</strong> <code>List Content Types</code></li>
+<li><strong>Content type:</strong> <code>Item</code> (Es la base más limpia para construir listas personalizadas).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="b-content-type-roster-ct-para-el-comité-1">B. Content Type: <code>Roster CT</code> (Para el Comité)</h4>
+<p>Llena los campos exactamente así:</p>
+<ul>
+<li><strong>Name:</strong> <code>Roster CT</code></li>
+<li><strong>Description:</strong> <code>Plantilla maestra para el listado de personas y roles del comité.</code></li>
+<li><strong>Category:</strong> Selecciona <strong>"Existing category"</strong> -&gt; <code>_Casa Familiar</code>.</li>
+<li><strong>Parent content type:</strong><ul>
+<li><strong>Parent category:</strong> <code>List Content Types</code></li>
+<li><strong>Content type:</strong> <code>Item</code>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-el-paso-final-agregar-tus-columnas-1">3. El Paso Final: Agregar tus Columnas</h3>
+<p>Una vez que le des a <strong>Create</strong>, SharePoint te llevará a la pantalla del nuevo Content Type. Haz lo siguiente para terminar la "receta":</p>
+<ol>
+<li>Haz clic en <strong>Add site column</strong> (o <em>Add from existing site columns</em>).</li>
+<li>Busca tu grupo <code>_Casa Familiar</code>.</li>
+<li>Agrega las columnas correspondientes:<ul>
+<li>Para <code>Event Task CT</code>: Agrega <code>CF_TaskStatus</code> y <code>CF_YearCycle</code>.</li>
+<li>Para <code>Roster CT</code>: Agrega <code>CF_CommitteeRole</code> y <code>CF_YearCycle</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="📂relacionado-1">📂Relacionado</h3>
+<ul>
+<li>[[04a-Detalle-Columnas-Base|Guía de Columnas (Ingredientes)]]</li>
+<li>[[04-Guia-Implementacion-Practica|Volver a la Guía Principal]]</li>
+</ul>
+<h1 id="detalle-técnico-retention-policies-microsoft-purview-1">Detalle Técnico: Retention Policies (Microsoft Purview)</h1>
+<h3 id="1-¿qué-es-una-retention-policy-1">1. ¿Qué es una Retention Policy?</h3>
+<p>Es una regla de cumplimiento que vive por encima de SharePoint, en el <strong>Microsoft Purview (Compliance Center)</strong>. Sirve para asegurar que la información importante no se pierda, ya sea por error humano o de forma intencionada.</p>
+<p>En tu proyecto, los <strong>contratos y presupuestos</strong> son críticos. Una política de retención garantiza que, aunque alguien intente borrar un archivo, SharePoint guardará una copia oculta durante el tiempo que definas.</p>
+<hr>
+<h3 id="2-configuración-en-microsoft-purview-1">2. Configuración en Microsoft Purview</h3>
+<p>Para configurar esto, un administrador debe ir a: <strong>Microsoft 365 Admin Center</strong> -&gt; <strong>Compliance</strong> (o Purview) -&gt; <strong>Data Lifecycle Management</strong> -&gt; <strong>Microsoft 365</strong> -&gt; <strong>Retention Policies</strong>.</p>
+<h4 id="configuración-recomendada-para-casa-familiar-1">Configuración Recomendada para Casa Familiar:</h4>
+<ul>
+<li><strong>Name:</strong> <code>Retention Policy - Event Contracts (5 Years)</code></li>
+<li><strong>Description:</strong> <code>Retención obligatoria para documentos de contratos y finanzas de eventos.</code></li>
+<li><strong>Type:</strong> <strong>Static</strong> (Para aplicar a sitios específicos).</li>
+<li><strong>Locations:</strong> Selecciona <strong>SharePoint sites</strong>. Puedes elegir aplicarlo a todos los sitios o solo a los que pertenecen al Hub de eventos.</li>
+<li><strong>Retention Settings:</strong><ul>
+<li><strong>Retain items for a specific period:</strong> <code>5 years</code>.</li>
+<li><strong>Start the retention period based on:</strong> <code>When items were created</code>.</li>
+<li><strong>At the end of the retention period:</strong> <code>Do nothing</code> (o borrar automáticamente si quieres limpieza total).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-¿cómo-funciona-en-la-vida-real-1">3. ¿Cómo funciona en la vida real?</h3>
+<p>Si un usuario intenta borrar un contrato bajo esta política:</p>
+<ol>
+<li>El archivo parece desaparecer de la biblioteca de documentos.</li>
+<li>Sin embargo, SharePoint lo mueve automáticamente a una biblioteca oculta llamada <strong>"Preservation Hold Library"</strong>.</li>
+<li>Solo los administradores con permisos especiales pueden ver o recuperar esos archivos de esa biblioteca oculta durante los 5 años que dura la política.</li>
+</ol>
+<h3 id="4-diferencia-entre-retention-policy-y-retention-label-1">4. Diferencia entre "Retention Policy" y "Retention Label"</h3>
+<ul>
+<li><strong>Policy (Política):</strong> Se aplica a <strong>todo el sitio</strong> o biblioteca. Es automática y el usuario no tiene que hacer nada. <em>(Esta es la recomendada para tu Fase 1).</em></li>
+<li><strong>Label (Etiqueta):</strong> El usuario elige manualmente qué archivos marcar (ej: marcar solo el archivo "Contrato.pdf"). Es más flexible pero requiere que la gente se acuerde de poner la etiqueta.</li>
+</ul>
+<h3 id="📂-relacionado-4">📂 Relacionado</h3>
+<ul>
+<li>[[04-Guia-Implementacion-Practica|Volver a la Guía Principal]]</li>
+</ul>
+<h1 id="04e---guía-de-despliegue-de-site-scripts-v3-1">04e - Guía de Despliegue de Site Scripts (v3+)</h1>
+<p>Esta guía explica cómo registrar y aplicar los Site Scripts (<code>event-site-template.json</code> y <code>hub-site-template.json</code>) utilizando los estándares más recientes de PnP PowerShell (Posteriores a Septiembre 2024).</p>
+<h2 id="1-prerrequisitos-powershell-7-1">1. Prerrequisitos (PowerShell 7)</h2>
+<p>Microsoft actualizó las políticas de seguridad en Septiembre 2024. Ahora debes registrar tu propia aplicación en tu tenant para permitir los inicios de sesión interactivos.</p>
+<h3 id="11-registrar-la-app-de-pnp-en-entra-id-1">1.1 Registrar la App de PnP en Entra ID</h3>
+<p>Ejecuta este comando una sola vez por tenant:</p>
+<pre><code class="hljs powershell"><span class="hljs-built_in">Register-PnPEntraIDAppForInteractiveLogin</span>
+</code></pre>
+<ul>
+<li>Se abrirá una ventana del navegador. Inicia sesión con tu cuenta de administrador.</li>
+<li>Concede el consentimiento para la organización.</li>
+<li>IMPORTANTE: En tu terminal de PowerShell, aparecerá un Application (Client) ID. Cópialo y guárdalo.</li>
+</ul>
+<h2 id="2-conectar-a-sharepoint-1">2. Conectar a SharePoint</h2>
+<p>Una vez registrado, conéctate usando tu nuevo Client ID:</p>
+<pre><code class="hljs powershell"><span class="hljs-variable">$SiteURL</span> = <span class="hljs-string">"https://netorg4878279.sharepoint.com/sites/TuSitio"</span>
+<span class="hljs-variable">$ClientID</span> = <span class="hljs-string">"TU-CLIENT-ID-AQUI"</span>
+
+<span class="hljs-built_in">Connect-PnPOnline</span> <span class="hljs-literal">-Url</span> <span class="hljs-variable">$SiteURL</span> <span class="hljs-literal">-Interactive</span> <span class="hljs-literal">-ClientId</span> <span class="hljs-variable">$ClientID</span>
+</code></pre>
+<h2 id="3-registrar-el-site-script-1">3. Registrar el Site Script</h2>
+<p>Para agregar tu JSON como una plantilla en SharePoint:</p>
+<pre><code class="hljs powershell"><span class="hljs-comment"># Leer el archivo JSON</span>
+<span class="hljs-variable">$json</span> = <span class="hljs-built_in">Get-Content</span> <span class="hljs-literal">-Path</span> <span class="hljs-string">".\event-site-template.json"</span> <span class="hljs-literal">-Raw</span>
+
+<span class="hljs-comment"># Agregar el Site Script a SharePoint</span>
+<span class="hljs-built_in">Add-PnPSiteScript</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Casa Familiar - Event Site Template"</span> <span class="hljs-literal">-Content</span> <span class="hljs-variable">$json</span> <span class="hljs-literal">-Description</span> <span class="hljs-string">"Listas estandarizadas para planeación de eventos"</span>
+</code></pre>
+<p>Toma nota del ID devuelto por este comando.</p>
+<h2 id="4-crear-el-site-design-plantilla-de-sitio-1">4. Crear el Site Design (Plantilla de Sitio)</h2>
+<p>Ahora, vincula ese script a un "Site Design" para que aparezca en la interfaz web:</p>
+<pre><code class="hljs powershell"><span class="hljs-built_in">Add-PnPSiteDesign</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Event Planning Site"</span> <span class="hljs-literal">-SiteScriptIds</span> <span class="hljs-string">"EL-ID-DEL-PASO-3"</span> <span class="hljs-literal">-WebTemplate</span> <span class="hljs-string">"64"</span>
+</code></pre>
+<p>Nota: "64" es el ID para un Team Site.</p>
+<h2 id="5-aplicación-visual-interfaz-web-1">5. Aplicación Visual (Interfaz Web)</h2>
+<p>Una vez registrado vía PowerShell, puedes aplicarlo visualmente:</p>
+<ol>
+<li>Ve a tu nuevo sitio de SharePoint.</li>
+<li>Haz clic en Settings (Icono del engrane) -&gt; Apply a site template.</li>
+<li>Ve a la pestaña From your organization.</li>
+<li>Selecciona "Event Planning Site" y haz clic en Use template.</li>
+</ol>
+<hr>
+<blockquote>
+<p>[!TIP]
+Usa <code>Get-PnPSiteScript</code> y <code>Get-PnPSiteDesign</code> para listar las plantillas ya registradas.</p>
+</blockquote>
+<h1 id="detalle-técnico-visualización-en-páginas-web-parts-1">Detalle Técnico: Visualización en Páginas (Web Parts)</h1>
+<h3 id="1-la-diferencia-entre-lista-y-página-1">1. La Diferencia entre Lista y Página</h3>
+<ul>
+<li><strong>La Lista:</strong> Es el "depósito" de datos. Es donde entras a escribir las tareas, elegir el año y ver los colores. (Ej: <code>https://tu-sitio/Lists/EventTasks</code>).</li>
+<li><strong>La Página:</strong> Es la "cara" del sitio. Es lo que los usuarios ven al entrar (Home). Aquí es donde <strong>muestras</strong> la lista de forma elegante.</li>
+</ul>
+<hr>
+<h3 id="2-cómo-agregar-tus-columnas-maestras-a-una-lista-1">2. Cómo agregar tus Columnas Maestras a una Lista</h3>
+<p>Si ya tienes una lista creada y quieres empezar a usar tus columnas (Status, Year, Role), sigue esta ruta para no tener que crearlas de nuevo:</p>
+<ol>
+<li>Entra a la lista en SharePoint.</li>
+<li>Haz clic en el engrane (Settings) -&gt; List settings.</li>
+<li>Baja a la sección Columns y haz clic en Add from existing site columns.</li>
+<li>En "Select columns from", elige tu grupo _Casa Familiar.</li>
+<li>Selecciona la columna, dale a Add &gt; y luego a OK.</li>
+</ol>
+<hr>
+<h3 id="3-cómo-mostrar-tu-lista-en-la-página-principal-home-1">3. Cómo mostrar tu lista en la Página Principal (Home)</h3>
+<p>Para que el comité vea sus tareas al entrar al sitio:</p>
+<ol>
+<li>Ve a la página de inicio (Home) y haz clic en Edit (esquina superior derecha).</li>
+<li>Haz clic en el círculo con el símbolo de más (+) para agregar un nuevo web part.</li>
+<li>Busca y selecciona el web part de List.</li>
+<li>Selecciona la lista de tareas (ej: Event Tasks).</li>
+<li>Haz clic en Republish para guardar los cambios.</li>
+</ol>
+<hr>
+<h3 id="4-personalizar-la-vista-en-la-página-1">4. Personalizar la vista en la Página</h3>
+<p>Una vez que la lista está en la página, puedes:</p>
+<ul>
+<li><strong>Filtrar:</strong> Configurar el componente para que solo muestre las tareas "Blocked".</li>
+<li><strong>Esconder columnas:</strong> Para que la página no se vea muy cargada, puedes esconder la columna "ID" o "Creado por" y dejar solo lo importante.</li>
+</ul>
+<h3 id="5-resumen-visual-1">5. Resumen Visual</h3>
+<ul>
+<li><strong>¿Dónde vive la columna?</strong> En la Lista.</li>
+<li><strong>¿Dónde se ve el Dashboard?</strong> En la Página (usando el Web Part de Lista).</li>
+</ul>
+<h3 id="relacionado-4">Relacionado</h3>
+<ul>
+<li>[[04b-JSON-Formatting-Templates|Asegúrate de tener aplicados los colores JSON para que la página sea impactante.]]</li>
+<li>[[04-Guia-Implementacion-Practica|Volver a la Guía Principal]]</li>
+</ul>
+<h1 id="detalle-técnico-ultimate-site-script-v5---final-1">Detalle Técnico: Ultimate Site Script (V5 - Final)</h1>
+<p>Esta es la versión <strong>lista para producción</strong> de tu automatización de gestión de eventos. Cada lista está completamente equipada, los enlaces de navegación están preconfigurados y el branding se aplica automáticamente.</p>
+<hr>
+<h3 id="1-qué-incluye-1">1. Qué Incluye</h3>
+<table>
+<thead>
+<tr>
+<th align="left">List</th>
+<th align="left">Columns</th>
+<th align="left">Smart View</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Event Tasks</strong></td>
+<td align="left">Status, Year, Due Date, Start Date, Assigned To, Priority, Category, % Complete, Notes</td>
+<td align="left">"My Pending Tasks", "Blocked Tasks"</td>
+</tr>
+<tr>
+<td align="left"><strong>Risks</strong></td>
+<td align="left">Status, Risk Category, Probability, Impact Level, Mitigation Plan, Risk Owner, Review Date</td>
+<td align="left">"Active Risks"</td>
+</tr>
+<tr>
+<td align="left"><strong>Committee Roster</strong></td>
+<td align="left">Role, Year, Phone, Email, Availability, Emergency Contact, Special Skills</td>
+<td align="left">—</td>
+</tr>
+<tr>
+<td align="left"><strong>Event Budget</strong></td>
+<td align="left">Expense Category, Vendor, Estimated Cost, Actual Cost, Payment Status, Approved By, Invoice Date, Receipt Notes</td>
+<td align="left">"Pending Payments"</td>
+</tr>
+</tbody></table>
+<p><strong>Plus:</strong> Tema Teal + Navegación MegaMenu + Enlaces en el menú izquierdo.</p>
+<hr>
+<h3 id="2-post-despliegue-convertir-campos-de-texto-a-choice-1">2. Post-Despliegue: Convertir Campos de Texto a Choice</h3>
+<p>Después de aplicar el script, mejora manualmente estos campos para un mejor control de datos:</p>
+<table>
+<thead>
+<tr>
+<th align="left">List</th>
+<th align="left">Field</th>
+<th align="left">Recommended Choices</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Event Tasks</td>
+<td align="left">Priority</td>
+<td align="left">High, Medium, Low</td>
+</tr>
+<tr>
+<td align="left">Event Tasks</td>
+<td align="left">Category</td>
+<td align="left">Venue, Catering, Entertainment, Marketing, Logistics</td>
+</tr>
+<tr>
+<td align="left">Risks</td>
+<td align="left">Probability</td>
+<td align="left">Low, Medium, High</td>
+</tr>
+<tr>
+<td align="left">Risks</td>
+<td align="left">Impact Level</td>
+<td align="left">Low, Medium, High, Critical</td>
+</tr>
+<tr>
+<td align="left">Event Budget</td>
+<td align="left">Payment Status</td>
+<td align="left">Pending, Approved, Paid, Cancelled</td>
+</tr>
+<tr>
+<td align="left">Event Budget</td>
+<td align="left">Expense Category</td>
+<td align="left">Venue Rental, Food &amp; Beverage, Decorations, Permits, Insurance, Marketing</td>
+</tr>
+<tr>
+<td align="left">Committee Roster</td>
+<td align="left">Availability</td>
+<td align="left">Full-Time, Part-Time, Event Day Only</td>
+</tr>
+</tbody></table>
+<p><strong>Cómo:</strong> List Settings → clic en el nombre de la columna → cambiar Type a Choice → agregar opciones → OK.</p>
+<hr>
+<h3 id="3-cómo-desplegar-estrategia-de-script-dual-1">3. Cómo Desplegar (Estrategia de Script Dual)</h3>
+<p>Dado que ahora tienes una arquitectura con un Hub central y múltiples Sitios de Eventos conectados, tienes <strong>dos scripts JSON diferentes</strong>.</p>
+<h4 id="a-desplegando-el-hub-site-script-hub-site-templatejson-1">A. Desplegando el Hub Site Script (<code>hub-site-template.json</code>)</h4>
+<p>Este script solo debe ejecutarse <strong>una vez</strong> en tu portal principal. Fuerza el tema Teal y establece el layout a MegaMenu con cabecera compacta.</p>
+<p><strong>Importante:</strong> Antes de ejecutar estos comandos, asegúrate de haber seguido la <strong>[[04e-Detalle-Site-Scripts|Nueva Guía de Autenticación]]</strong> para registrar tu Client ID.</p>
+<pre><code class="hljs powershell"><span class="hljs-comment"># Conectar usando PnP (Moderno)</span>
+<span class="hljs-built_in">Connect-PnPOnline</span> <span class="hljs-literal">-Url</span> https://netorg4878279.sharepoint.com/sites/TuHub <span class="hljs-literal">-Interactive</span> <span class="hljs-literal">-ClientId</span> <span class="hljs-string">"TU-ID"</span>
+
+<span class="hljs-variable">$hubContent</span> = <span class="hljs-built_in">Get-Content</span> <span class="hljs-string">".\hub-site-template.json"</span> <span class="hljs-literal">-Raw</span>
+<span class="hljs-variable">$hubResult</span> = <span class="hljs-built_in">Add-PnPSiteScript</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Casa Familiar - Hub Branding"</span> <span class="hljs-literal">-Content</span> <span class="hljs-variable">$hubContent</span>
+<span class="hljs-built_in">Add-PnPSiteDesign</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Apply Hub Branding"</span> <span class="hljs-literal">-SiteScriptIds</span> <span class="hljs-variable">$hubResult</span>.Id <span class="hljs-literal">-WebTemplate</span> <span class="hljs-string">"68"</span>
+</code></pre>
+<p><em>Aplica esta plantilla "Apply Hub Branding" solo a tu Hub Site principal.</em></p>
+<hr>
+<h4 id="b-desplegando-el-event-sites-script-event-site-templatejson-1">B. Desplegando el Event Sites Script (<code>event-site-template.json</code>)</h4>
+<p>Este es el motor principal. Crea las 4 listas, se une al Hub automáticamente y configura el Menú Izquierdo. Lo aplicarás a <em>cada</em> nuevo sitio de evento que crees (ej: The Walk 2025).</p>
+<p><strong>Si estás actualizando el script existente (V5):</strong></p>
+<pre><code class="hljs powershell"><span class="hljs-variable">$newContent</span> = <span class="hljs-built_in">Get-Content</span> <span class="hljs-string">".\event-site-template.json"</span> <span class="hljs-literal">-Raw</span>
+<span class="hljs-built_in">Set-PnPSiteScript</span> <span class="hljs-literal">-Identity</span> <span class="hljs-string">"3b6c1a53-25d0-4cb0-bb48-ad0d0f6522e4"</span> <span class="hljs-literal">-Content</span> <span class="hljs-variable">$newContent</span>
+</code></pre>
+<p><strong>Si estás creando una plantilla nueva para Sitios de Eventos:</strong></p>
+<pre><code class="hljs powershell"><span class="hljs-variable">$content</span> = <span class="hljs-built_in">Get-Content</span> <span class="hljs-string">".\event-site-template.json"</span> <span class="hljs-literal">-Raw</span>
+<span class="hljs-variable">$result</span> = <span class="hljs-built_in">Add-PnPSiteScript</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Casa Familiar V5 - Event Site"</span> <span class="hljs-literal">-Content</span> <span class="hljs-variable">$content</span>
+<span class="hljs-built_in">Add-PnPSiteDesign</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Casa Familiar - Full Event Setup"</span> <span class="hljs-literal">-SiteScriptIds</span> <span class="hljs-variable">$result</span>.Id <span class="hljs-literal">-WebTemplate</span> <span class="hljs-string">"64"</span>
+</code></pre>
+<p><em>Nota: Usamos WebTemplate "64" para Team Sites modernos.</em></p>
+<h4 id="después-de-subir-ambas-opciones-1">Después de Subir (Ambas Opciones):</h4>
+<ol>
+<li>Ve a tu sitio de SharePoint.</li>
+<li>Haz clic en el engrane -&gt; <strong>Apply a site template</strong> -&gt; <strong>From your organization</strong>.</li>
+<li>Selecciona <strong>"Casa Familiar - Full Event Setup"</strong>.</li>
+<li>¡Listo! Se aplicarán las 4 listas, vistas, enlaces de navegación y el branding.</li>
+</ol>
+<blockquote>
+<p><strong>Importante:</strong> Si las listas ya existen de una ejecución previa, el script omitirá su creación pero no agregará nuevas columnas. Para probar un despliegue limpio, aplícalo en un sitio nuevo o borra las listas existentes primero.</p>
+</blockquote>
+<hr>
+<h3 id="4-opcional-registrar-el-tema-teal-primero-1">4. Opcional: Registrar el Tema Teal Primero</h3>
+<p>Si recibes un error de tema, registra el tema Teal antes de aplicar:</p>
+<pre><code class="hljs powershell"><span class="hljs-variable">$themepalette</span> = <span class="hljs-selector-tag">@</span>{
+  <span class="hljs-string">"themePrimary"</span> = <span class="hljs-string">"#008080"</span>; <span class="hljs-string">"themeLighterAlt"</span> = <span class="hljs-string">"#f0fafa"</span>
+  <span class="hljs-string">"themeLighter"</span> = <span class="hljs-string">"#c5eded"</span>; <span class="hljs-string">"themeLight"</span> = <span class="hljs-string">"#98dede"</span>
+  <span class="hljs-string">"themeTertiary"</span> = <span class="hljs-string">"#4dbdbd"</span>; <span class="hljs-string">"themeSecondary"</span> = <span class="hljs-string">"#1a9e9e"</span>
+  <span class="hljs-string">"themeDarkAlt"</span> = <span class="hljs-string">"#007373"</span>; <span class="hljs-string">"themeDark"</span> = <span class="hljs-string">"#006161"</span>
+  <span class="hljs-string">"themeDarker"</span> = <span class="hljs-string">"#004848"</span>; <span class="hljs-string">"neutralLighterAlt"</span> = <span class="hljs-string">"#faf9f8"</span>
+  <span class="hljs-string">"neutralLighter"</span> = <span class="hljs-string">"#f3f2f1"</span>; <span class="hljs-string">"neutralLight"</span> = <span class="hljs-string">"#edebe9"</span>
+  <span class="hljs-string">"neutralQuaternaryAlt"</span> = <span class="hljs-string">"#e1dfdd"</span>; <span class="hljs-string">"neutralQuaternary"</span> = <span class="hljs-string">"#d0d0d0"</span>
+  <span class="hljs-string">"neutralTertiaryAlt"</span> = <span class="hljs-string">"#c8c6c4"</span>; <span class="hljs-string">"neutralTertiary"</span> = <span class="hljs-string">"#a19f9d"</span>
+  <span class="hljs-string">"neutralSecondary"</span> = <span class="hljs-string">"#605e5c"</span>; <span class="hljs-string">"neutralPrimaryAlt"</span> = <span class="hljs-string">"#3b3a39"</span>
+  <span class="hljs-string">"neutralPrimary"</span> = <span class="hljs-string">"#323130"</span>; <span class="hljs-string">"neutralDark"</span> = <span class="hljs-string">"#201f1e"</span>
+  <span class="hljs-string">"black"</span> = <span class="hljs-string">"#000000"</span>; <span class="hljs-string">"white"</span> = <span class="hljs-string">"#ffffff"</span>
+}
+<span class="hljs-built_in">Add-SPOTheme</span> <span class="hljs-literal">-Name</span> <span class="hljs-string">"Teal"</span> <span class="hljs-literal">-Palette</span> <span class="hljs-variable">$themepalette</span> <span class="hljs-literal">-IsInverted</span> <span class="hljs-variable">$false</span>
+</code></pre>
+<hr>
+<h3 id="relacionado-5">Relacionado</h3>
+<ul>
+<li>[[04b-JSON-Formatting-Templates|Aplicar formato de colores después del despliegue]]</li>
+<li>[[04f-Detalle-Visualizacion-Paginas|Agregar listas a tu página de inicio]]</li>
+<li>[[04-Guia-Implementacion-Practica|Volver a la Guía Práctica]]</li>
+</ul>
+<h1 id="04j---guía-de-despliegue-oficial-de-sharepoint-online-spo-1">04j - Guía de Despliegue Oficial de SharePoint Online (SPO)</h1>
+<p>Si prefieres usar el <strong>Microsoft SharePoint Online Management Shell Oficial</strong> en lugar de PnP, utiliza esta guía. Este método es la forma "tradicional" y NO requiere registrar una aplicación en Entra ID.</p>
+<h2 id="1-prerrequisitos-1">1. Prerrequisitos</h2>
+<p>Asegúrate de tener instalado el módulo oficial:</p>
+<pre><code class="hljs powershell"><span class="hljs-built_in">Install-Module</span> <span class="hljs-literal">-Name</span> Microsoft.Online.SharePoint.PowerShell <span class="hljs-literal">-Force</span>
+</code></pre>
+<h2 id="2-conectar-a-tu-centro-de-administración-1">2. Conectar a tu Centro de Administración</h2>
+<p>Reemplaza <code>netorg4878279</code> con el nombre real de tu tenant:</p>
+<pre><code class="hljs powershell"><span class="hljs-built_in">Connect-SPOService</span> <span class="hljs-literal">-Url</span> https://netorg4878279<span class="hljs-literal">-admin</span>.sharepoint.com
+</code></pre>
+<h2 id="3-registrar-el-site-script-json-1">3. Registrar el Site Script (JSON)</h2>
+<p>Ejecuta estos comandos para subir tu <code>event-site-template.json</code>:</p>
+<pre><code class="hljs powershell"><span class="hljs-comment"># 1. Leer el contenido del JSON</span>
+<span class="hljs-variable">$json</span> = <span class="hljs-built_in">Get-Content</span> <span class="hljs-literal">-Path</span> <span class="hljs-string">".\event-site-template.json"</span> <span class="hljs-literal">-Raw</span>
+
+<span class="hljs-comment"># 2. Agregar el script a tu tenant</span>
+<span class="hljs-variable">$script</span> = <span class="hljs-built_in">Add-SPOSiteScript</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Casa Familiar - Official Event Site"</span> <span class="hljs-literal">-Content</span> <span class="hljs-variable">$json</span>
+
+<span class="hljs-comment"># 3. Crear el Site Design (Plantilla)</span>
+<span class="hljs-comment"># Usa WebTemplate "64" para Team Sites</span>
+<span class="hljs-built_in">Add-SPOSiteDesign</span> <span class="hljs-literal">-Title</span> <span class="hljs-string">"Official Event Setup"</span> <span class="hljs-literal">-WebTemplate</span> <span class="hljs-string">"64"</span> <span class="hljs-literal">-SiteScripts</span> <span class="hljs-variable">$script</span>.Id
+</code></pre>
+<h2 id="4-¿por-qué-usar-pnp-para-carpetas-1">4. ¿Por qué usar PnP para Carpetas?</h2>
+<p>Aunque el módulo oficial de SPO (arriba) es perfecto para registrar scripts, <strong>no puede</strong> crear fácilmente carpetas dentro de las bibliotecas de documentos ni gestionar MegaMenus.</p>
+<ul>
+<li><strong>Para el JSON:</strong> Usa el módulo Oficial de SPO (esta guía).</li>
+<li><strong>Para Carpetas/Menús:</strong> Usa PnP PowerShell (ya que sus cmdlets están diseñados específicamente para la automatización de contenido).</li>
+</ul>
+<hr>
+<blockquote>
+<p>[!TIP]
+Usa <code>Get-SPOSiteScript</code> y <code>Get-SPOSiteDesign</code> para gestionar tus plantillas oficiales a través del módulo de SPO.</p>
+</blockquote>
+<h1 id="mejoras-adicionales-de-sharepoint-nativas-1">Mejoras Adicionales de SharePoint (Nativas)</h1>
+<p>A continuación se presentan recomendaciones de mejora adicionales para los sitios de eventos de Casa Familiar, utilizando exclusivamente herramientas nativas de Microsoft 365 y SharePoint incluidas en el licenciamiento estándar para evitar generar costos extra.</p>
+<h2 id="1-integración-nativa-con-microsoft-teams-1">1. Integración Nativa con Microsoft Teams</h2>
+<p>Dado que cada sitio de evento está asociado a un Grupo de M365 (y por lo tanto a un Team de Teams), podemos unificar aún más la experiencia del comité.</p>
+<ul>
+<li><strong>Pestaña de Tareas:</strong> Incrusta directamente la vista de la lista <em>Event Tasks</em> (como pestaña de Sitio Web o Lista) dentro del canal General en Teams. Esto permite que el comité actualice su progreso sin necesidad de abrir el navegador web.</li>
+<li><strong>Canales por Área:</strong> En lugar de enviar correos caóticos, crea canales en Teams para <code>#Logística</code>, <code>#Voluntariado</code>, <code>#Marketing</code> para centrar las conversaciones. Las carpetas en la Biblioteca de Documentos del sitio deben alinearse con la estructura de canales en Teams.</li>
+</ul>
+<h2 id="2-vistas-visuales-board-view-kanban-1">2. Vistas Visuales: Board View (Kanban)</h2>
+<p>En la lista de <em>Event Tasks</em>, configura una "Board View" (Vista de Tablero) basada en la columna <code>CF_TaskStatus</code>.</p>
+<ul>
+<li><strong>Beneficio:</strong> Esta es una funcionalidad <em>Out-of-the-Box</em>. Permite al comité visualizar su carga de trabajo en columnas (Pending -&gt; In Progress -&gt; Completed) y arrastrar y soltar tarjetas.</li>
+<li><strong>Reemplazo de Power Apps:</strong> Esta vista mejora la experiencia web y móvil de forma gratuita sin diseñar formularios complejos.</li>
+</ul>
+<h2 id="3-seguimiento-de-presupuesto-expense-tracking-1">3. Seguimiento de Presupuesto (Expense Tracking)</h2>
+<p>Para el control financiero de eventos sin fines de lucro.</p>
+<ul>
+<li><strong>Lista Adicional (<code>Event Budget</code>):</strong> Crea una lista con las siguientes columnas:<ul>
+<li><code>Item Concept</code> (Texto)</li>
+<li><code>Estimated Amount</code> (Moneda)</li>
+<li><code>Actual Amount</code> (Moneda)</li>
+<li><code>Category</code> (Choice: Food, Rental, Marketing, etc.)</li>
+<li><code>CF_YearCycle</code> (Número)</li>
+<li>Attachments habilitados (para subir cotizaciones y recibos).</li>
+</ul>
+</li>
+<li><strong>Enlace de Facturas:</strong> El Lead del comité puede autorizarlas, y se agrupan por <code>Category</code> para tener sub-totales automáticos nativos en la vista de lista.</li>
+</ul>
+<h2 id="4-directorio-y-recursos-compartidos-en-el-hub-1">4. Directorio y Recursos Compartidos en el Hub</h2>
+<p>Para evitar duplicar el esfuerzo de buscar proveedores año tras año entre diferentes comités:</p>
+<ul>
+<li><strong>Lista Maestra de Proveedores en el Hub:</strong> <code>Casa Familiar Vendors</code>.<ul>
+<li>Columnas: Nombre, Contacto, Teléfono, Especialidad (Comida, Música, Seguridad), Calificación (1 a 5 estrellas por el Lead anterior).</li>
+</ul>
+</li>
+<li><strong>Lookup Column:</strong> En cada lista de <code>Event Tasks</code> e incluso en la lista de presupuesto (<code>Event Budget</code>), utiliza una columna de búsqueda (Lookup) referenciando la lista del Hub Site. Esta es una funcionalidad nativa y evita la redundancia de datos.</li>
+</ul>
+<h2 id="5-cuadros-de-mando-ejetutivos-dashboards-y-reportes-1">5. Cuadros de Mando Ejetutivos (Dashboards) y Reportes</h2>
+<p>Para la junta directiva de Casa Familiar que requiere una visión general sin entrar en el detalle de todos los sitios:</p>
+<ul>
+<li><strong>Página Principal del Hub (Vista de Roll-up):</strong> Usa el Web Part de "Highlighted Content" o "News" en el <code>Casa Familiar Events Hub</code> para consultar una vista consolidada de todas las <em>Event Tasks</em> a través de los 5 sitios asociados que tengan estado <code>Blocked</code> y el <code>CF_YearCycle</code> actual. Esto resalta rápidamente si algún evento necesita apoyo de la alta gerencia, utilizando el motor de búsqueda interno de SharePoint de forma gratuita.</li>
+</ul>
+<h1 id="plan-de-gobernanza-de-datos-sitios-de-eventos-casa-familiar-1">Plan de Gobernanza de Datos: Sitios de Eventos "Casa Familiar"</h1>
+<p>Este documento establece las reglas y políticas para asegurar que la información generada en cada sitio de evento se mantenga segura, organizada y cumpla con las políticas de retención de la organización.</p>
+<hr>
+<h2 id="1-estructura-y-arquitectura-dónde-vive-la-información-1">1. Estructura y Arquitectura (Dónde vive la información)</h2>
+<p>El modelo de gobernanza se basa en una arquitectura <strong>"Hub &amp; Spoke"</strong> (Centro y Ejes):</p>
+<ul>
+<li><p><strong>El Centro (Hub Site):</strong> <code>Casa Familiar Events</code></p>
+<ul>
+<li><strong>Propósito:</strong> Portal público para todos los empleados. Consolidación de información de todos los eventos.</li>
+<li><strong>Gobernanza:</strong> Solo el equipo core de planeación (y TI) tiene permisos de edición. El resto de la organización solo tiene acceso de <em>Lectura</em>.</li>
+<li><strong>Datos alojados:</strong> Políticas generales, plantillas maestras, columnas de sitio globales (<code>CF_TaskStatus</code>, etc.).</li>
+</ul>
+</li>
+<li><p><strong>Los Ejes (Event Sites):</strong> <code>Event: [Nombre del Evento 202X]</code></p>
+<ul>
+<li><strong>Propósito:</strong> Espacio de trabajo colaborativo específico para <em>cada</em> evento.</li>
+<li><strong>Gobernanza:</strong> Todos los miembros del comité del evento tienen permisos de edición.</li>
+<li><strong>Datos alojados:</strong> Presupuestos específicos, listas de tareas del evento, contratos de proveedores, rosters.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-gestión-de-permisos-quién-puede-ver-y-editar-1">2. Gestión de Permisos (Quién puede ver y editar)</h2>
+<p>La seguridad se maneja mediante Grupos de Microsoft 365 y niveles de permiso estándar de SharePoint. No se deben romper las herencias de permisos a nivel de carpeta o archivo individual a menos que sea estrictamente necesario (ej: Presupuestos).</p>
+<table>
+<thead>
+<tr>
+<th align="left">Rol en el Evento</th>
+<th align="left">Grupo de SharePoint</th>
+<th align="left">Nivel de Permiso</th>
+<th align="left">Cuándo usarlo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Director / Líder de Proyecto</strong></td>
+<td align="left">Owners (Propietarios)</td>
+<td align="left">Full Control</td>
+<td align="left">Puede crear listas, cambiar configuraciones del sitio y gestionar accesos. Máximo 2-3 personas.</td>
+</tr>
+<tr>
+<td align="left"><strong>Comité / Coordinadores / Volunteers Core</strong></td>
+<td align="left">Members (Miembros)</td>
+<td align="left">Edit</td>
+<td align="left">Pueden agregar, editar y borrar tareas, riesgos, documentos y elementos del presupuesto.</td>
+</tr>
+<tr>
+<td align="left"><strong>Voluntarios Generales / Staff Externo</strong></td>
+<td align="left">Visitors (Visitantes)</td>
+<td align="left">Read</td>
+<td align="left">Solo pueden ver la información para estar enterados, pero no pueden modificar documentos ni listas.</td>
+</tr>
+</tbody></table>
+<p><strong>Excepción Crítica (Lista de Presupuesto):</strong>
+La lista <code>Event Budget</code> y la carpeta de facturas/contratos deben configurarse para que solo el rol de <em>Owners</em> y el área de Finanzas puedan aprobar ("Payment Status: Paid").</p>
+<ul>
+<li><strong>Acción:</strong> Romper la herencia de permisos solo en esa lista si se requiere privacidad financiera absoluta.</li>
+</ul>
+<hr>
+<h2 id="3-retención-y-ciclo-de-vida-de-los-datos-cuánto-tiempo-se-guarda-1">3. Retención y Ciclo de Vida de los Datos (Cuánto tiempo se guarda)</h2>
+<p>Para cumplir con normativas legales y evitar la acumulación de "basura digital", se aplicarán políticas de retención y limpieza automatizada.</p>
+<h3 id="31-política-de-retención-legal-microsoft-purview-1">3.1 Política de Retención Legal (Microsoft Purview)</h3>
+<ul>
+<li><strong>Alcance:</strong> Documentos críticos (Contratos de proveedores, Facturas firmadas, Pólizas de seguro, Evidencia de mitigación de riesgos).</li>
+<li><strong>Regla:</strong> Retención de <strong>10 años</strong> desde que se marca como "Final" o "Pagado". No pueden ser eliminados permanentemente ni por el usuario (ver [[04d-Detalle-Retention-Policies]]).</li>
+</ul>
+<h3 id="32-ciclo-de-vida-del-sitio-del-evento-site-lifecycle-management-1">3.2 Ciclo de Vida del Sitio del Evento (Site Lifecycle Management)</h3>
+<p>Dado que se crean nuevos sitios cada año (ej: The Walk 2024, The Walk 2025), los sitios viejos deben "congelarse".</p>
+<table>
+<thead>
+<tr>
+<th align="left">Fase</th>
+<th align="left">Cuándo Ocurre</th>
+<th align="left">Acción de Gobernanza</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>1. Activo</strong></td>
+<td align="left">Planeación y ejecución del evento</td>
+<td align="left">Accesos normales (Edición completa para miembros).</td>
+</tr>
+<tr>
+<td align="left"><strong>2. Cierre (Read-Only)</strong></td>
+<td align="left">30 días después del evento</td>
+<td align="left">TI o el Dueño del Sitio cambian el grupo de "Members" a "Visitors". El sitio se vuelve un "archivo histórico de solo lectura". Nadie puede modificar datos pasados.</td>
+</tr>
+<tr>
+<td align="left"><strong>3. Archivado Profundo</strong></td>
+<td align="left">3 años después del evento</td>
+<td align="left">Se desvincula del Menú del Hub (ya no es visible globalmente) pero sigue accesible vía búsqueda e indexación para auditorías.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-estandarización-de-metadatos-cómo-se-etiqueta-la-información-1">4. Estandarización de Metadatos (Cómo se etiqueta la información)</h2>
+<p>Para poder buscar reportes (ej: "Muéstrame todas las tareas 'Completadas' de todos los eventos del '2024'"), dependemos 100% del uso estricto de <strong>Site Columns</strong> aplicadas vía los <strong>Site Scripts</strong> (ver [[04h-Site-Script]]).</p>
+<p><strong>Reglas de Ingreso de Datos:</strong></p>
+<ol>
+<li><strong>Cero Listas Personalizadas a nivel Raíz:</strong> Todas las listas core (Tasks, Risks, Budget, Roster) <em>deben</em> crearse siempre y únicamente usando el template oficial "Casa Familiar - Full Event Setup".</li>
+<li><strong>No modificar tipos de campo Core:</strong> Los campos inyectados por el template (<code>CF_TaskStatus</code>, <code>Expense Category</code>) no deben ser borrados ni renombrados por los dueños del sitio.</li>
+<li><strong>Uso de Metadatos Obligatorios:</strong> Los campos definidos como <code>isRequired: true</code> en el template (Ej: <em>Due Date</em>, <em>Estimated Cost</em>) garantizan que no existan registros "huérfanos".</li>
+</ol>
+<hr>
+<h2 id="5-auditoría-y-revisiones-1">5. Auditoría y Revisiones</h2>
+<ul>
+<li><strong>Frecuencia:</strong> Bimestral.</li>
+<li><strong>Responsable:</strong> Administrador de SharePoint / Project Manager Global.</li>
+<li><strong>Acción:</strong><ol>
+<li>Revisar el <em>Site Usage Analytics</em> para identificar sitios "abandonados".</li>
+<li>Verificar que los <em>Owners</em> de los sitios siguen siendo empleados activos de Casa Familiar (Identity Management).</li>
+<li>Asegurar que ningún sitio de evento tenga habilitada la opción de compartir enlaces anónimos ("Anyone with the link") para proteger información personal del Roster o Financiera.</li>
+</ol>
+</li>
+</ul>
+<h3 id="📂-relacionado-5">📂 Relacionado</h3>
+<ul>
+<li>[[04d-Detalle-Retention-Policies|Política técnica de Prevención de Datos (Purview)]]</li>
+<li>[[04h-Site-Script|Documentación del Template Automatizado Principal]]</li>
+</ul>
+<h1 id="estrategia-de-reutilización-anual-de-sitios-1">Estrategia de Reutilización Anual de Sitios</h1>
+<p>Cuando un evento se repite cada año (Ej: <em>The Walk 2024</em>, <em>The Walk 2025</em>), surge la pregunta: <strong>¿Reutilizo el mismo sitio de SharePoint y borro lo viejo, o creo uno nuevo?</strong></p>
+<p>En SharePoint Moderno, la recomendación de Microsoft es casi siempre <strong>crear un sitio nuevo</strong>. Aquí explicamos por qué y cómo manejar ambas estrategias.</p>
+<hr>
+<h2 id="estrategia-1-nuevo-año-nuevo-sitio-recomendada-1">Estrategia 1: "Nuevo Año, Nuevo Sitio" (Recomendada)</h2>
+<p>En lugar de borrar tareas viejas, creas un sitio fresco usando el <strong>Site Script</strong> que ya automatizamos.</p>
+<ul>
+<li><strong>Ejemplo:</strong> Tienes <code>casafamiliar.sharepoint.com/sites/TheWalk2024</code>. El próximo año creas <code>.../sites/TheWalk2025</code>.</li>
+</ul>
+<h3 id="ventajas-2">Ventajas</h3>
+<ol>
+<li><strong>Auditoría perfecta:</strong> Tienes un archivo histórico intacto de lo que pasó en 2024 (quién hizo qué, cuánto costó, qué falló).</li>
+<li><strong>Cero riesgo de borrado:</strong> No hay peligro de que alguien borre por accidente un contrato de 2024 creyendo que era "basura" para limpiar la lista.</li>
+<li><strong>Cumplimiento Legal (Purview):</strong> Las políticas de retención de 10 años funcionan perfectamente porque el sitio viejo simplemente se archiva (ver [[05-Plan-Gobernanza-Datos]]).</li>
+<li><strong>Rapidez:</strong> Gracias a tu Site Script ([[04h-Site-Script]]), crear el sitio 2025 y sus listas toma menos de 2 minutos.</li>
+</ol>
+<h3 id="desventajas-1">Desventajas</h3>
+<ul>
+<li>Genera más sitios en tu consola de administración (lo cual es normal y esperado en Microsoft 365).</li>
+</ul>
+<h3 id="flujo-de-trabajo-paso-a-paso-1">Flujo de Trabajo (Paso a Paso):</h3>
+<ol>
+<li><strong>Cierre del Evento (Noviembre 2024):</strong> Cambias los permisos del sitio <code>TheWalk2024</code> a "Solo Lectura". Nada se toca.</li>
+<li><strong>Inicio Nuevo Ciclo (Enero 2025):</strong> Creas el sitio <code>TheWalk2025</code>.</li>
+<li><strong>Aplicar Template:</strong> Ejecutas el template "Casa Familiar - Full Event Setup" en el nuevo sitio.</li>
+<li><strong>Enlazar al Hub:</strong> El script ya lo conecta automáticamente al hub principal.</li>
+<li><strong>Copiar Plantillas:</strong> Mueves manualmente solo los documentos de plantilla "en blanco" (ej: formato de check-in) del sitio 2024 al 2025.</li>
+</ol>
+<hr>
+<h2 id="estrategia-2-reciclaje-de-sitio-no-recomendada-pero-posible--1">Estrategia 2: "Reciclaje de Sitio" (No recomendada, pero posible )</h2>
+<p>Usas exactamente el mismo sitio (<code>casafamiliar.sharepoint.com/sites/TheWalk</code>) año tras año, limpiando las listas.</p>
+<h3 id="ventajas-3">Ventajas</h3>
+<ul>
+<li>La URL nunca cambia. Los voluntarios siempre guardan el mismo link en sus favoritos.</li>
+<li>No tienes que mover ni copiar documentos base de un año a otro.</li>
+</ul>
+<h3 id="desventajas-riesgos-altos-1">Desventajas (Riesgos Altos)</h3>
+<ol>
+<li><strong>Pérdida de Historial:</strong> Para usar listas como <em>Event Tasks</em> limpias, alguien tiene que borrar las tareas del año pasado. Se pierde el historial operativo.</li>
+<li><strong>Choque Legal:</strong> Si configuras la política de Retención de 10 años, <strong>Microsoft M365 te impedirá borrar elementos</strong> de la lista para reciclarlos. El sistema te marcará error al intentar "limpiar" para el nuevo año.</li>
+<li><strong>Saturación de Vistas:</strong> Si decides <em>no</em> borrar, sino solo cambiar la columna <code>CF_YearCycle</code> (ej: filtrar la vista para que solo muestre "2025"), después de 3 años tu lista de Tareas será inmensa, muy lenta de cargar, y la búsqueda será un caos.</li>
+</ol>
+<h3 id="flujo-de-trabajo-si-decides-hacerlo-así-1">Flujo de Trabajo (Si decides hacerlo así):</h3>
+<ol>
+<li><strong>Cierre del Evento:</strong> Debes exportar tus listas (Tasks, Risks, Budget) a Excel como respaldo histórico.</li>
+<li><strong>Limpieza manual:</strong> Un administrador debe entrar y borrar <strong>todos</strong> los elementos de todas las listas. <em>(Reitero: esto fallará si tienes Retention Policies activas)</em>.</li>
+<li><strong>Actualizar Documentos:</strong> Mover los documentos del año pasado a una carpeta llamada "Archive 2024".</li>
+</ol>
+<hr>
+<h2 id="veredicto-para-casa-familiar-1">Veredicto para Casa Familiar</h2>
+<p>Dado que has implementado <strong>Site Scripts Autómatizados</strong> y necesitas <strong>Políticas de Retención de Contratos</strong>, la única estrategia viable y segura a largo plazo es la <strong>Estrategia 1 (Nuevo Año, Nuevo Sitio)</strong>.</p>
+<p><strong>Solución al problema del "link eterno":</strong>
+Para evitar que los usuarios se confundan con URLs nuevas cada año, la mejor práctica es:
+En tu <strong>Hub Site principal</strong>, pon un botón gigante que diga "Ir al Evento The Walk Actual". Tú como administrador, solo actualizas ese botón cada año para que apunte al nuevo sitio (del 2024 al 2025). El usuario final solo tiene que recordar la ruta del Hub Site.</p>
+<h3 id="📂-relacionado-6">📂 Relacionado</h3>
+<ul>
+<li>[[04h-Site-Script|Recuerda cómo aplicar el template para sitios nuevos]]</li>
+<li>[[05-Plan-Gobernanza-Datos|Reglas sobre qué hacer con los sitios viejos]]</li>
+</ul>
+<h1 id="estrategia-de-archivos-centralizados-hub-vs-event-sites-1">Estrategia de Archivos Centralizados (Hub vs Event Sites)</h1>
+<p>El modelo de "Hub &amp; Spoke" (Centro y Ejes) no solo aplica a las listas, sino también a la gestión de documentos. El error más común al planear eventos es tener 5 versiones diferentes del mismo "Formato de Check-in" regadas por todos los sitios.</p>
+<p>Aquí tienes el plan recomendado para gobernar los archivos y mantener una "Única Fuente de Verdad" (Single Source of Truth).</p>
+<hr>
+<h2 id="1-el-hub-site-la-biblioteca-maestra-plantillas-y-políticas-1">1. El Hub Site: La Biblioteca Maestra (Plantillas y Políticas)</h2>
+<p>El sitio Hub (<code>Event Planning Improvements Project</code>) es el "Corporativo". Aquí no se guarda trabajo en progreso de ningún evento específico.</p>
+<h3 id="bibliotecas-de-documentos-recomendadas-en-el-hub-1">Bibliotecas de Documentos Recomendadas en el Hub:</h3>
+<ol>
+<li><strong>"Master Templates" (Plantillas Maestras):</strong><ul>
+<li><strong>Qué guardar:</strong> Logos oficiales, formatos vacíos de presupuestos (Excel), formatos de check-in de voluntarios, machotes de contratos.</li>
+<li><strong>Permisos (Crucial):</strong> Solo el equipo central (Owners) tiene permiso de <em>Edición</em>. Todos los demás voluntarios tienen permiso de <em>Lectura</em> (solo pueden descargar o copiar).</li>
+</ul>
+</li>
+<li><strong>"Global Policies &amp; Manuals" (Políticas Globales):</strong><ul>
+<li><strong>Qué guardar:</strong> Manuales de respuesta a emergencias, guías de código de vestimenta, protocolos de seguridad.</li>
+<li><strong>Permisos:</strong> Igual que arriba, 100% de Lectura para la mayoría.</li>
+</ul>
+</li>
+</ol>
+<h3 id="beneficio-1">Beneficio:</h3>
+<p>Si en 2025 cambias el logo de la organización, solo actualizas el archivo en la carpeta "Master Templates" del Hub. Cuando los voluntarios de un evento vayan a buscar el logo, siempre descargarán la versión más nueva, sin que tengas que avisarles a todos.</p>
+<hr>
+<h2 id="2-los-event-sites-espacios-de-trabajo-working-documents-1">2. Los Event Sites: Espacios de Trabajo (Working Documents)</h2>
+<p>Cada sitio de evento individual (Ej: <code>The Walk 2024</code>) viene por defecto con una biblioteca llamada <strong>"Documents"</strong> (Documentos). Ese es el espacio de trabajo activo.</p>
+<h3 id="¿qué-se-guarda-en-el-sitio-del-evento-1">¿Qué se guarda en el Sitio del Evento?</h3>
+<ul>
+<li>Contratos de proveedores <strong>ya firmados</strong> para <em>ese</em> evento.</li>
+<li>Presentaciones de PowerPoint específicas para <em>esa</em> junta de comité.</li>
+<li>El plano de mesas (Layout) del salón de <em>ese</em> año.</li>
+</ul>
+<h3 id="permisos-1">Permisos:</h3>
+<ul>
+<li>Todos los miembros del comité del evento tienen permisos para <strong>Editar, Borrar y Crear</strong> la biblioteca de su sitio. Es su espacio de trabajo.</li>
+</ul>
+<hr>
+<h2 id="3-¿cómo-conectar-ambos-mundos-flujo-de-trabajo-del-usuario-1">3. ¿Cómo Conectar Ambos Mundos? (Flujo de Trabajo del Usuario)</h2>
+<p>Para que los voluntarios no se frustren buscando la "Plantilla de Check-in", debes hacer que fluya de manera natural desde el Hub hacia el Sitio del Evento.</p>
+<h3 id="la-función-mágica-colocar-un-acceso-directo-add-shortcut-1">La Función Mágica: "Colocar un Acceso Directo" (Add shortcut)</h3>
+<ol>
+<li>Ve a la biblioteca "Master Templates" de tu Hub Site.</li>
+<li>Selecciona la carpeta de plantillas.</li>
+<li>Copia el <strong>enlace (URL)</strong> de esa biblioteca.</li>
+<li>En tu sitio de evento, puedes agregar ese enlace como un acceso directo (Quick Link) o en el menú izquierdo de navegación.</li>
+</ol>
+<h3 id="método-copy-to-recomendado-para-sharepoint-moderno-1">Método "Copy to" (Recomendado para SharePoint Moderno)</h3>
+<p>La mejor manera de trabajar es enseñar a los voluntarios este flujo:</p>
+<ol>
+<li>El voluntario entra al <strong>Hub Site</strong>.</li>
+<li>Entra a la biblioteca <strong>Master Templates</strong>.</li>
+<li>Selecciona el formato vacío (ej: <code>Formato-CheckIn-Vacio.xlsx</code>).</li>
+<li>Haz clic en el botón superior que dice <strong>"Copy to"</strong> (Copiar a).</li>
+<li>SharePoint le preguntará "¿A dónde lo quieres copiar?". El voluntario selecciona su sitio de evento activo (Ej: <code>The Walk 2024</code> -&gt; <code>Documents</code>).</li>
+<li><strong>Magia:</strong> El documento vacío se copia al sitio del evento, donde el voluntario ya puede llenarlo con nombres sin afectar la plantilla maestra del Hub.</li>
+</ol>
+<hr>
+<h2 id="4-mejora-continua-actualizando-plantillas-1">4. Mejora Continua: Actualizando Plantillas</h2>
+<p>¿Qué pasa si un voluntario del evento "The Walk 2024" mejora la plantilla del presupuesto agregando fórmulas increíbles?</p>
+<ul>
+<li>Esa mejora se queda en su sitio de evento.</li>
+<li>Te envía un correo diciendo: "Oye, mejoré el formato de presupuesto, ¿lo puedes hacer el oficial?".</li>
+<li>Tú (como Owner del Hub) vas a tu computadora, descargas el formato mejorado, y <strong>lo subes a la biblioteca "Master Templates" del Hub</strong> reemplazando el viejo.</li>
+<li>¡Listo! El próximo evento (Ej: Gala 2024) ya usará el formato mejorado cuando le den "Copy to".</li>
+</ul>
+<h3 id="📂-relacionado-7">📂 Relacionado</h3>
+<ul>
+<li>[[05-Plan-Gobernanza-Datos|Plan de control de versiones y permisos]]</li>
+<li>[[06-Estrategia-Reutilizacion-Anual|Qué hacer con los documentos de eventos pasados]]</li>
+</ul>
+<h1 id="configuración-centralizada-del-hub-site-guía-de-contenido-1">Configuración Centralizada del Hub Site (Guía de Contenido)</h1>
+<p>Para mantener la consistencia con tu "Ultimate English Site Script" (V5), el Hub Site central (<code>Event Planning Improvements Project</code>) debe estar estructurado y nombrado completamente en Inglés para los elementos del sistema, aunque las descripciones estén en Español.</p>
+<p>Aquí tienes el blueprint exacto de qué crear en el Hub Site, incluyendo nombres de bibliotecas, estructuras de carpetas y plantillas esenciales.</p>
+<hr>
+<h2 id="1-bibliotecas-de-documentos-a-crear-1">1. Bibliotecas de Documentos a Crear</h2>
+<p>No uses la biblioteca por defecto "Documents" para todo. Segrega tus archivos creando estas bibliotecas específicas en el Hub Site (Icono Engrane -&gt; Add an App -&gt; Document Library).</p>
+<h3 id="library-a-master-templates-1">Library A: <code>Master Templates</code></h3>
+<p><strong>Propósito:</strong> Hogar de todos los archivos en blanco y reutilizables.
+<strong>Permisos:</strong> Owners (Edit), Members/Visitors (Read-Only).</p>
+<p><strong>Estructura Completa de Carpetas dentro de <code>Master Templates</code>:</strong></p>
+<ul>
+<li><p><code>01 - Finance &amp; Budget</code></p>
+<ul>
+<li><code>Event-Budget-Blank-Template.xlsx</code></li>
+<li><code>Vendor-Invoice-Cover-Sheet.docx</code></li>
+<li><code>Reimbursement-Request-Form.pdf</code></li>
+<li><code>Sponsorship-Pitch-Deck.pptx</code></li>
+<li><code>Sponsorship-Pricing-Tiers.pdf</code></li>
+<li><code>Tax-Exemption-Certificate.pdf</code></li>
+</ul>
+</li>
+<li><p><code>02 - Operations &amp; Logistics</code></p>
+<ul>
+<li><code>Volunteer-Check-In-Sheet.xlsx</code></li>
+<li><code>Event-Run-of-Show-Template.docx</code></li>
+<li><code>Venue-Inspection-Checklist.pdf</code></li>
+<li><code>Equipment-Inventory-Tracker.xlsx</code></li>
+<li><code>Catering-Menu-Template.docx</code></li>
+<li><code>Event-Debrief-Meeting-Agenda.docx</code></li>
+</ul>
+</li>
+<li><p><code>03 - Marketing &amp; Branding</code></p>
+<ul>
+<li><code>Casa-Familiar-Official-Logos.zip</code></li>
+<li><code>Press-Release-Template.docx</code></li>
+<li><code>Social-Media-Graphics-Base.pptx</code></li>
+<li><code>Typography-and-Brand-Colors.pdf</code></li>
+<li><code>Email-Newsletter-Template.docx</code></li>
+<li><code>Event-Flyer-Template.dotx</code></li>
+</ul>
+</li>
+<li><p><code>04 - Legal &amp; Contracts</code></p>
+<ul>
+<li><code>Standard-Vendor-Agreement.docx</code></li>
+<li><code>Liability-Waiver-Form.pdf</code></li>
+<li><code>Photo-Release-Consent-Form.pdf</code></li>
+<li><code>Talent-Performer-Agreement.docx</code></li>
+<li><code>Non-Disclosure-Agreement-NDA.pdf</code></li>
+</ul>
+</li>
+<li><p><code>05 - Risk &amp; Safety Management</code></p>
+<ul>
+<li><code>Risk-Assessment-Matrix-Blank.xlsx</code></li>
+<li><code>Incident-Report-Form.pdf</code></li>
+<li><code>Emergency-Contact-List-Template.xlsx</code></li>
+</ul>
+</li>
+<li><p><code>06 - Committee &amp; Volunteers</code></p>
+<ul>
+<li><code>Committee-Meeting-Minutes-Template.docx</code></li>
+<li><code>Volunteer-Role-Descriptions.pdf</code></li>
+<li><code>Certificate-of-Appreciation-Template.pptx</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="library-b-global-policies--procedures-1">Library B: <code>Global Policies &amp; Procedures</code></h3>
+<p><strong>Propósito:</strong> Reglas y manuales oficiales que no cambian de evento en evento.
+<strong>Permisos:</strong> Owners (Edit), Members/Visitors (Read-Only).</p>
+<p><strong>Contenido Recomendado (Sin carpetas, mantener plano para facilitar búsquedas):</strong></p>
+<ul>
+<li><code>Emergency-Response-Protocol.pdf</code></li>
+<li><code>Volunteer-Code-of-Conduct.pdf</code></li>
+<li><code>Expense-Approval-Policy.pdf</code></li>
+<li><code>Media-Interaction-Guidelines.pdf</code></li>
+<li><code>Vendor-Onboarding-Process.pdf</code></li>
+<li><code>Data-Privacy-and-Photo-Policy.pdf</code></li>
+<li><code>Event-Cancellation-Policy.pdf</code></li>
+</ul>
+<hr>
+<h2 id="2-navegación-del-hub-site-megamenu-1">2. Navegación del Hub Site (MegaMenu)</h2>
+<p>El Hub utiliza el layout de MegaMenu para mostrar un directorio completo de recursos.</p>
+<p><strong>Estructura Extendida del Menú (Inglés para los Enlaces):</strong></p>
+<ul>
+<li><strong>Home</strong> <em>(Link al Hub Home Page)</em></li>
+<li><strong>Active Events</strong> <em>(Dropdown)</em><ul>
+<li><em>The Walk 2024</em></li>
+<li><em>Annual Gala 2024</em></li>
+<li><em>Community Festival 2024</em></li>
+</ul>
+</li>
+<li><strong>Master Templates</strong> <em>(Dropdown - Link a la Library A)</em><ul>
+<li><em>Finance &amp; Budget</em></li>
+<li><em>Operations &amp; Logistics</em></li>
+<li><em>Marketing &amp; Branding</em></li>
+<li><em>Legal &amp; Contracts</em></li>
+<li><em>Risk &amp; Safety</em></li>
+<li><em>Committee &amp; Volunteers</em></li>
+</ul>
+</li>
+<li><strong>Global Policies</strong> <em>(Dropdown - Link a la Library B)</em><ul>
+<li><em>Emergency Protocols</em></li>
+<li><em>Volunteer Code of Conduct</em></li>
+<li><em>Vendor Onboarding Process</em></li>
+</ul>
+</li>
+<li><strong>Quick Links</strong> <em>(Dropdown)</em><ul>
+<li><em>Submit Expense Reimbursement</em></li>
+<li><em>IT Support Request</em></li>
+<li><em>Marketing Brand Portal</em></li>
+</ul>
+</li>
+<li><strong>Past Events Archive</strong> <em>(Dropdown)</em><ul>
+<li><em>The Walk 2023</em></li>
+<li><em>Annual Gala 2023</em></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3-diseño-de-la-página-principal-del-hub-web-parts-1">3. Diseño de la Página Principal del Hub (Web Parts)</h2>
+<p>La Home page del Hub Site no debe mostrar tareas (eso pertenece a los sitios de eventos). Debe actuar como un panel para toda la organización.</p>
+<p><strong>Web Parts Recomendados (De arriba a abajo):</strong></p>
+<ol>
+<li><strong>Hero Web Part:</strong><ul>
+<li><em>Título:</em> "Welcome to Casa Familiar Event Planning"</li>
+<li><em>Botón de Llamado a la Acción:</em> "Go to Current Event: The Walk 2024" (Se actualiza anualmente).</li>
+</ul>
+</li>
+<li><strong>Quick Links Web Part (Layout de Iconos):</strong><ul>
+<li>Link 1: Download Official Logos</li>
+<li>Link 2: View Emergency Protocols</li>
+<li>Link 3: Submit Reimbursement</li>
+</ul>
+</li>
+<li><strong>News Web Part:</strong><ul>
+<li>Úsalo para publicar anuncios organizacionales (ej: "New Catering Vendor Approved", "Gala Date Moved").</li>
+</ul>
+</li>
+<li><strong>Events Web Part:</strong><ul>
+<li>Consolida fechas de calendario de todos los Event Sites conectados para mostrar una línea de tiempo unificada.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="4-recordatorio-del-flujo-de-trabajo-1">4. Recordatorio del Flujo de Trabajo</h2>
+<p><strong>Siempre entrena al personal con esta regla:</strong>
+<em>"Nunca edites un archivo directamente en la biblioteca <code>Master Templates</code>. Abre la carpeta, selecciona el archivo, haz clic en <strong>Copy to</strong> en el menú superior, y envíalo a la biblioteca de documentos de tu sitio de evento específico antes de llenarlo."</em></p>
+<hr>
+<h3 id="relacionado-6">Relacionado</h3>
+<ul>
+<li>[[07-Estrategia-Archivos-Centralizados|Por qué centralizamos archivos (Estrategia)]]</li>
+<li>[[04h-Site-Script|La plantilla usada para los Sitios de Eventos]]</li>
+</ul>
+<h1 id="estructura-de-carpetas-operativas-para-sitios-de-eventos-1">Estructura de Carpetas Operativas para Sitios de Eventos</h1>
+<p>Mientras que el Hub Site contiene las <strong>Master Templates</strong>, cada sitio de evento individual (ej: <em>The Walk 2024</em>) necesita una estructura operativa para almacenar sus archivos de trabajo específicos, contratos firmados y activos del día del evento.</p>
+<p>La consistencia en todos los sitios de eventos es clave para facilitar los reportes y la rotación del personal.</p>
+<hr>
+<h2 id="1-recomendaciones-para-la-biblioteca-documents-1">1. Recomendaciones para la Biblioteca "Documents"</h2>
+<p>Cada sitio de evento creado con la plantilla "Casa Familiar - Full Event Setup" tendrá una biblioteca por defecto llamada <strong>Documents</strong>. Esta debe organizarse de la siguiente manera:</p>
+<h3 id="estructura-sugerida-de-carpetas-inglés-1">Estructura Sugerida de Carpetas (Inglés):</h3>
+<ul>
+<li><code>01 - Financials &amp; Expenses</code><ul>
+<li><em>Propósito:</em> Presupuesto llenado localmente, cotizaciones de vendors y facturas específicas.</li>
+<li><em>Contenido:</em> <code>TheWalk2024-Final-Budget.xlsx</code>, <code>Catering-Invoice-001.pdf</code>.</li>
+</ul>
+</li>
+<li><code>02 - Planning &amp; Logistics</code><ul>
+<li><em>Propósito:</em> Planes operativos, run-of-shows y planos del lugar.</li>
+<li><em>Contenido:</em> <code>Event-Schedule-V3.docx</code>, <code>Venue-Layout-Map.png</code>.</li>
+</ul>
+</li>
+<li><code>03 - Marketing &amp; Social Media</code><ul>
+<li><em>Propósito:</em> Flyers específicos para este año, fotos del evento y comunicados de prensa localizados.</li>
+<li><em>Contenido:</em> <code>Social-Media-Photos/</code>, <code>TheWalk2024-Campaign-Flyer.pdf</code>.</li>
+</ul>
+</li>
+<li><code>04 - Signed Contracts &amp; Agreements</code><ul>
+<li><em>Propósito:</em> Versiones finales y firmadas de documentos (Mover desde el template del Hub -&gt; Llenar -&gt; Firmar -&gt; Almacenar aquí).</li>
+<li><em>Contenido:</em> <code>Signed-Security-Contract.pdf</code>, <code>Talent-Waivers/</code>.</li>
+</ul>
+</li>
+<li><code>05 - Volunteer &amp; Staff Management</code><ul>
+<li><em>Propósito:</em> Horarios de turnos, listas de contactos específicas para este equipo.</li>
+<li><em>Contenido:</em> <code>Shift-Schedule-Final.xlsx</code>, <code>Staff-Instructions.pdf</code>.</li>
+</ul>
+</li>
+<li><code>06 - Post-Event &amp; Debrief</code><ul>
+<li><em>Propósito:</em> Reportes resumidos, resultados de encuestas y lecciones aprendidas.</li>
+<li><em>Contenido:</em> <code>Post-Event-Report.docx</code>, <code>Survey-Results-Summary.xlsx</code>.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2-mejores-prácticas-para-dueños-de-sitios-1">2. Mejores Prácticas para Dueños de Sitios</h2>
+<ol>
+<li><strong>No crees carpetas de primer nivel:</strong> Mantente fiel a las 6 categorías estándar de arriba.</li>
+<li><strong>Convención de Nombres:</strong> Prefija los archivos con el Nombre del Evento y Año (ej: <code>Gala2024-GuestList.xlsx</code>) para que, si alguna vez se mueven o comparten, el contexto permanezca.</li>
+<li><strong>Usa el Hub:</strong> Si necesitas un formulario "en blanco", ve a la biblioteca <code>Master Templates</code> del Hub y usa la función <strong>"Copy to"</strong> para traerlo aquí.</li>
+</ol>
+<hr>
+<h2 id="3-automatización-creación-programática-1">3. Automatización (Creación Programática)</h2>
+<p>Dado que los Site Scripts de SharePoint aún no soportan de forma nativa la creación de estructuras de carpetas complejas, se recomienda que el <strong>Dueño del Sitio</strong> o <strong>Administrador de TI</strong> ejecute el script <code>create-event-folders.ps1</code> inmediatamente después de que se aprovisione un nuevo sitio de evento.</p>
+<hr>
+<h3 id="relacionado-7">Relacionado</h3>
+<ul>
+<li>[[08-Hub-Site-English-Content|Compara con la estructura de Master Templates del Hub Site]]</li>
+<li>[[07-Estrategia-Archivos-Centralizados|Aprende cómo copiar archivos del Hub al Sitio de Evento]]</li>
+</ul>
+
+	
+
+</body></html>
