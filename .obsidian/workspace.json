@@ -4,24 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "40c61504f47a3240",
+        "id": "a78695eaea2d0a0f",
         "type": "tabs",
         "children": [
           {
-            "id": "ee198858b52bde39",
+            "id": "bdb2aab71577365e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "weekly-reports/2026-03-18-Weekly-Activity-Report.md",
+                "file": "SharePoint-Events-Portal/abrazo-2026/00-Event-Overview.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00-Event-Overview"
+            }
+          },
+          {
+            "id": "731712ba18e78618",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SharePoint-Events-Portal/abrazo-2026/01-SharePoint-Home-Page-Content.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01-SharePoint-Home-Page-Content"
+            }
+          },
+          {
+            "id": "b9258c855bf0fe30",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SharePoint-Events-Portal/abrazo-2026/01a-SharePoint-Markdown-Alternative.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-03-18-Weekly-Activity-Report"
+              "title": "01a-SharePoint-Markdown-Alternative"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -56,7 +85,7 @@
                 "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               },
@@ -78,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 811.5
   },
   "right": {
     "id": "0b9bda1c9cb47db6",
@@ -94,7 +123,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "weekly-reports/2026-03-18-Weekly-Activity-Report.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +132,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2026-03-18-Weekly-Activity-Report"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +141,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "weekly-reports/2026-03-18-Weekly-Activity-Report.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-03-18-Weekly-Activity-Report"
+              "title": "Outgoing links"
             }
           },
           {
@@ -156,20 +183,22 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "weekly-reports/2026-03-18-Weekly-Activity-Report.md",
+                "file": "AppFolio-QuickBooks-Integration/Sandbox Server/Sandbox-UAT-Documentation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-03-18-Weekly-Activity-Report"
+              "title": "Outline of Sandbox-UAT-Documentation"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 505.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -179,47 +208,57 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "webpage-html-export:Export as HTML": false
     }
   },
-  "active": "ee198858b52bde39",
+  "active": "b9258c855bf0fe30",
   "lastOpenFiles": [
-    "weekly-reports/generate_report.py",
-    "Master-Sprint-Plan-Workload-Analysis.md",
-    "logo/Casa Familiar_LogoPrincipalSlogan_1000x1000_300pix.png",
-    "logo",
-    "Salesforce-Reporting-KPIs/04-Technical/Visita-Gema-Mayra-Guia.md",
-    "Master-Sprint-Plan.md",
+    "SharePoint-Events-Portal/fall-festival-2026/03-Event-Tasks-List-Design.md",
+    "SharePoint-Events-Portal/fall-festival-2026/02-Fall-Festival-Project-Plan.md",
+    "SharePoint-Events-Portal/fall-festival-2026/01-SharePoint-Home-Page-Content.md",
+    "SharePoint-Events-Portal/fall-festival-2026/00-Event-Overview.md",
+    "SharePoint-Events-Portal/fall-festival-2026",
+    "SharePoint-Events-Portal/abrazo-2026/00-Event-Overview.md",
+    "SharePoint-Events-Portal/abrazo-2026/01-SharePoint-Home-Page-Content.md",
+    "SharePoint-Events-Portal/abrazo-2026/01a-SharePoint-Markdown-Alternative.md",
+    "SharePoint-Events-Portal/abrazo-2026/02-Abrazo-2026-Project-Plan.md",
+    "SharePoint-Events-Portal/abrazo-2026/03-Event-Tasks-List-Design.md",
+    "SharePoint-Events-Portal/abrazo-2026/_TOC_.md",
+    "SharePoint-Events-Portal/abrazo-2026/03-Event-Tasks-List-Design.html",
+    "SharePoint-Events-Portal/abrazo-2026/02-Abrazo-2026-Project-Plan.html",
+    "SharePoint-Events-Portal/abrazo-2026/01a-SharePoint-Markdown-Alternative.html",
+    "SharePoint-Events-Portal/abrazo-2026/01-SharePoint-Home-Page-Content.html",
+    "SharePoint-Events-Portal/abrazo-2026/00-Event-Overview.txt",
+    "SharePoint-Events-Portal/abrazo-2026/00-Event-Overview.html",
+    "SharePoint-Events-Portal/abrazo-2026/~WRL0001.tmp",
+    "SharePoint-Events-Portal/abrazo-2026/~WRD0000.tmp",
+    "SharePoint-Events-Portal/abrazo-2026/~$-Event-Tasks-List-Design.docx",
+    "M365-Site-Creation-Restriction/04-Testing-Environment.md",
+    "M365-Site-Creation-Restriction/Microsoft Graph Explorer Guide for M365 Group Creation Restriction.md",
+    "M365-Site-Creation-Restriction/01-Graph-Explorer-Guide.md",
+    "Pasted image 20260325132536.png",
+    "Pasted image 20260325132436.png",
+    "AppFolio-QuickBooks-Integration/Sandbox Server/Sandbox-UAT-Documentation.md",
+    "M365-Site-Creation-Restriction/image.png",
+    "weekly-reports/weekly-report-template.md",
+    "weekly-reports/2026-03-25-Weekly-Activity-Report.md",
     "weekly-reports/2026-03-18-Weekly-Activity-Report.md",
-    "weekly-reports/Weekly_Report_Template.pdf",
-    "Master-Project-Board.md",
-    "weekly-reports",
-    "Weekly_Report_Template.pdf",
-    "Salesforce-Reporting-KPIs/01-Backlog.md",
-    "AppFolio-QuickBooks-Integration/05-Analysis/Stakeholder-Communication-Strategy.md",
-    "AppFolio-QuickBooks-Integration/01-Backlog.md",
-    "AppFolio-QuickBooks-Integration/00-Project-Overview.md",
-    "AppFolio-QuickBooks-Integration/05-Analysis",
-    "AppFolio-QuickBooks-Integration",
-    "Salesforce-Reporting-KPIs/05-Analysis/Sprint-Start-Day-Analysis.md",
-    "Salesforce-Reporting-KPIs/03-Workflows/Intake-Workflow-Draft.md",
-    "SharePoint-Events-Portal/01-Backlog.md",
-    "SharePoint-Events-Portal/00-Project-Overview.md",
-    "SharePoint-Events-Portal",
-    "sharepoint-events/09-Event-Site-Folder-Structure.md",
-    "sharepoint-events/temp.pdf",
-    "sharepoint-events/_TOC_.md",
-    "sharepoint-events/Temp_Unificado.md",
-    "sharepoint-events/temp.md",
-    "sharepoint-events/temp.html",
-    "sharepoint-events/11-Project-Schedule.md",
-    "sharepoint-events/mermaid-filter.err",
-    "sharepoint-events/10-Manual-Fallback-Guide.md",
-    "sharepoint-events/08-Hub-Site-English-Content.md",
-    "sharepoint-events/07-Estrategia-Archivos-Centralizados.md",
-    "sharepoint-events/06-Estrategia-Reutilizacion-Anual.md",
-    "sharepoint-events/05-Plan-Gobernanza-Datos.md",
-    "sharepoint-events/05-Future-Native-Improvements.md",
-    "sharepoint-events/04f-Detalle-Visualizacion-Paginas.md"
+    "weekly-reports/weekly-report-2026-03-25.md",
+    "Pasted image 20260324142753.png",
+    "Pasted image 20260324142750.png",
+    "AppFolio-QuickBooks-Integration/Sandbox Server/UAT-Architecture-and-Setup.md",
+    "Pasted image 20260324134757.png",
+    "AppFolio-QuickBooks-Integration/Sandbox Server/Sandbox Server.md",
+    "Pasted image 20260324131556.png",
+    "Pasted image 20260324131444.png",
+    "Pasted image 20260323152812.png",
+    "Pasted image 20260323154218.png",
+    "M365-Site-Creation-Restriction/03-Analysis-Group-Update.md",
+    "M365-Site-Creation-Restriction/02-PowerShell-Method.md",
+    "M365-Site-Creation-Restriction/Version para Dummies.md",
+    "M365-Site-Creation-Restriction/_TOC_.md",
+    "M365-Site-Creation-Restriction/00-Index.md",
+    "_agents/workflows/weekly-report.md"
   ]
 }

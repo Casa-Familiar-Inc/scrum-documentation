@@ -19,3 +19,4 @@ This repository contains the Scrum planning and project management documentation
 - `sharepoint-events/` - Technical documentation and guides
 - `AppFolio-QuickBooks-Integration/` - Integration project files
 - `weekly-reports/` - Weekly activity reports
+# cf-documentation

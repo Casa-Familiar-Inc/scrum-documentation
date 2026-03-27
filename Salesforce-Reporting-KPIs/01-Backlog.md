@@ -1,5 +1,6 @@
 ---
 title: Product Backlog - Salesforce KPIs
+last_update: 2026-03-17
 tags: [jira, backlog, scrum, sprint, epic, user-story]
 ---
 
@@ -9,13 +10,15 @@ This document contains Epics and User Stories formatted for JIRA migration, util
 
 ## Epic 1: Discovery Phase & Requirements Gathering
 **Description**: Understand current FOC and Social Services processes to map reporting needs and KPIs.
-**Estimated Duration**: Sprint 1 (Mar 18, 2026 - Mar 31, 2026)
+**Sprint**: Sprint 1 (Mar 18, 2026 - Mar 31, 2026)
+**JIRA Epic**: EPIC 1: DISCOVERY P...
 
 ### US-01: Social Services Site Visit (Gema)
 **As an** IT Analyst,
 **I want to** conduct a technical visit to Gema at Social Services,
 **In order to** understand custom intake design and reporting pain points.
 - **Story Points**: 3
+- **Sprint**: Sprint 1 / Sprint 2 (si no se completa en Sprint 1)
 - **Acceptance Criteria**:
   - [ ] Documented "As-Is" workflow for immigration/procedures.
   - [ ] Collection of 3+ sample manual reports currently used.
@@ -31,21 +34,23 @@ This document contains Epics and User Stories formatted for JIRA migration, util
 **I want to** conduct a technical visit to Mayra at FOC,
 **In order to** understand financial service workflows and data tracking needs.
 - **Story Points**: 3
+- **Sprint**: Sprint 1
+- **JIRA IDs**: CF-30 (US), CF-35, CF-36, CF-37, CF-38 (Tasks)
 - **Acceptance Criteria**:
   - [ ] Documented "As-Is" workflow for financial counseling.
   - [ ] Identification of duplicate data entry points between Salesforce and spreadsheets.
   - [ ] List of success metrics (KPIs) currently tracked manually.
 - **Tasks**:
-  1. Schedule interview with Mayra.
-  2. Perform "Shadowing" session of one intake process.
-  3. Document all Excel formulas used for monthly reporting.
-  4. Identify fields required for Grant reporting.
+  1. `CF-35` Schedule interview with Mayra.
+  2. `CF-36` Perform "Shadowing" session of one intake process.
+  3. `CF-37` Document all Excel formulas used for monthly reporting.
+  4. `CF-38` Identify fields required for Grant reporting.
 
 ---
 
 ## Epic 2: KPI Definition & Data Architecture
 **Description**: Translate visit findings into structured metrics for Salesforce.
-**Estimated Duration**: Sprint 2 (Apr 01, 2026 - Apr 14, 2026)
+**Sprint**: Sprint 2 (Apr 01, 2026 - Apr 14, 2026)
 
 ### US-03: KPI Specification for Social Services & FOC
 **As a** Scrum Master/Analyst,
@@ -80,7 +85,7 @@ This document contains Epics and User Stories formatted for JIRA migration, util
 
 ## Epic 3: Data Consolidation & Integrity
 **Description**: Ensure historical data is migrated and new data is high-quality.
-**Estimated Duration**: Sprint 3 (Apr 15, 2026 - Apr 28, 2026)
+**Sprint**: Sprint 3 (Apr 15, 2026 - Apr 28, 2026)
 
 ### US-05: Historical Data Migration Strategy
 **As a** Data Analyst,
@@ -114,7 +119,7 @@ This document contains Epics and User Stories formatted for JIRA migration, util
 
 ## Epic 4: Executive Visibility & Dashboards
 **Description**: Build the visualization layer for the Boss and IT Management.
-**Estimated Duration**: Sprint 4 (Apr 29, 2026 - May 12, 2026)
+**Sprint**: Sprint 4 (Apr 29, 2026 - May 12, 2026)
 
 ### US-07: Executive Dashboard Design
 **As an** IT Analyst,

@@ -1,59 +1,62 @@
 ---
 title: Master Project Board - IT Analyst
 it_analyst: Nefi Lopez
-last_update: 2026-03-16
+last_update: 2026-03-17
+sprint_activo: Sprint 1 (Mar 18 - Mar 31, 2026)
+tags: [board, agile, it-analyst, casa-familiar, security]
 ---
 
 # IT Master Project Board
 
-This board allows you to see the global status of your responsibilities at Casa Familiar at a glance.
-
-## Weekly Priorities
-1. [ ] Interview with Gema (Social Services).
-2. [ ] Interview with Mayra (FOC).
-3. [ ] Review Salesforce Dashboard structure.
+Vista global de todas las responsabilidades IT en Casa Familiar.
 
 ---
 
-## Project Portfolio
+## Sprint 1 Activo (ALTA CARGA) — Mar 18 al 31, 2026
 
-### 1. Salesforce Reporting & KPIs
-**Goal**: Centralize SS and FOC intakes.
-**Status**: [In Progress]
-- **Latest Milestone**: Initial backlog and interview guide created.
-- **Next Step**: Site visits to map real workflows.
-- **Blockers**: None.
+> [!WARNING]
+> Prioridades ajustadas por urgencia en **Abrazo 2026** y **Seguridad IT**.
 
-### 2. SharePoint Events Portal
-**Goal**: Standardize and automate event management for Casa Familiar.
-**Status**: [In Progress]
-- **Latest Milestone**: Backlog created based on technical documentation.
-- **Next Step**: Configure Hub Site and Site Columns.
-- **Blockers**: None.
+### Prioridades de Esta Semana (Mar 18-21)
 
-### 3. AppFolio to QuickBooks Integration
-**Goal**: Migrate financial data using Dancing Numbers.
-**Status**: [Blocked]
-- **Latest Milestone**: UAT server provisioned with QB Demo.
-- **Next Step**: Obtain accounting data verification from internal stakeholder.
-- **Blockers**: Internal stakeholder unresponsive for 1+ week.
-
-### 4. Automation & Low-Code
-**Goal**: Scripts and flows to reduce administrative burden.
-**Status**: [Concept / Design]
-- **Latest Milestone**: Agile-Lite organization strategy defined.
-- **Next Step**: Identify first candidate process for Bash/PowerShell script.
-
-### 5. IT Support (Daily)
-
-**Goal**: Maintain Casa Familiar operations.
-**Status**: [Ongoing]
-- **Current Load**: Medium.
+- [ ] **URGENTE**: Crear SharePoint "Abrazo 2026" — `SP-US06`
+- [ ] **SEGURIDAD**: Restringir creación de Grupos/Teams a nivel Tenant — `GOV-US01`
+- [ ] **AUDITORÍA**: Revisar permisos de Karla Torres — `GOV-US02`
+- [ ] Entrevista con Mayra (FOC) — `SF-US02`
+- [ ] Setup UAT Server (AppFolio) — `AF-US01`
 
 ---
 
-## Management Summary
-*"IT focus is currently on the **Discovery Phase** of financial and social processes. A work structure has been established to measure Cloud Care's impact in Salesforce. The project is progressing as planned to have the first executive dashboards ready next month."*
+## Portfolio de Proyectos
+
+### 1. SharePoint Events Portal
+**Meta**: Estandarizar gestión de eventos y centralizar histórico.
+**Status**: `[En Progreso]` — Foco en Abrazo 2026
+- **Next Step**: Auditoría de Abrazo 2024 para replicar estructura.
+- **Leads**: Karla Torres (Coordinación).
+
+### 2. IT Governance & Security (NUEVO)
+**Meta**: Control de acceso, seguridad del tenant y auditoría de permisos.
+**Status**: `[Activo]` — Sprint 1
+- **Next Step**: Ejecutar script PowerShell para restricción de Sitios/Equipos.
+
+### 3. Salesforce Reporting & KPIs
+**Meta**: Centralizar intakes de SS y FOC.
+**Status**: `[En Progreso]`
+- **Next Step**: Visita al sitio FOC (Mayra).
+
+### 4. AppFolio to QuickBooks Integration
+**Meta**: Migración de datos financieros.
+**Status**: `[Bloqueado]` — Escalación en curso.
 
 ---
-*Use this file as your "Home" in Obsidian to keep track of multiple projects.*
+
+## Resumen Ejecutivo
+
+> *"Se ha priorizado la creación del ecosistema **Abrazo 2026** y el fortalecimiento de la **Gobernanza IT** (restricción de creación de grupos). El Sprint 1 presenta una carga alta; se aplicará Time Boxing estricto. La junta con el Comité de Eventos está agendada para la próxima semana para alineación y capacitación."*
+
+---
+
+- [[Master-Sprint-Plan]]
+- [[IT-Governance-Security/01-Backlog]]
+- [[SharePoint-Events-Portal/01-Backlog]]
